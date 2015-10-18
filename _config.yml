@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://scottbot.github.io
+title: scottbot more irregular
+tagline: a test
+description: My awesome new site
+paginate: 5
