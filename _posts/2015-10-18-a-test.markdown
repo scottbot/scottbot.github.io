@@ -5,3 +5,6 @@ layout: post
 ---
 a test
 # Header
+## Header smaller
+<h1>Header</h1>
+<h2>Header smaller</h2>
