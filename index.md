@@ -1,9 +1,3 @@
----
-title: title
----
-
-# Test
-
 Hi! I’m Scott B. Weingart, and I wear many hats.
 
 ![Scott B. Weingart in front of mountains](/sbw.webp)
@@ -22,4 +16,4 @@ My work wanders between categories, but some highlights of efforts to which I ha
 
 Before my current job, I directed the Navari Family Center for Digital Scholarship at the University of Notre Dame and a digital humanities program at Carnegie Mellon University. I'm privileged to have served as a treasurer of the [Alliance of Digital Humanities Organizations](https://adho.org/), as an Executive Council Member of the [Association for Computers and the Humanities](https://ach.org/), as a member of the [Library of Congress's Copyright Public Modernization Committee](https://www.loc.gov/item/prn-21-034/library-of-congress-announces-copyright-public-modernization-committee/2021-06-22/), and on various other advisory boards.
 
-See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list. If you want to get in touch, [email me](mailto:weingart.scott+irregular@gmail.com).
+See my [curriculum vitae](/cv.pdf) or [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for a more ~~exhausting~~ exhaustive list. If you want to get in touch, [email me](mailto:weingart.scott+irregular@gmail.com).
