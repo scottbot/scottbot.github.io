@@ -1,3 +1,7 @@
+---
+title: title
+---
+
 # Test
 
 Hi! I’m Scott B. Weingart, and I wear many hats.
