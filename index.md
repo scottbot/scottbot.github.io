@@ -1,6 +1,6 @@
 Hi! I’m Scott B. Weingart, and I wear many hats.
 
-![Scott B. Weingart in front of mountains](/sbw.webp)
+![Scott B. Weingart in front of mountains](/sbw.jpg)
 
 You can read about my day job on [my cv](/cv.pdf). Evenings and weekends are dedicated to family, adventuring, and the circus.
 
