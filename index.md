@@ -14,10 +14,6 @@ My work wanders between categories, but some highlights follow:
 -   Creative works, including an AI-assisted short story co-authored with Robin Sloan: the [Center for Midnight](https://www.robinsloan.com/center-for-midnight/).
 -   Public lectures and keynote addresses, including at [HASTAC](https://hastac2015.sched.com/event/2vaV/connecting-the-dots), the [Digital Humanities Forum](https://today.ku.edu/digital-humanities-forum-explore-nodes-networks-humanities), and elsewhere.
 
-Before my current job, I directed the Navari Family Center for Digital Scholarship at the University of Notre Dame and a digital humanities program at Carnegie Mellon University. I'm privileged to have served as a treasurer of the [Alliance of Digital Humanities Organizations](https://adho.org/), as an Executive Council Member of the [Association for Computers and the Humanities](https://ach.org/), as a member of the [Library of Congress's Copyright Public Modernization Committee](https://www.loc.gov/item/prn-21-034/library-of-congress-announces-copyright-public-modernization-committee/2021-06-22/), and on various other boards and committees.
+Prior to 2023, I directed the Navari Family Center for Digital Scholarship at the University of Notre Dame and a digital humanities program at Carnegie Mellon University. I'm privileged to have served as a treasurer of the [Alliance of Digital Humanities Organizations](https://adho.org/), as an Executive Council Member of the [Association for Computers and the Humanities](https://ach.org/), as a member of the [Library of Congress's Copyright Public Modernization Committee](https://www.loc.gov/item/prn-21-034/library-of-congress-announces-copyright-public-modernization-committee/2021-06-22/), and on various other boards and committees.
 
 See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list, or [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
-
----
-
-Find [earlier versions](https://web.archive.org/web/20211207232426/https://scottbot.net/) of this site on the internet archive.
