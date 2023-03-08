@@ -12,6 +12,6 @@ My work wanders between categories (in fact the hiring manager for the first aca
 -   Creative works, including an AI-assisted short story co-authored with Robin Sloan: the [Center for Midnight](https://www.robinsloan.com/center-for-midnight/).
 -   Public lectures and keynote addresses, including at [HASTAC](https://hastac2015.sched.com/event/2vaV/connecting-the-dots), the [Digital Humanities Forum](https://today.ku.edu/digital-humanities-forum-explore-nodes-networks-humanities), and elsewhere.
 
-Prior to my life as a civil servant, I directed initiatives combining computation and culture at the University of Notre Dame and Carnegie Mellon University. I'm also privileged to have served in leadership roles in several amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
+Prior to my life as a civil servant, I directed initiatives combining computation and culture at the University of Notre Dame and at Carnegie Mellon University. I'm also privileged to have served in leadership roles in several amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
 
 See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list, or [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
