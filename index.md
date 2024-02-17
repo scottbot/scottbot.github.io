@@ -1,4 +1,4 @@
-Hi! I’m Scott B. Weingart, and I wear many hats. In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer. You can read about my day job on [my cv](/cv.html) \[[pdf](/cv.pdf)\]. 
+Hi! I’m Scott B. Weingart, and I wear many hats. In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer. You can read about my day job on [my cv](/cv.pdf). 
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
@@ -14,4 +14,4 @@ My work wanders between categories (the hiring manager from one failed academic 
 
 Before becoming a civil servant, I directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
 
-See my [curriculum vitae](/cv.html) \[[pdf](/cv.html)\] for a more ~~exhausting~~ exhaustive list, or [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
+See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list, or [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
