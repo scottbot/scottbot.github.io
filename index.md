@@ -1,4 +1,4 @@
-Hi! I’m Scott B. Weingart, and I wear many hats. In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer. You can read about my day job on [my cv](/cv.pdf) or [my résumé](/resume/pdf). 
+Hi! I’m Scott B. Weingart, and I wear many hats. In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer. You can read about my day job on [my cv](/cv.pdf) or [my résumé](/resume.pdf). 
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
