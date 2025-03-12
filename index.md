@@ -1,4 +1,6 @@
-Hi! I’m Scott B. Weingart, and I wear many hats. In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer. You can read about my day job on [my cv](/cv.pdf) or [my résumé](/resume.pdf). 
+Hi! I’m Scott B. Weingart, and I wear many hats. By day, I am a **Federal Chief Data Officer** in the U.S. government.¹ In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer.
+
+Read about my day job on [my cv](/cv.pdf) or [my résumé](/resume.pdf). **If you like what you see, [hire me](mailto:weingart.scott+future@gmail.com)**.
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
@@ -15,3 +17,5 @@ My work wanders between categories, but here are some highlights:
 Before my current role, I directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
 
 See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list, my [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits, and my [résumé](/resume.pdf) for a brief summary. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
+
+¹ _This is a personal website. Views here do not reflect the U.S. government._
