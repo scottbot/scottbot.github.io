@@ -1,6 +1,6 @@
-Hi! I’m Scott B. Weingart, and I wear many hats. By day, I am a **Federal Chief Data Officer** in the U.S. government.¹ In my off time, I'm a historian of knowledge affiliated with the University of Edinburgh's [Centre for Data, Culture & Society](https://www.cdcs.ed.ac.uk/), as well as a professional circus performer, an amateur father, and a hopeless adventurer.
+Hi! I'm Scott B. Weingart, a historian of knowledge affiliated with Dartmouth College and the University of Edinburgh, as well as a DOGE-fired former **Federal Chief Data Officer** at the National Endowment for the Humanities.¹ In my off time, I'm a professional circus performer, an amateur father, and a hopeless adventurer.
 
-Read about my day job on [my cv](/cv.pdf) or [my résumé](/resume.pdf). **If you like what you see, [hire me](mailto:weingart.scott+future@gmail.com)**.
+Read about my work on my [cv](/cv.pdf) or [résumé](/resume.pdf). **If you like what you see, [hire me](mailto:weingart.scott+future@gmail.com)**.
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
