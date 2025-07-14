@@ -1,6 +1,6 @@
 Hi! I'm Scott B. Weingart, and I wear many hats. DOGE recently fired me from the National Endowment for the Humanities, where I served as **Chief Data Officer**.¹ I am a historian of knowledge, a resident scholar at Dartmouth, and a research affiliate at the University of Edinburgh. In my off time, I'm a professional circus performer, an amateur father, and a hopeless adventurer.
 
-Read about my work on my [academic cv](/cv.pdf) or [résumé](/resume.pdf). **If you like what you see, [hire me](mailto:weingart.scott+future@gmail.com)**.
+Read about my work on my [academic cv](/cv.pdf) or [résumé](/resume.pdf). **To book a speaking engagement or my services as a consultant, [email me](mailto:weingart.scott+booking@gmail.com).**
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
