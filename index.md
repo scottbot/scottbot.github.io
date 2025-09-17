@@ -1,4 +1,4 @@
-Hi! I'm Scott B. Weingart, and I wear many hats. DOGE recently fired me from the National Endowment for the Humanities, where I served as **Chief Data Officer**.¹ I am a historian of knowledge, a resident scholar at Dartmouth, and a research affiliate at the University of Edinburgh. In my off time, I'm a professional circus performer, an amateur father, and a hopeless adventurer.
+Hi! I'm Scott B. Weingart, a historian of knowledge who wears many hats. By day, I am the **Chief Technology Officer at the Library of Virginia**, where I help make its rich collections and services digitally accessible to all.¹ Concurrently, I serve as a resident scholar at Dartmouth and a research affiliate at the University of Edinburgh. In my off time, I'm a professional circus performer, an amateur father, and a hopeless adventurer.
 
 Read about my work on my [academic cv](/cv.pdf). **To book a speaking engagement or my services as a consultant, [email me](mailto:weingart.scott+booking@gmail.com).**
 
@@ -14,8 +14,8 @@ My academic work wanders between categories, but here are some highlights:
 -   Creative works, including an AI-assisted short story co-authored with Robin Sloan: the [Center for Midnight](https://www.robinsloan.com/center-for-midnight/).
 -   Public lectures and keynote addresses, including at [HASTAC](https://hastac2015.sched.com/event/2vaV/connecting-the-dots), the [Digital Humanities Forum](https://today.ku.edu/digital-humanities-forum-explore-nodes-networks-humanities), and elsewhere.
 
-Before my current role, I directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
+Before my current role, I served the U.S. Government as **Chief Data Officer and Director of Data and Evaluation at the National Endowment for the Humanities**. I also previously directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
 
 See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list and my [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
 
-¹ _This is a personal website. Views here do not reflect the U.S. government._
+¹ _The Library of Virginia is a state agency that also wears many hats. It is the library at the seat of government, the state’s archive, a public humanities institution, a specialized research library, and a state agency supporting public libraries throughout Virginia._
