@@ -4,6 +4,8 @@ Read about my work on my [academic cv](/cv.pdf). **To book a speaking engagement
 
 ![Scott B. Weingart in front of mountains](/sbw.jpg)
 
+Before my current role, I served the U.S. Government as **Chief Data Officer and Director of Data and Evaluation at the National Endowment for the Humanities**. I also previously directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
+
 My academic work wanders between categories, but here are some highlights:
 
 -   Books including [The Network Turn](https://www.cambridge.org/core/elements/network-turn/CC38F2EA9F51A6D1AFCB7E005218BBE5) (Cambridge University Press), [The Historian’s Macroscope](https://themacroscope.org/) (Imperial College Press), and some earlier digital-only volumes.
@@ -13,8 +15,6 @@ My academic work wanders between categories, but here are some highlights:
 -   *Many* web-based projects, including [Six Degrees of Francis Bacon](http://www.sixdegreesoffrancisbacon.com/), the [Digital Humanities Literacy Guidebook](https://cmu-lib.github.io/dhlg/), the [ePistolarium](http://ckcc.huygens.knaw.nl/epistolarium/#), the [Index of Digital Humanities Conferences](https://dh-abstracts.library.cmu.edu/), [ETHOS](https://lps.library.cmu.edu/ETHOS/), the [Frankenstein Variorum](https://frankensteinvariorum.org/), [Shakespeare-VR](https://shakespeare-vr.library.cmu.edu/), and the [Internet Philosophy Ontology Project](https://www.inphoproject.org/).
 -   Creative works, including an AI-assisted short story co-authored with Robin Sloan: the [Center for Midnight](https://www.robinsloan.com/center-for-midnight/).
 -   Public lectures and keynote addresses, including at [HASTAC](https://hastac2015.sched.com/event/2vaV/connecting-the-dots), the [Digital Humanities Forum](https://today.ku.edu/digital-humanities-forum-explore-nodes-networks-humanities), and elsewhere.
-
-Before my current role, I served the U.S. Government as **Chief Data Officer and Director of Data and Evaluation at the National Endowment for the Humanities**. I also previously directed tech-inflected scholarly programs at the University of Notre Dame and at Carnegie Mellon University. I'm privileged to have served in leadership roles in some amazing organizations, including the [Alliance of Digital Humanities Organizations](https://adho.org/) and the [Association for Computers and the Humanities](https://ach.org/).
 
 See my [curriculum vitae](/cv.pdf) for a more ~~exhausting~~ exhaustive list and my [google scholar](https://scholar.google.com/citations?user=c5t_w1cAAAAJ) for some greatest hits. [Email me](mailto:weingart.scott+irregular@gmail.com) to get in touch.
 
