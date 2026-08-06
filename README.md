@@ -112,16 +112,11 @@ They're ordinary Markdown: `content/_index.md` and `content/colophon.md`.
 
 ## Publishing to GitHub Pages
 
-One-time setup (GitHub Desktop is the no-command-line route):
-
-1. Create a repository on GitHub (e.g. `scottbot/scottbot.github.io`, which
-   must match `repoURL` in `hugo.toml` — that's where each work page's
-   "create a pull request" link points), add this folder to it, commit, and
-   push to the `main` branch.
-2. On GitHub: **Settings → Pages → Source: GitHub Actions.**
-3. Every push to `main` now rebuilds and publishes the site automatically
-   (the recipe is `.github/workflows/deploy.yml`; Hugo's version is pinned
-   there, so builds are reproducible for years).
+The repository lives in `Documents\GitHub\scottbot.github.io`. Commit and
+push with GitHub Desktop; every push to `main` rebuilds and publishes the
+site automatically (the recipe is `.github/workflows/deploy.yml`; Hugo's
+version is pinned there, so builds are reproducible for years). Pages must
+be set to **Settings → Pages → Source: GitHub Actions** (already done).
 
 > Windows notes, already handled in this copy: the repository's local git
 > config sets `core.longpaths true` (a few corpus paths exceed Windows'

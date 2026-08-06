@@ -13,9 +13,12 @@ permissions:
   pages: write
   id-token: write
 
+# One deployment at a time, and never cancel one mid-flight: a killed
+# deployment lingers "in progress" on GitHub's side and blocks every
+# push after it. Queued runs simply wait their turn.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -23,12 +26,12 @@ jobs:
     env:
       HUGO_VERSION: "0.164.0"   # pinned on purpose; update only deliberately
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install Hugo (single pinned binary)
         run: |
           curl -sL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
             | tar -xz -C /usr/local/bin hugo
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
         id: pages
       - name: Build
         # Use the URL GitHub Pages says the site is served from, so links,
@@ -36,7 +39,7 @@ jobs:
         # the custom domain is set up. No minification: the served HTML,
         # CSS, and JS stay human-readable, as a courteous press should.
         run: hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: public
   deploy:
@@ -47,4 +50,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

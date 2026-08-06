@@ -8,3 +8,6 @@ Thumbs.db
 .DS_Store
 __pycache__/
 *.pyc
+# Google Drive sync scratch
+.tmp.driveupload/
+.tmp.drivedownload/
