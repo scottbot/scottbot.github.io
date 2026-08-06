@@ -6,6 +6,7 @@ no dependency chain to rot. The design follows the CV's early-modern printing
 style: EB Garamond with discretionary ligatures, oldstyle numerals, italic
 ampersands, marginalia, manicules, and one colophon.
 
+
 ## The one-minute tour
 
 | Folder | What lives there |
