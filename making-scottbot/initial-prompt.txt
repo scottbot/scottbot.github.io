@@ -1,0 +1,12 @@
+Please take the CV in my folder, as well as all the outputs in markdown, and create a static-site generated (that I can regularly add to) portfolio page for me. My CV should be the backbone that links to my works. The style and last page of my CV should also be the inspiration for the design (e.g., ligatures, fonts, colors, early modern printing style, a little irreverent, etc.).
+
+There should also be space for an about me page, a blog, etc. It should be inspired by contemporary academic portfolios pages (Kieran Healy especially, but also Cameron Blevins, Jason Heppler, etc.) as well as pages like gwern.net.
+
+On the CV page (and potentially others), there should be the option for a side-by-side reading interface on wide screens, such that on the left is the content you're reading, and on the right is a differently-scrollable version of whichever of my articles / blog posts / etc. was clicked. So e.g., I'm on my CV, I click one of my articles, and that article in MD appears to the right without taking someone from the CV.
+The CV itself should be there in full, in HTML/CSS (and JS if necessary but I want it simple as possible). I should be able to add to it over time by updating a bib file or markdown files or something like that. Decompose the CV, create the units, and re-assemble it using the new workflow. It should have the same look and feel as the PDF without being wedded to the page. (ligatures, etc.)
+
+The markdown of my works might need editing of the YAML files in order to make them all aligned for publication on the web. Refer to the original PDFs of the works and the bibtex file if you need to find more/different information to standardize them, or ask me.
+
+Throughout this process, feel free to ask me questions as often as is relevant to make this perfect.
+
+The site itself should be easily generatable on gh pages and on my windows machine, light on code for the user in something like hugo, and should not be too futzily connected to infrastructures that might break in a year or two because people aren't maintaining some library or another. That is, it should be built on robust and simple tech stack that's likely to last.
