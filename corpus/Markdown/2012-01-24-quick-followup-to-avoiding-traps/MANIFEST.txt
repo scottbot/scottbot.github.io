@@ -1,0 +1,2 @@
+15da37b87725e951f5a40c41cffd8f60c8b928821065f27adbc2f6f3f6a30f9f        5028  2012-01-24-quick-followup-to-avoiding-traps.md
+447dbcd51e0c4ed21eee791520b63f0a86e3fcb19539289ce0232bc876035f8e       84104  images/img-001.png

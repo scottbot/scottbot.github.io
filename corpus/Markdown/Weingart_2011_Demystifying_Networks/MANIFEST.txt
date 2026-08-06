@@ -1,0 +1,10 @@
+89ab6e94aa07af1f4c2f3461047a92a1b6b82617b98dd50fc51d9aa3c66001a0       39197  Weingart_2011_Demystifying_Networks.md
+9b4cb232a84420ae8d48986ad755b89369306dbdb978ad17bbce652cab5070b9       13893  images/img-01-simple-network.png
+19ca793d89f25a4bababe21b6538b1c03ac381f3d0ba7da63da95f249682ef31       17400  images/img-02-books-no-relationships.png
+531de453aad67d2d88024fb3332a6d66f57ffe791ff610ed4632023bd8e2ecd2       62921  images/img-03-books-and-authors.png
+d071fe8800c7f96b5ba2bdf99cdd1995652b9b5bd9ce85c088534f5612c11f8f       17830  images/img-04-cities-highways.png
+5d1d951da37938d39662eefbf6e39cbbeed27278ced425bfbc6c5345769b2421       74602  images/img-05-books-authors-relationships.png
+6260f29a478d06aea2c759ae81dd5fa24d3e65ebdad0062be6d15d18d1193a77       65843  images/img-06-books-authors-collaboration.png
+fb1ca7e1e943071f0c5dcc6d7c68d2201c4f960dfb6612fe8228a8c29dc64b47       95535  images/img-07-dense-networks.png
+1161d46bc0cc20342faebcd86440a32ba5241c26d04b3f2da7fb735b5f171f43       10537  images/img-08-degree-labels.png
+bfcd91c455d4af5d7afc57c3838f225b596e3f3e785a939d45ad3d7394d8aac4      149504  images/img-09-ego-network.png

@@ -1,0 +1,3 @@
+28c8f97812a436e1ce09be593d9a12fa314bef35df81bf83185c43310b5da940       12270  2013-04-14-liveblogged-review-of-macroanalysis-by-matthew-l-jockers-part-1.md
+5c51943c7c6012b1a7644699e4d738d0f291814bcf84eb8f6ceca3c21583f0e7      422042  images/img-001.png
+9dfeb0077876c89a2182e155d128c3f007e8d5180fe9afad9dd72dc9f806bcae      256303  images/img-002.png

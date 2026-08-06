@@ -1,0 +1,43 @@
+- institution: "Library of Virginia"
+  positions:
+    - "**Inaugural Chief Technology Officer**"
+  body: |
+    Provides strategic vision and operational leadership for the Library of Virginia’s IT and digital initiatives, supporting its many missions as the library at the seat of government, the state’s archive, a public humanities institution, a specialized research library, and a state agency supporting public libraries throughout Virginia. Oversees web applications, digital engagement, and digital collections of over 130 million objects, and the management of critical systems like Alma, Primo, and Rosetta.
+
+- institution: "National Endowment for the Humanities, United States Government"
+  positions:
+    - "**Inaugural Chief Data Officer**"
+    - "**Inaugural Director**, *Office of Data and Evaluation*"
+  body: |
+    NEH senior leadership team member responsible for evidence-informed decision making, and for keeping the U.S. public informed of the state, health, and value of the humanities.
+
+    **Executive Leadership**. Shaped data, evaluation, & AI policy impacting $170 million in annual grantmaking. Furnished evidence to advise leadership. Led strategic planning, risk management, and related activities. Oversaw statistical clearinghouse on the state & value of the humanities.
+
+    **Strategic Partnerships**. Built partnerships with other federal agencies, private philanthropies, and non-profits. Represented NEH on federal chief data officer council. Supported data and evaluation capacity building across 56 State and Jurisdictional Humanities Councils. Maintained NEH data infrastructure.
+
+    **Program Management**. Led multimillion-dollar grantmaking and contract initiatives.
+
+- institution: "University of Notre Dame"
+  positions:
+    - "**Inaugural Director**, *Navari Family Center for Digital Scholarship*"
+    - "**Associate Librarian (Faculty)**, *Hesburgh Libraries*"
+    - "**Affiliated Faculty**, *Lucy Family Institute for Data & Society*"
+  body: |
+    - Served on Hesburgh Libraries’ senior leadership administrative body, the Library Cabinet.
+    - Directed 11,500 ft², $10+ million endowed research center with a technology lending library; data science support services; grant & fellowship programs; and specialized facilities including a makerspace, VR room, and dataviz wall.
+    - Supervised 15+ faculty, staff, postdocs, & students (including the heads of the Business & Architecture branch libraries with their own additional spaces and staff).
+    - Conducted, presented, and authored research at the intersection of data science & society.
+
+- institution: "Carnegie Mellon University"
+  positions:
+    - "**Inaugural Program Director of Digital Humanities**"
+    - "**Assistant Librarian (Faculty)**, *Hunt Library*"
+    - "**Core Faculty**, *Humanities Analytics*"
+    - "**Affiliated Faculty**, *The Simon Initiative*"
+  body: |
+    - Directed five-year, $2 million program to make CMU a leader in the Digital Humanities
+    - Managed faculty, developers, students, interns, & other staff on dozens of projects.
+    - Administered internal grant and fellowship programs dispersing $100k/year.
+    - Designed and implemented technical infrastructure supporting digital humanities across campus.
+    - Conducted, presented, and authored research at the intersection of data science & society.
+    - Taught data analysis, research methods, and history courses to students, faculty, & staff.

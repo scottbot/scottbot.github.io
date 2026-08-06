@@ -1,0 +1,7 @@
+3114c8dc734bbeddbe959f7c5d47c863d3ba4adfafa0a9b7696b27afa41b9b3d       18110  2015-06-27-acceptances-to-digital-humanities-2015-part-3.md
+9bb65f7516356e49aa40ad3ab7e8cc87cf839fab330bf8af1b892b4adff057b4      149912  images/img-001.png
+538fa7b1a1cd384566bd6b2253b0d6de0cad0e2f21c0cb2f7ded5ffd64885d2b        5342  images/img-002.png
+52b72375ce553e692de5e8835dd1d6606aaeba35b76062eabc2fdbbcebd457a7      467221  images/img-003.png
+cfe220a22a6e6dd308af707aa4d6f0590810a67a2dd3845dcefe46e473ee6a68       45065  images/img-004.png
+7fdb7fcccb009f298c5bdb053358e9897ff7d8ea7aaf28dcb87ed50bbaa764e0        6848  images/img-005.png
+93d09700af5bab20f4e2bb9c3d2c922a900dec13f9d87e29ba422bf4ed9e3450        8128  images/img-006.png

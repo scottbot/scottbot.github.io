@@ -1,0 +1,9 @@
+88d6a47beccaee9add8ec320d212b114fa4f4abf2ab34135bbbb339f235d8275       37201  Weingart_and_Eichmann_2017_Whats_Under_the_Big_Tent.md
+4ed965fba24dfe850838ae0f17399c5076d3e61bf25627ad227edc36e050a517       40983  images/fig-001.png
+ff5d76939ffbacf17fb71edab31074b5acf148262a8df2e57221ebff1b1092f1      578224  images/fig-002.png
+461c4df9c6f4daf9c439662d4b421e424222a935d62f6452fef0a998abd67fee       31538  images/fig-003.png
+9f6a661e7069943b9baa82f535ffeccb77917d77bf10ba1be5782ec326476a82       29777  images/fig-004.png
+c45b3b9e9142eef34ad3e1dde7b83004cdc4dc57fd2bde375db68b425371fcda       49100  images/fig-005.png
+786a2213ea2fb91f5bbcb0d8ade24e7e1625f4e43b1b61d097856b00d049398c       36110  images/fig-006.png
+19de41fd2dd4d0161a9ffc913b6e9ab1adc668af36522ade11e3bb136b012f25       70988  images/fig-007.png
+02555ca2d601691f267ebdabb08f5aaa2f6fe164fc4d02932081dafe73f389b5       67198  images/fig-008.png

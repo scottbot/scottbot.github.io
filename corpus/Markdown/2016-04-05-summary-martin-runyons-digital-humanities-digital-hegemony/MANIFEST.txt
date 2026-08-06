@@ -1,0 +1,2 @@
+9a91865a5ef17463487a5a7c200ab8b5825546bbf4eded408fcd4e5d67c0fff9        5578  2016-04-05-summary-martin-runyons-digital-humanities-digital-hegemony.md
+74167218fd41e896c9d95867a1e05b6a9bd04cfc8e6ee1d328458cbf2c76826d       88335  images/img-001.png

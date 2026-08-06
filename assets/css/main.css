@@ -1,0 +1,711 @@
+/* ────────────────────────────────────────────────────────────────
+   scottbot.net — an early-modern press operating on the web
+   Palette and typography per the CV's colophon:
+     #000000 most text · #A6A6A6 headers & footers · #808080 marginalia
+     #AA610D headings & highlights · #724109 name accent
+   EB Garamond variable, with standard, discretionary, & historical
+   ligatures. Ampersands italic, always, because they look swooshy & neat.
+   ──────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/fonts/EBGaramond-var.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/fonts/EBGaramond-Italic-var.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --ink:       #000000;
+  --grey-head: #A6A6A6;   /* running headers & footers          */
+  --grey-marg: #808080;   /* marginalia                          */
+  --brown:     #AA610D;   /* headings & highlights               */
+  --brown-dk:  #724109;   /* the name accent                     */
+  --paper:     #fffdf9;   /* a faintly warm sheet                */
+  --rule:      #e4ddd0;
+  --measure:   44rem;
+  --gutter-l:  6.5rem;    /* year column                         */
+  --gutter-r:  11rem;     /* marginal-note column                */
+  --rail-w:    13.5rem;   /* contents rail (the still side menu) */
+}
+
+/* ── The width ladder ──────────────────────────────────────────
+   Every breakpoint in this file, in one place. The page is built
+   from the tokens above: the text block is --measure wide, and on
+   pages with margins it carries --gutter-l and --gutter-r besides
+   (6.5 + 44 + 11 = 61.5rem = 984px).
+
+     ≤  640px  entries fold to a single column (mobile; unpolished)
+     ≥ 1100px  the reading pane may open (mirrors readerMinWidth
+               in hugo.toml — change them together)
+     ≥ 1250px  true margins appear: the year column and marginalia
+               get their own gutters (984px block + breathing room)
+     1250–1479px  the contents rail is seated in the outer margin:
+               the page column steps left — as an early modern text
+               block would; the outer margin was always the wider
+               one — and the rail slims to fit the freed space
+     ≥ 1480px  the page column re-centers, the rail at full width
+               beside it (984px centered + rail + offsets each side)
+
+   Orthogonal to width: @media (pointer: coarse) enlarges tap targets
+   on touch devices, whatever their size.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Sheet ─────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+/* Smooth scrolling only for readers who have not asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", Garamond, "Adobe Garamond Pro", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-feature-settings: "liga" 1, "dlig" 1, "hlig" 1, "kern" 1, "onum" 1;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+  display: flex; flex-direction: column; min-height: 100vh;
+}
+.page-body { flex: 1; width: 100%; }
+
+/* ── Accessibility helpers ─────────────────────────────────── */
+/* Visible keyboard focus, in house ink. */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--brown-dk);
+  outline-offset: 2px;
+}
+/* Skip link: hidden until focused, then a small printed slip. */
+.skip-link {
+  position: absolute;
+  left: .75rem; top: -100vh;
+  z-index: 100;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: .35em .8em;
+  font-style: italic;
+}
+.skip-link:focus { top: .5rem; }
+/* Screen-reader-only text (e.g. the 404 heading). */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+/* On wide screens, reserve true margins so marginalia have a home. */
+@media (min-width: 1250px) {
+  main.with-margins {
+    max-width: calc(var(--gutter-l) + var(--measure) + var(--gutter-r));
+    padding-left: var(--gutter-l);
+    padding-right: var(--gutter-r);
+  }
+}
+
+/* ── Running header & footer ───────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;              /* under the reading pane (50) */
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  font-style: italic;
+}
+/* With a frozen header, anchored sections need breathing room. */
+:target, h2[id] { scroll-margin-top: 4rem; }
+.site-nav {
+  max-width: calc(var(--measure) + 8rem);
+  margin: 0 auto;
+  padding: .65rem 1.25rem;
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: .25rem 1rem;
+}
+.site-nav a { color: var(--grey-head); text-decoration: none; }
+.site-nav a:hover, .site-nav a.active { color: var(--brown); }
+/* No letter-spacing anywhere near the name: it suppresses ligatures (tt!) */
+.nav-links a { margin-left: 1.1rem; }
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  color: var(--grey-head);
+  font-style: italic;
+  font-size: 1.05rem;
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  max-width: calc(var(--measure) + 8rem);
+  margin: 0 auto; width: 100%;
+  padding: .6rem 1.25rem 1.1rem;
+}
+.site-footer a { color: inherit; text-decoration: none; }
+.site-footer a:hover { color: var(--brown); }
+/* The closing word: roman small caps, letterspaced, centered. */
+.site-footer .finis {
+  display: block; width: 100%; text-align: center;
+  font-style: normal; font-variant: small-caps; letter-spacing: .35em;
+}
+
+/* ── Type ──────────────────────────────────────────────────── */
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; margin: 1.6em 0 .4em; }
+h1 { font-size: 2.3rem; margin-top: .4em; }
+h2 { font-size: 1.75rem; color: var(--brown); }
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.2rem; }
+
+a { color: var(--brown); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: .15em; text-decoration-thickness: .05em; }
+.prose a { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brown) 45%, transparent); text-underline-offset: .15em; }
+.prose a:hover { text-decoration-color: var(--brown); }
+
+em, i { font-style: italic; }
+/* Swoosh: italic ampersands, even where the surrounding font is not. */
+.amp { font-style: italic; font-family: "EB Garamond", serif; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  width: 10rem;
+  margin: 2.6rem auto;
+}
+
+blockquote {
+  margin: 1.2em 0 1.2em 0;
+  padding-left: 1.1em;
+  border-left: 2px solid var(--rule);
+}
+code, pre {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: .78em;
+}
+pre {
+  background: #f7f3ea;
+  border: 1px solid var(--rule);
+  padding: .8em 1em;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+img { max-width: 100%; height: auto; }
+.prose img { display: block; margin: 1.4em auto; }
+table { border-collapse: collapse; font-size: .95em; margin: 1.4em 0; }
+th, td { border: 1px solid var(--rule); padding: .3em .6em; text-align: left; }
+th { color: var(--brown-dk); }
+
+sup { font-feature-settings: "sups" 1; }
+.footnotes { font-size: 1.05rem; color: var(--grey-marg); }
+.footnotes hr::after { content: ""; }
+.footnotes hr { border-top: 1px solid var(--rule); width: 12rem; margin: 2.5rem 0 1rem; }
+
+::selection { background: color-mix(in srgb, var(--brown) 22%, transparent); }
+
+/* The LaTeX logo — raised A, dropped E, as the CV prints it */
+.tex-logo { white-space: nowrap; }
+.tex-logo .tex-a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .72em;
+  vertical-align: .3em;
+  margin: 0 -.14em 0 -.36em;
+}
+.tex-logo .tex-e {
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: -.22em;
+  margin: 0 -.115em 0 -.125em;
+}
+i .tex-logo .tex-a, em .tex-logo .tex-a, .marginal .tex-logo .tex-a {
+  margin: 0 -.1em 0 -.26em;
+}
+i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
+  margin: 0 -.09em 0 -.09em;
+}
+
+/* Archaic passages (colophon) need no extra rules: the long-s and its
+   historical ligatures come from the text itself, and the body already
+   turns on every ligature feature. The .archaic class stays in the HTML
+   as a styling hook. */
+
+/* Drop cap for pages that earn one */
+.dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.4em;
+  line-height: .78;
+  padding: .07em .08em 0 0;
+  color: var(--brown);
+  font-weight: 500;
+}
+
+/* ── Hero (home & CV head) ─────────────────────────────────── */
+.hero { text-align: center; margin: 1.5rem 0 2rem; }
+
+/* The CV's head, as printed: name, tagline, contact, and mission all
+   flush to both edges of one block. display:table shrink-wraps the
+   block to its widest line (the name); text-align-last stretches every
+   other line to match. */
+.hero-justified {
+  display: table;
+  margin: 1.5rem auto 2.5rem;
+  text-align: left;
+}
+.hero.hero-justified .bigname,
+.hero.hero-justified .tagline {
+  white-space: nowrap;
+  text-align: center;
+}
+.hero.hero-justified .tagline { font-size: 1.5rem; }
+.hero.hero-justified .contact {
+  display: flex; justify-content: space-between; gap: 2rem;
+  border-top: 1px dotted var(--grey-head);
+  border-bottom: 1px dotted var(--grey-head);
+  padding: .3rem .1rem;
+  margin: .7rem 0 .9rem;
+}
+.hero.hero-justified .mission {
+  max-width: none; margin: 0;
+  text-align: justify;
+  text-align-last: center;
+}
+@media (max-width: 760px) {
+  .hero.hero-justified { display: block; text-align: center; }
+  .hero.hero-justified .bigname, .hero.hero-justified .tagline {
+    white-space: normal; text-align: center;
+  }
+  .hero.hero-justified .mission { text-align: center; text-align-last: center; }
+  .hero.hero-justified .contact { flex-wrap: wrap; justify-content: center; gap: .4rem 1.5rem; }
+}
+.hero .updated {
+  color: var(--grey-head); font-style: italic; font-size: 1rem;
+  text-align: right; display: block; margin-bottom: 1.5rem;
+}
+.hero h1.bigname {
+  font-size: clamp(3rem, 9vw, 4.6rem);
+  color: var(--brown-dk);
+  font-weight: 700;
+  margin: 0 0 .1em;
+}
+.hero .tagline { font-size: 1.45rem; margin: 0; }
+.hero .tagline b { font-weight: 700; }
+.hero .tagline .masq { color: var(--grey-marg); }
+.hero .contact {
+  display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
+  color: var(--grey-head); font-size: 1.02rem; margin: .6rem 0 1rem;
+}
+.hero .contact a { color: var(--grey-head); }
+.hero .contact a:hover { color: var(--brown); }
+.hero .mission {
+  font-style: italic; font-size: 1.35rem; line-height: 1.4;
+  max-width: 34rem; margin: 0 auto;
+}
+
+/* ── CV structure ──────────────────────────────────────────── */
+.cv h2.cv-section {
+  font-size: 1.9rem;
+  margin: 2.6rem 0 .6rem;
+  scroll-margin-top: 4rem;   /* clear the frozen header */
+}
+.cv .section-sub {
+  color: var(--grey-head); font-style: normal; font-size: 1.05rem;
+  margin: -.5rem 0 .8rem;
+}
+/* Contents, two forms. On wide screens: a still menu floating at the
+   viewport's right, which steps aside when the reading pane opens.
+   Narrower: the same list folded into a compact disclosure. */
+.side-rail {
+  display: none;
+  position: fixed;
+  top: 4.8rem; right: 1rem;
+  width: var(--rail-w);
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+  font-size: .98rem;
+  line-height: 1.6;
+  padding: .2rem 1rem;
+  border-left: 1px solid var(--rule);
+}
+.side-rail .rail-title {
+  display: block;
+  color: var(--grey-head); font-style: italic;
+  margin-bottom: .35rem;
+}
+.side-rail ul { list-style: none; margin: 0; padding: 0; }
+.side-rail a { color: var(--grey-marg); }
+.side-rail a:hover { color: var(--brown); }
+.side-rail a.active { color: var(--brown); }
+
+.toc-details {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: .6rem .3rem; margin: 1.6rem 0 1rem;
+  font-size: 1.05rem;
+}
+.toc-details summary { cursor: pointer; color: var(--grey-marg); font-style: italic; }
+.toc-details ul {
+  columns: 14rem; column-gap: 2.5rem;
+  list-style: none; margin: .5rem 0 0; padding: 0;
+  line-height: 1.7;
+}
+.toc-details li { break-inside: avoid; }
+.toc-details a { color: var(--grey-marg); }
+.toc-details a:hover { color: var(--brown); }
+
+@media (min-width: 1480px) {
+  body:not(.reader-open) .side-rail { display: block; }
+  .toc-details { display: none; }
+}
+/* The 1250–1479px rung of the ladder (see the width ladder, top of
+   file): the rail is seated in the outer margin — the page column
+   steps left and the rail slims to fit. Below 1250px the margins fold
+   up and the rail folds back into the disclosure atop the page. */
+@media (min-width: 1250px) and (max-width: 1479.98px) {
+  body:not(.reader-open) .side-rail {
+    display: block;
+    --rail-w: 10.5rem;
+    right: .5rem;
+    font-size: .92rem;
+    padding: .2rem .8rem;
+  }
+  body:not(.reader-open) main.with-margins { margin-left: 1.5rem; }
+  .toc-details { display: none; }
+}
+
+/* An entry row: year gutter · body · marginal note */
+.cv-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--gutter-l) 1fr;
+  gap: 0 1.1rem;
+  margin: 0 0 .55rem;
+}
+.cv-entry .year {
+  color: var(--grey-marg);
+  text-align: right;
+  font-variant-numeric: oldstyle-nums;
+  white-space: nowrap;
+  font-style: normal;
+}
+.cv-entry .year .range { font-style: italic; }
+.cv-entry .body { hanging-punctuation: first; }
+.cv-entry .body .sub { display: block; }
+.cv-entry .body p { margin: .2em 0; }
+
+/* Marginal notes: true margin on wide sheets, inline elsewhere */
+.marginal {
+  color: var(--grey-marg);
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+.marginal .manicule { color: var(--brown); font-style: normal; }
+.margin-host { position: relative; }
+@media (min-width: 1250px) {
+  body:not(.reader-open) .cv-entry > .marginal,
+  body:not(.reader-open) .margin-host > .marginal {
+    position: absolute;
+    left: 100%;
+    margin-left: 1.4rem;
+    top: .18em;
+    width: calc(var(--gutter-r) - 1.6rem);
+  }
+}
+@media (max-width: 1249.9px) {
+  .cv-entry > .marginal { grid-column: 2; margin-top: .05rem; }
+  .margin-host > .marginal { display: block; margin: .2rem 0 .6rem; }
+}
+body.reader-open .cv-entry > .marginal { position: static; grid-column: 2; }
+body.reader-open .margin-host > .marginal { position: static; display: block; margin: .2rem 0 .6rem; }
+
+/* The CV's own colophon, as printed on its last page */
+.cv-colophon .colophon-initial::first-letter {
+  float: left;
+  font-size: 3.6em; line-height: .75;
+  color: var(--brown);
+  border: 2px solid var(--brown);
+  margin: .08em .12em 0 0;
+  padding: .1em .15em;
+  font-weight: 500;
+}
+.cv-colophon img.ornament { mix-blend-mode: multiply; }
+
+/* Read-in-pane affordance: a hedera (printer's leaf), not a manicule —
+   manicules are reserved for the two places the printed CV uses them. */
+a.readlink {
+  font-size: .92em;
+  white-space: nowrap;
+  color: var(--brown);
+  font-style: italic;
+}
+a.readlink .leaf { font-style: normal; }
+a.readlink:hover { text-decoration: underline; }
+
+/* Prose subsections of the CV (roles, highlights, biography) */
+.cv .role-inst { color: var(--brown); font-weight: 400; font-size: 1.5rem; margin: 1.5rem 0 .3rem; }
+.cv .role-pos { margin: 0; font-size: 1.28rem; }
+.cv .role-pos .pos-title { font-weight: 600; }
+.cv .role-body { margin-top: .35rem; }
+.cv .role-body ul { margin: .3em 0; padding-left: 1.2em; }
+.cv .role-body li { margin: .15em 0; }
+.cv .hl-title { font-weight: 700; font-size: 1.28rem; margin: 1rem 0 0; }
+.cv .hl-body { margin: .1rem 0 .6rem; }
+
+.cv .bio { margin-top: .5rem; }
+.cv .bio p { margin: 0 0 .8em; }
+.cv .bio img.headshot {
+  width: 11rem; float: right; margin: .25rem 0 .6rem 1rem;
+  filter: grayscale(1);
+}
+
+/* Reviews section */
+/* Reviewed-work headers sit in the house heading color, roman weight,
+   so the bold within each review (the reviewing journal) stands alone. */
+.cv .review-work { font-weight: 400; color: var(--brown); font-size: 1.3rem; margin: 1.3rem 0 .15rem; }
+.cv .review-work a.readlink { font-size: .8em; }
+.cv .review-items { margin: 0 0 .6rem; padding-left: 1.2em; }
+.cv .review-items li { margin: .12em 0; }
+.cv .review-intro { color: var(--grey-marg); font-size: 1.05rem; }
+
+/* Sassy interlude & closing */
+.sassy {
+  text-align: center; color: var(--grey-head);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.7; margin: 5rem 0;
+}
+/* ── Lists (works & blog indexes) ──────────────────────────── */
+.index-year { color: var(--grey-marg); }
+.list-intro { font-style: italic; margin-bottom: 2rem; }
+
+/* ── Single pages (works & blog posts) ─────────────────────── */
+.work-head h1 { color: var(--brown-dk); font-size: 2rem; margin-bottom: .2em; }
+.work-meta {
+  color: var(--grey-marg); font-size: 1.06rem; line-height: 1.5;
+  margin: 0 0 1.6rem;
+}
+.work-meta .venue { font-style: italic; }
+.work-meta a { color: var(--grey-marg); text-decoration: underline; text-decoration-color: var(--rule); }
+.work-meta a:hover { color: var(--brown); }
+.work-caveat {
+  color: var(--grey-marg);
+  font-size: 1rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: .45rem 0;
+  margin: 0 0 1.6rem;
+}
+.work-caveat a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); }
+.work-citation {
+  font-size: 1.02rem;
+  border-left: 2px solid var(--rule);
+  padding-left: .9em; margin: .8rem 0 1.4rem;
+}
+.prose { overflow-wrap: break-word; }
+
+/* ── The reading pane ──────────────────────────────────────── */
+#reader {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 46%;
+  background: var(--paper);
+  border-left: 1px solid var(--rule);
+  box-shadow: -6px 0 18px rgba(60,40,10,.06);
+  z-index: 50;
+  flex-direction: column;
+}
+body.reader-open #reader { display: flex; }
+/* True split view: while the pane is open the window itself does not
+   scroll — the left column becomes its own scroll container, so each
+   half owns a scrollbar at its own edge (no more stacked scrollbars).
+   NOTE: the column gets an explicit width (54%), never width:100% plus
+   a margin — an over-constrained flex item resolves differently across
+   engines (this broke Firefox once). min-height:0 is the canonical fix
+   for a flex child that refuses to become a scroll container. */
+body.reader-open { overflow: hidden; height: 100vh; }
+body.reader-open .page-body {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 54%;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+body.reader-open .page-body main { max-width: none; margin-right: 0; }
+body.reader-open .site-nav { max-width: none; width: 54%; margin: 0; }
+@media (min-width: 1250px) {
+  body.reader-open main.with-margins {
+    padding-right: 2rem;
+    max-width: none;
+  }
+}
+body.reader-open .site-footer { width: 54%; margin: 0; max-width: none; }
+.reader-bar {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem;
+  /* Mirror .site-nav's metrics exactly, so the pane's top rule and the
+     site header's bottom rule meet as one line across the divider. */
+  padding: .65rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--grey-head); font-style: italic;
+}
+.reader-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reader-actions { display: flex; gap: .9rem; align-items: baseline; }
+.reader-permalink { color: var(--grey-head); font-size: 1rem; white-space: nowrap; }
+.reader-permalink:hover { color: var(--brown); }
+.reader-close {
+  background: none; border: 0; cursor: pointer;
+  color: var(--grey-head); font-size: 1.5rem; line-height: 1;
+  font-family: inherit;
+  padding: 0 .1em;
+}
+.reader-close:hover { color: var(--brown); }
+.reader-content {
+  overflow-y: auto;
+  padding: 1.2rem 2rem 3rem;
+  font-size: 1.13rem;
+}
+/* On very wide monitors the pane is nearly a page wide; keep its text
+   at a readable measure, centered. */
+.reader-content > * { max-width: var(--measure); margin-left: auto; margin-right: auto; }
+.reader-content h1 { font-size: 1.7rem; color: var(--brown-dk); }
+
+/* ── Colophon & 404 ────────────────────────────────────────── */
+.ornament { display: block; margin: 2.5rem auto 1rem; width: min(20rem, 70%); }
+.colophon-initial::first-letter {
+  float: left;
+  font-size: 3.6em; line-height: .75;
+  color: var(--brown);
+  border: 2px solid var(--brown);
+  margin: .08em .12em 0 0;
+  padding: .1em .15em;
+  font-weight: 500;
+}
+
+/* ── Small screens ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1.12rem; }
+  /* Comfortable tap targets for the running-head nav (≥24px). */
+  .site-nav a { display: inline-block; padding: .3rem 0; }
+  .cv-entry { grid-template-columns: 1fr; gap: 0; }
+  .cv-entry .year { text-align: left; font-size: .95em; }
+  .cv-entry .year:empty { display: none; }
+  /* Marginal notes join the single column (a pocket edition folds its
+     apparatus into the line) — without this they would still claim a
+     second grid column and squeeze the entry. */
+  .cv-entry > .marginal { grid-column: auto; }
+}
+
+/* The yielding running head (≤640px, driven by reader.js): slides away
+   while reading downward, returns on the first upward scroll. Without
+   JavaScript the head simply stays, as on wide screens. */
+.site-header { transition: transform .22s ease; }
+body.head-away .site-header { transform: translateY(-100%); }
+@media (prefers-reduced-motion: reduce) {
+  .site-header { transition: none; }
+}
+
+/* The rising manicule: after a couple of screens of reading, a hand
+   appears at the corner pointing back to the top. An anchor, not a
+   button — without JavaScript it never appears at all. */
+.rise {
+  position: fixed; right: .9rem; bottom: .9rem; z-index: 30;
+  font-size: 1.9rem; line-height: 1;
+  padding: .35rem .5rem;
+  color: var(--brown); text-decoration: none;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  visibility: hidden; opacity: 0;
+  transition: opacity .25s, visibility .25s;
+}
+.rise.shown { visibility: visible; opacity: 1; }
+body.reader-open .rise { visibility: hidden; opacity: 0; }
+
+/* Overflow armor: wide tables scroll within themselves, so the page
+   never breaks its measure (code blocks already do — see pre above).
+   reader.js supplies the .scrolls wrapper. */
+.scrolls { overflow-x: auto; margin: 1.4em 0; }
+.scrolls > table { margin: 0; }
+
+/* Fingers, not cursors: on touch devices the small precise targets —
+   read links, footnote marks — get larger tap areas with no visual
+   change (the padding is cancelled by negative margins). */
+@media (pointer: coarse) {
+  /* Sparse targets get the full 44px; footnote marks — which cluster
+     in tight runs — get a smaller boost so neighbors don't overlap. */
+  a.readlink, .reader-close {
+    padding: .7rem .5rem; margin: -.7rem -.5rem;
+  }
+  .prose sup a, a.footnote-ref, a.footnote-backref {
+    padding: .35rem .3rem; margin: -.35rem -.3rem;
+  }
+}
+
+/* ── White backgrounds sink into the paper ─────────────────────
+   Blog figures, site art, and portraits blend onto the page tint.
+   Works pages are exempt: publications stay true to their published
+   form, white grounds and all. */
+.section-blog .prose img,
+#reader.pane-blog .reader-content img,
+.cv .bio img.headshot,
+img.ornament {
+  mix-blend-mode: multiply;
+}
+
+/* ── High-contrast preference ──────────────────────────────────
+   The default palette follows the printed CV's colophon and stays
+   untouched; readers who ask the OS for more contrast get the same
+   inks, mixed darker. Measured against the paper (#fffdf9):
+     #A6A6A6 → 2.40:1  →  #6b6b6b  5.25:1
+     #808080 → 3.89:1  →  #595959  6.89:1
+     #AA610D → 4.67:1  →  #8a4f0a  6.45:1                        */
+@media (prefers-contrast: more) {
+  :root {
+    --grey-head: #6b6b6b;
+    --grey-marg: #595959;
+    --brown:     #8a4f0a;
+  }
+  .prose a { text-decoration-color: var(--brown); }
+}
+
+/* ── Print ─────────────────────────────────────────────────────
+   Academics print CVs. Ink only, no chrome, no split view.       */
+@media print {
+  @page { margin: 2cm; }
+  :root {
+    --paper: #fff;
+    --grey-head: #333;
+    --grey-marg: #333;
+    --brown: #000;
+    --brown-dk: #000;
+  }
+  html { scroll-behavior: auto; }
+  body { display: block; background: #fff; color: #000; font-size: 11pt; }
+  .site-header, .site-footer, #reader, a.readlink, .skip-link,
+  .toc-details, .side-rail, .rise { display: none !important; }
+  .sassy { color: #444; }
+  /* Never print the split view, whatever state the pane was in. */
+  body.reader-open { overflow: visible; height: auto; }
+  body.reader-open .page-body { width: 100%; overflow: visible; }
+  main, main.with-margins {
+    max-width: var(--measure);
+    padding-left: 0; padding-right: 0;
+  }
+  /* Marginalia fold inline (their sub-1250px behaviour). */
+  body .cv-entry > .marginal { position: static; grid-column: 2; width: auto; margin-left: 0; }
+  a { color: #000; text-decoration: none; }
+  .prose a { text-decoration: underline; text-decoration-color: #000; }
+  h2, h3 { break-after: avoid; }
+  .cv-entry, blockquote, pre { break-inside: avoid; }
+  img { filter: grayscale(1); }
+}

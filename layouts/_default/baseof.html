@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{{ `<!-- Assembled by Hugo, with a large language model's help, and set in EB Garamond. The full recipe: /colophon/ -->` | safeHTML }}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}{{ end }}</title>
+  {{- /* Every page gets its own description: front matter first, then the
+       work's own abstract where one was preserved, then a summary of the
+       page's actual content, then the site line. */ -}}
+  {{- $desc := .Description -}}
+  {{- if not $desc }}{{ with .Params.abstract }}{{ $desc = . | plainify | htmlUnescape | truncate 155 }}{{ end }}{{ end -}}
+  {{- if not $desc }}{{ if .IsPage }}{{ $desc = .Summary | plainify | htmlUnescape | truncate 155 }}{{ end }}{{ end -}}
+  {{- if not $desc }}{{ $desc = site.Params.description }}{{ end -}}
+  <meta name="description" content="{{ $desc }}">
+  {{- /* Open Graph & Twitter cards: what Slack, iMessage, and social
+       platforms use to draw a preview when a link is shared. */}}
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:image" content="{{ "images/ornamental-s.png" | absURL }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="author" content="{{ site.Params.author }}">
+  {{ with .OutputFormats.Get "rss" -}}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+  {{ end -}}
+  {{/* Stylesheet and script are served unminified, under their own names.
+       A site that brags about its typography should not be ashamed of its
+       source. View freely: /css/main.css and /js/reader.js */}}
+  <link rel="stylesheet" href="{{ (resources.Get "css/main.css").RelPermalink }}">
+  <link rel="icon" href="/images/ornamental-s.png" type="image/png">
+  <link rel="preload" href="/fonts/EBGaramond-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/EBGaramond-Italic-var.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="{{ block "bodyclass" . }}{{ end }}" data-reader-min="{{ site.Params.readerMinWidth }}">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Site">
+    <a class="site-name" href="/">Scott B. Weingart</a>
+    <span class="nav-links">
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) (hasPrefix $.RelPermalink .URL) }} class="active"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+    </span>
+  </nav>
+</header>
+
+<div class="page-body">
+  <main id="main" tabindex="-1" class="{{ block "mainclass" . }}{{ end }}">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <aside id="reader" hidden aria-label="Reading pane">
+    <div class="reader-bar">
+      <span class="reader-title"></span>
+      <span class="reader-actions">
+        <a class="reader-permalink" href="#" title="Open as its own page">full&thinsp;page&thinsp;<span aria-hidden="true">↗</span></a>
+        <button class="reader-close" title="Close (Esc)" aria-label="Close reading pane"><span aria-hidden="true">×</span></button>
+      </span>
+    </div>
+    <div class="reader-content prose" tabindex="0" role="region" aria-label="Opened work"></div>
+  </aside>
+</div>
+
+{{- /* The rising manicule: points back to the top after a long read.
+     Revealed by reader.js after ~1.5 screens of scrolling; without
+     JavaScript it stays hidden (see .rise in main.css). */ -}}
+<a class="rise" href="#main" aria-label="Back to top">&#9757;&#xFE0E;</a>
+
+<footer class="site-footer">
+  {{- /* The traditional closing word, and nothing else: the nav above
+       does all the navigating, so the footer is pure ornament. */ -}}
+  <span class="finis">FINIS.</span>
+</footer>
+
+<script src="{{ (resources.Get "js/reader.js").RelPermalink }}" defer></script>
+</body>
+</html>

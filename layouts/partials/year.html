@@ -1,0 +1,4 @@
+{{- /* Year-gutter label: digits roman, words (ongoing, forthcoming,
+     unpublished…) italic, as in the printed CV. */ -}}
+{{- $y := printf "%v" . -}}
+{{- replaceRE `([A-Za-z]+)` `<span class="range">$1</span>` $y | safeHTML -}}

@@ -1,0 +1,5 @@
+8dbac7294fb5ec67a3efc8f95b293684d3d0efee90d0161b2d40301a5f090dac       14554  2012-01-10-doing-bayesian-data-analysis.md
+e2cfed92e8983319504f6fb240c6773367fc0a4ee00db49c111a46e24a26550e      138348  images/SBW-037-img-001-science-thanksgiving.jpg
+8e85daf7e1d546d8525f71a469e49d1706b0e464419810bbf4e4971b0aec76ce      273945  images/SBW-037-img-002-astrology.gif
+d5f813e7cf949b9719c4256923aeea4c963ea418293c0d8e45b3e9112375d3c5       45878  images/SBW-037-img-003-last-line-of-defense-statistics.gif
+2372688b55165620dd0a8aa1b044bb911890ca7fdae38ec36ce502f040094871       23872  images/SBW-037-img-004-null-hypothesis.png

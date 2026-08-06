@@ -1,0 +1,36 @@
+{{- /* The CV's section list, one <li> per section — rendered twice:
+     inside the floating side rail (wide screens) and inside the
+     collapsed Contents disclosure (narrower screens). */ -}}
+{{- $toc := slice
+  (dict "id" "appointments" "t" "Appointments")
+  (dict "id" "education" "t" "Education")
+  (dict "id" "roles" "t" "Roles & Responsibilities")
+  (dict "id" "highlights" "t" "Highlights of Note")
+  (dict "id" "biography" "t" "Extended Biography")
+  (dict "id" "books" "t" "Academic Books")
+  (dict "id" "non-academic-books" "t" "Non-Academic Books")
+  (dict "id" "articles" "t" "Articles & Chapters")
+  (dict "id" "selected-other-publications" "t" "Other Publications")
+  (dict "id" "edited-volumes" "t" "Edited Volumes")
+  (dict "id" "awards" "t" "Awards, Honors, & Funding")
+  (dict "id" "talks" "t" "Keynote Addresses")
+  (dict "id" "conference-presentations" "t" "Conference Presentations")
+  (dict "id" "other-presentations" "t" "Other Presentations")
+  (dict "id" "workshops" "t" "Workshops & Demos")
+  (dict "id" "posters" "t" "Posters")
+  (dict "id" "teaching" "t" "Teaching")
+  (dict "id" "projects" "t" "Projects, Tools, & Websites")
+  (dict "id" "consulting" "t" "Contract & Consulting")
+  (dict "id" "reviews" "t" "Reviews & Consequents")
+  (dict "id" "service" "t" "External Service")
+  (dict "id" "internal-service" "t" "Internal Service")
+  (dict "id" "grant-affiliations" "t" "Grant Affiliations")
+  (dict "id" "press" "t" "Press & PR")
+  (dict "id" "affiliations" "t" "Affiliations")
+  (dict "id" "blog-posts" "t" "Scholarly Blog Posts")
+  (dict "id" "by-the-numbers" "t" "By The Numbers")
+  (dict "id" "colophon" "t" "Colophon")
+-}}
+{{- range $toc }}
+  <li><a href="#{{ .id }}">{{ partial "rich.html" .t }}</a></li>
+{{- end }}

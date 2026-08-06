@@ -1,0 +1,21 @@
+# ── Line endings: one law for the whole repository ─────────────
+# All text is stored and checked out with LF. The generated files
+# are already written LF on every OS (scripts/ingest.py guarantees
+# it), so nothing churns and no CRLF warnings appear on Windows.
+# Batch files are the one exception: cmd.exe prefers CRLF.
+*        text=auto eol=lf
+*.bat    text eol=crlf
+# Spreadsheet data belongs to Excel: stored byte-faithful, never
+# normalized (also silences the CRLF notice on every commit).
+*.csv    -text
+
+# ── Binaries: never normalized, never diffed as text ───────────
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.ico    binary
+*.pdf    binary
+*.woff2  binary
+*.zip    binary

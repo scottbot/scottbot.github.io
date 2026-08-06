@@ -1,0 +1,5 @@
+28cfcb906b9f9b80c387bd242295c0697958d3b53f8e3dc7a2bc994f99653836       40931  Weingart_2015_Finding_the_History_and_Philosophy_of_Science.md
+65bb8824e29bf9c7d2485b1fabeddffad7f87dc53de40dc821e545883157ad6c       36689  images/SBW-024-fig-001.png
+52234eb59ebf6a5026fa7e719c7a64bb40ac4a4876fbf49d6bac543f7027723b       71656  images/SBW-024-fig-002.png
+6325c70c513107ba2a77ef2a86a9c2719062fa413aa8babd6abe14e1ad91944e       63404  images/SBW-024-fig-003.png
+d6014a7dfd35241df8edd7136f4516fa5077e610b96bac894ee0c71f754f1e8c       50505  images/SBW-024-fig-004.png

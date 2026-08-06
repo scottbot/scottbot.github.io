@@ -1,0 +1,229 @@
+sections:
+  - key: academic-books
+    title: "Academic Books"
+    subtitle: "peer reviewed"
+    entries:
+      - year: "2022"
+        citation: "Graham, S., Milligan, I., Weingart, S.B., & Martin, K. (2022). *Exploring Big Historical Data: The Historian’s Macroscope, 2nd edition*. London: World Scientific Press. [10.1142/12435](https://doi.org/10.1142/12435)"
+        note: "signif. revisions"
+        work: "macroscope-2e"
+        sbw: SBW-001
+      - year: "2020"
+        citation: "Ahnert, R., Ahnert, S.E., Coleman, N., & Weingart, S.B. (2020). *The Network Turn*. Cambridge: Cambridge University Press. [10.1017/9781108866804](https://doi.org/10.1017/9781108866804)"
+        note: "150+ citations"
+        work: "Network Turn"
+        sbw: SBW-002
+      - year: "2014"
+        citation: "Graham, S., Milligan, I., & Weingart, S.B. (2014). *Exploring Big Historical Data: The Historian’s Macroscope*. London: Imperial College Press. [10.1142/p981](https://doi.org/10.1142/p981) [Translated into and published in Chinese.]"
+        note: "440+ citations; bestseller"
+        work: "macroscope-1stEd"
+        sbw: SBW-047
+
+  - key: non-academic-books
+    title: "Non-Academic Books"
+    subtitle: "not peer reviewed"
+    entries:
+      - year: "2010"
+        citation: "Weingart, S.B. et al. (2010). *Science of Science (Sci2) Tool User Manual*. Digital Publication."
+        note: "15+ citations"
+        work: "Weingart_et_al_2011_Sci2_User_Manual"
+        sbw: SBW-009
+      - year: "2009"
+        citation: "Börner, K. et al. (2009). *Network Workbench Tool User Manual*. Digital Publication."
+        work: "Borner_et_al_2009_NWB_User_Manual"
+        sbw: SBW-004
+
+  - key: articles-chapters
+    title: "Articles & Chapters"
+    subtitle: "peer reviewed"
+    entries:
+      - year: "unpublished"
+        citation: "Weingart, S.B. (unpublished). The Networked Structure of Early Modern Science. *Journal for the Association of Information Science & Technology*."
+        sbw: SBW-135
+      - year: ""
+        citation: "Sack, G. & Weingart, S.B. (unpublished). Literary Network Analysis. In J. O’Sullivan (Ed.) *Digital Humanities for Literary Studies: Theories, Methods, and Practices*. College Station: Texas A&M University Press."
+        work: "Sack_and_Weingart_Literary_Network_Analysis"
+        sbw: SBW-124
+      - year: "2024"
+        citation: "Conroy, M., Gillmann, C., Harvey, F., Mchedlidze, T., Fabrikant, S., Windhager, F., Scheuermann, G., Weingart, S.B., Tangherlini, T., Warren, C., Rehbein, M., Börner, K., Elo, K., Jäncke, S., Kerren, A., Nöllenburg, M., Dwyer, T., Eide, Ø., Kobourov, S., & Betz, G. (2024). Uncertainty in Humanities Network Visualization. *Frontiers in Communication*, 7. [10.3389/fcomm.2023.1305137](https://doi.org/10.3389/fcomm.2023.1305137)"
+        work: "Conroy_et_al_2024_Uncertainty_Humanities_Network_Visualization"
+        sbw: SBW-003
+      - year: "2021"
+        citation: "Lincoln, M., Weingart, S.B. & Eichmann-Kalwara, N. (2021). The Index of Digital Humanities Conferences. *Journal of Open Humanities Data*, 7(12). [10.5334/johd.26](https://doi.org/10.5334/johd.26)"
+        note: "10+ citations"
+        work: "Lincoln_et_al_2021_Index_of_DH_Conferences"
+        sbw: SBW-132
+      - year: ""
+        citation: "Heberling, J.M., Miller, J.T., Noesgaard, D., Weingart, S.B., & Schigel, D. (2021). Data integration enables global biodiversity synthesis. *Proceedings of the National Academy of Sciences*, 118(6). [10.1073/pnas.2018093118](https://doi.org/10.1073/pnas.2018093118)"
+        note: "310+ citations"
+        work: "heberling-et-al-2021-data-integration-enables-global-biodiversity-synthesis"
+        sbw: SBW-034
+      - year: "2020"
+        citation: "Burton, M., Lavin, M., Otis, J., & Weingart, S.B. (2020). Digits: Two Reports on New Units of Scholarly Publication. *Journal of Electronic Publishing*, 23(1). [10.3998/3336451.0022.105](https://doi.org/10.3998/3336451.0022.105)"
+        work: "Burton_et_al_2019_Digits"
+        sbw: SBW-126
+      - year: ""
+        citation: "Gomez, F., Weingart, S.B., Mulligan, R., & Evans, D. (2019/2020). The Latin American Comics Archive (LACA): an online platform housing digitized Spanish-language comics as a tool to enhance literacy, research, and teaching through scholar / student collaboration. *Cuadernos del Centro de Estudios en Diseño y Comunicación*, 89. [10.18682/cdc.vi89.3789](https://doi.org/10.18682/cdc.vi89.3789)"
+        note: "award-winning"
+        work: "Gomez_et_al_2020_Latin_American_Comics_Archive"
+        sbw: SBW-130
+      - year: "2019"
+        citation: "Eichmann, N., Jorgensen, J., & Weingart, S.B. (2019). Representation at Digital Humanities Conferences (2000-2015). In J. Wernimont & E. Losh (Eds.) *Bodies of Information: Intersectional Feminism and Digital Humanities*. Minneapolis: University of Minnesota Press. [10.5749/j.ctv9hj9r9.9](https://doi.org/10.5749/j.ctv9hj9r9.9)"
+        note: "30+ citations"
+        work: "Eichmann-Kalwara_et_al_2018_Representation_at_DH_Conferences"
+        sbw: SBW-123
+      - year: "2017"
+        citation: "Weingart, S.B. & Eichmann, N. (2017). What’s Under the Big Tent? A Study of ADHO Conference Abstracts. *Digital Studies / Le champ numérique*, 7(1). [10.16995/dscn.284](https://doi.org/10.16995/dscn.284)"
+        note: "50+ citations"
+        work: "Weingart_and_Eichmann_2017_Whats_Under_the_Big_Tent"
+        sbw: SBW-119
+      - year: ""
+        citation: "Ladd, J., Otis, J., Warren, C., & Weingart, S.B. (2017). Exploring and Analyzing Network Data with Python. *The Programming Historian*, 2. [Translated into and published in Ukrainian, Portuguese, and French.] [10.46430/phen0064](https://doi.org/10.46430/phen0064)"
+        note: "20+ citations"
+        work: "Ladd_et_al_2017_Exploring_Network_Data_with_Python"
+        sbw: SBW-118
+      - year: "2016"
+        citation: "Van den Heuvel, C., Weingart, S.B., Spelt, N., & Nellen, H. (2016). Circles of Confidence in Correspondence. *Nuncius*, 31(1). [10.1163/18253911-03101002](https://doi.org/10.1163/18253911-03101002)"
+        note: "15+ citations"
+        work: "Van_den_Heuvel_et_al_2016_Circles_of_Confidence"
+        sbw: SBW-107
+      - year: ""
+        citation: "Langmead, A., Otis, J., Warren, C., Weingart, S.B., & Zilinski, L. (2016). Towards Interoperable Network Ontologies for the Digital Humanities. *International Journal of Humanities and Arts Computing*, 10(1-2). [10.3366/ijhac.2016.0157](https://doi.org/10.3366/ijhac.2016.0157)"
+        note: "30+ citations"
+        work: "Langmead_et_al_2016_Interoperable_Network_Ontologies"
+        sbw: SBW-106
+      - year: "2015"
+        citation: "Ekbia, H., Mattioli, M., Kouper, I., Arave, G., Ghazinejad, A., Bowman, Ratandeep Suri, V., Tsou, A., Weingart, S.B., & Sugimoto, C. (2015). Big data, bigger dilemmas: A critical review. *Journal of the Association for Information Science and Technology*, 66(8). [10.1002/asi.23294](https://doi.org/10.1002/asi.23294)"
+        note: "480+ citations"
+        work: "Ekbia_et_al_2015_Big_data_bigger_dilemmas"
+        sbw: SBW-103
+      - year: ""
+        citation: "Sugimoto, C. & Weingart, S.B. (2015). The Kaleidoscope of Disciplinarity. *Journal of Documentation*, 71(4). [10.1108/JD-06-2014-0082](https://doi.org/10.1108/JD-06-2014-0082)"
+        note: "150+ citations"
+        work: "Sugimoto_and_Weingart_2015_kaleidoscope_of_disciplinarity"
+        sbw: SBW-025
+      - year: ""
+        citation: "Weingart, S.B. (2015). Finding the History and Philosophy of Science. *Erkenntnis*, 80(1). [10.1007/s10670-014-9621-1](https://doi.org/10.1007/s10670-014-9621-1)"
+        note: "45+ citations"
+        work: "Weingart_2015_Finding_the_History_and_Philosophy_of_Science"
+        sbw: SBW-024
+      - year: ""
+        citation: "Graham, S. & Weingart, S.B. (2015). The Equifinality of Archaeological Networks: An Agent-Based Exploratory Lab Approach. *Journal of Archaeological Method and Theory*, 22(1). [10.1007/s10816-014-9230-y](https://doi.org/10.1007/s10816-014-9230-y)"
+        note: "50+ citations"
+        work: "Graham_Weingart_2014_Equifinality_Archaeological_Networks"
+        sbw: SBW-023
+      - year: "2014"
+        citation: "Graham, S., Milligan, I., & Weingart, S.B. (2014). Writing *The Historian’s Macroscope* in Public. *Perspectives in History*, 52(7)."
+        work: "Graham_et_al_2014_Writing_Macroscope_in_Public"
+        sbw: SBW-094
+      - year: ""
+        citation: "Weingart, S.B. (2014). Planned IVMOOC Extensions. In K. Börner & D. Polley (Eds.) *Visual Insights*. Boston: MIT Press."
+        sbw: SBW-136
+      - year: "2013"
+        citation: "Weingart, S.B. (2013). From trees to webs: uprooting knowledge through visualization. In A. Slavic, A. Akdag Salah, & S. Davies (Eds.) *Classification and visualization: interfaces to knowledge*. Würzburg: Ergon Verlag."
+        note: "10+ citations"
+        work: "Weingart_2013_From_Trees_to_Webs"
+        sbw: SBW-074
+      - year: ""
+        citation: "Weingart, S.B. & Jorgensen, J. (2013). Computational Analysis of the Body in European Fairy Tales. *Literary and Linguistic Computing*, 28(3). [10.1093/llc/fqs015](https://doi.org/10.1093/llc/fqs015)"
+        note: "award-winning; 40+ citations"
+        work: "Weingart_and_Jorgensen_2012"
+        sbw: SBW-038
+      - year: ""
+        citation: "Weingart, S.B. & Meeks, E. (2013). The Digital Humanities Contribution to Topic Modeling. *Journal of Digital Humanities*, 2(1)."
+        note: "130+ citations"
+        work: "Weingart_and_Meeks_2013_DH_Contribution_to_Topic_Modeling"
+        sbw: SBW-075
+      - year: ""
+        citation: "Thelwall, M., Tsou, A., Weingart, S.B., Holmberg, K., & Haustein, S. (2013). Tweeting links to academic articles. *Cybermetrics*, 17(1)."
+        note: "150+ citations"
+        work: "Thelwall_et_al_2013_Tweeting_Links"
+        sbw: SBW-073
+      - year: ""
+        citation: "Milojevic, S., Hemminger, B., Leydesdorff, L., Weingart, S.B., Chen, C., & Priem, J. (2013). Information Visualization State-of-the-Art and Future Directions. *Proceedings of the ASIS&T Annual Meeting*, 49(1). [10.1002/meet.14504901155](https://doi.org/10.1002/meet.14504901155)"
+        note: "10+ citations"
+        work: "Milojevic_et_al_2012_Information_visualization"
+        sbw: SBW-022
+      - year: "2012"
+        citation: "Graham, S., Weingart, S.B., & Milligan, I. (2012). Getting Started with Topic Modeling and MALLET. *The Programming Historian*, 2. [Translated into and published in Spanish.] [10.46430/phen0017](https://doi.org/10.46430/phen0017)"
+        note: "190+ citations"
+        work: "Graham_et_al_2012_topic_modeling"
+        sbw: SBW-021
+      - year: "2011"
+        citation: "Weingart, S.B. (2011). Demystifying Networks. *Journal of Digital Humanities*, 1(1)."
+        note: "70+ citations"
+        work: "Weingart_2011_Demystifying_Networks"
+        sbw: SBW-016
+      - year: ""
+        citation: "Guo, H., Weingart, S.B., & Börner, K. (2011). Mixed-Indicators Model for Identifying Emerging Research Fields. *Scientometrics*, 89(1). [10.1007/s11192-011-0433-7](https://doi.org/10.1007/s11192-011-0433-7)"
+        note: "150+ citations"
+        work: "Guo_et_al_2011_Mixed_indicators_model"
+        sbw: SBW-010
+      - year: "2010"
+        citation: "Allen, C., Murdock, J., Buckner, C., & Weingart, S.B. (2010). An API for Philosophy. *APA Newsletter on Philosophy and Computers*, 10(1)."
+        work: "Allen_et_al_2010_An_API_for_Philosophy"
+        sbw: SBW-005
+
+  - key: selected-other-publications
+    title: "Selected Other Publications"
+    subtitle: "not peer reviewed"
+    entries:
+      - year: "2025"
+        citation: "National Endowment for the Humanities. (2025). State and Impact of the Humanities: Funding Opportunity 20250416-XO. *National Endowment for the Humanities Office of Data and Evaluation Notice of Funding Opportunity (NOFO)*."
+        note: "grant program"
+        work: "NEH_2025_State_and_Impact_of_the_Humanities_NOFO"
+        sbw: SBW-134
+      - year: "2024"
+        citation: "Alpert-Abrams, H., Unger, J., Weingart, S.B., Lazopoulos, G., Rodriguez, L., & Skinner, B. (2024). Assessing the State of the Humanities: Preliminary Feedback on a Proposed Data-Driven Research Grant Program. *National Endowment for the Humanities Office of Data and Evaluation Report*."
+        note: "report"
+        work: "NEH_2024_Assessing_the_State_of_the_Humanities_Preliminary"
+        sbw: SBW-133
+      - year: "2021"
+        citation: "Weingart, S.B. & Lincoln, M. (2021). CMU Library Labs (2020-2024). *CMU Library Lab White Paper*. [10.1184/R1/13522718](https://doi.org/10.1184/R1/13522718)"
+        note: "white paper"
+        work: "CMU_Library_Labs_2020-2024"
+        sbw: SBW-033
+      - year: "2020"
+        citation: "Lincoln, M, & Weingart, S.B. (2020). CMU Libraries Tech Report, Fall 2020. *CMU Library Lab White Paper*."
+        note: "white paper"
+        sbw: SBW-137
+      - year: ""
+        citation: "Corrin, J., Davis, E., Lincoln, M., & Weingart, S.B. (2020). CAMPI: Computer-Aided Metadata Generation for Photo archives Initiative. *CMU Library Lab White Paper*. [10.1184/R1/12791807](https://doi.org/10.1184/R1/12791807)"
+        note: "white paper"
+        work: "Lincoln_et_al_2020_CAMPI"
+        sbw: SBW-131
+      - year: "2019"
+        citation: "Weingart, S.B. (2019). Networks in the Humanities: Challenges & Opportunities. In K. Börner, O. Eide, T. Mchedlidze, M. Rehbein, & G. Scheuermann (Eds.) *Network Visualization in the Humanities*. *Dagstuhl Reports*, 8(11). [10.4230/DagRep.8.11.139](https://doi.org/10.4230/DagRep.8.11.139)"
+        note: "report"
+        sbw: SBW-138
+      - year: ""
+        citation: "Conroy, M., Elo, K., Heyer, G., Jannidis, F., Rehbein, M., Symvonis, A., & Weingart, S.B. (2019). Visualizing Networks and Temporality. In K. Börner, O. Eide, T. Mchedlidze, M. Rehbein, & G. Scheuermann (Eds.) *Network Visualization in the Humanities*. *Dagstuhl Reports*, 8(11). [10.4230/DagRep.8.11.139](https://doi.org/10.4230/DagRep.8.11.139)"
+        note: "report"
+        work: "Conroy_et_al_2019_Visualizing_Networks_and_Temporality"
+        sbw: SBW-127
+      - year: ""
+        citation: "Weingart, S.B. (2019). The Route of a Text Message. *Motherboard*, an imprint of *VICE*. [Translated into and published in Dutch, Italian, and Russian.]"
+        note: "popular press; 1mil+ readers"
+        work: "the-route-of-a-text-message-a-love-story"
+        sbw: SBW-026
+      - year: "2018"
+        citation: "Sloan, R. et al. (2018). The Center for Midnight. *Digital Publication*. https://www.robinsloan.com/center-for-midnight/"
+        note: "fiction"
+        work: "2018-11-04-the-center-for-midnight"
+        sbw: SBW-125
+      - year: "2016"
+        citation: "Weingart, S.B. (2016). Stigma. *Inside Higher Ed*."
+        note: "popular press"
+        work: "2016-05-27-stigma"
+        sbw: SBW-115
+      - year: "2013"
+        citation: "Craig, K. & Weingart, S.B. (2013). Coding the Bishop. *Digital Publication*."
+        sbw: SBW-139
+
+  - key: edited-volumes
+    title: "Edited Volumes"
+    entries:
+      - year: "2013"
+        citation: "Weingart, S.B. & Meeks, E. (Eds.) (2013). *Journal of Digital Humanities*, 2(1)."
+        work: "Journal_of_Digital_Humanities_2-1"
+        sbw: SBW-072

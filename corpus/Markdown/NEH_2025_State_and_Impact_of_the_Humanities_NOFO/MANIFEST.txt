@@ -1,0 +1,2 @@
+e8feb9900bfcd654bb0652fa607b3180998dff1bb6ee3c5631eff90673c153c4      130293  NEH_2025_State_and_Impact_of_the_Humanities_NOFO.md
+c952c7a18de1fb92202025ac6e9c6c296e09c897ad1be8a21281ca4e6027031a  156761  images/fig-001.png

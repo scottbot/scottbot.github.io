@@ -1,0 +1,7 @@
+{{- /* "❧ read" chip linking a CV entry to its full text on the site.
+     The hedera (printer's leaf) marks read-links; manicules are reserved
+     for the spots the printed CV actually uses them.
+     Argument: the corpus-folder name stored in the entry's `work` key,
+     resolved through data/workmap.yaml. */ -}}
+{{- $path := index hugo.Data.workmap . -}}
+{{- with $path }} <a class="readlink" href="{{ . }}"{{ with site.GetPage . }} aria-label="Read: {{ .Title }}"{{ end }}><span class="leaf" aria-hidden="true">❧&thinsp;</span>read</a>{{ end -}}

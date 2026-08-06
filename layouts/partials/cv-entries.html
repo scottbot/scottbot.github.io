@@ -1,0 +1,18 @@
+{{- /* Renders a list of generic dated CV entries.
+     Context: a dict { "entries": <list>, "citekey": "citation"|"text" } —
+     entries use .text (or .citation), optional .sub, .note, .icon, .work. */ -}}
+{{- $key := .citekey | default "text" -}}
+{{- range .entries }}
+{{- if not .intro }}
+<div class="cv-entry">
+  <span class="year">{{ with .year }}{{ partial "year.html" . }}{{ end }}</span>
+  <div class="body">
+    {{- $line := index . $key -}}
+    {{- with $line }}{{ partial "rich.html" . }}{{ end -}}
+    {{- with .work }}{{ partial "readlink.html" . }}{{ end -}}
+    {{- range .sub }}<span class="sub">{{ partial "rich.html" . }}</span>{{ end -}}
+  </div>
+  {{- partial "marginal.html" . -}}
+</div>
+{{- end }}
+{{- end }}

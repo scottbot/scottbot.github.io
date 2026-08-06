@@ -1,0 +1,151 @@
+{{ define "bodyclass" }}reader-enabled cv-page{{ end }}
+{{ define "mainclass" }}with-margins{{ end }}
+{{ define "main" }}
+{{- $cv := hugo.Data.cv -}}
+{{- $p := $cv.profile -}}
+<div class="cv">
+  {{/* ── Head, after the CV's first sheet. As in the print, the name,
+       tagline, contact line, and mission are all set flush to both
+       edges of one block (the name's natural width sets the measure). */}}
+  <div class="hero hero-justified">
+    <span class="updated">Updated {{ $p.updated }}</span>
+    <h1 class="bigname">{{ $p.name }}</h1>
+    <p class="tagline">{{ replaceRE `masquerading as a` `<span class="masq">masquerading as a</span>` (partial "rich.html" $p.tagline) | safeHTML }}</p>
+    <div class="contact">
+      {{ with $p.phone }}<span>{{ . }}</span>{{ end }}
+      <a href="mailto:{{ $p.email }}">{{ $p.email }}</a>
+      <a href="/">{{ $p.web }}</a>
+    </div>
+    <p class="mission">{{ partial "rich.html" $p.mission }}</p>
+  </div>
+
+  {{/* Contents: on wide screens a still menu floats at the right and
+       yields its place to the reading pane when a work is opened; on
+       narrower screens the same list folds into a compact disclosure. */}}
+  <details class="toc-details">
+    <summary>Contents</summary>
+    <ul class="toc-list">{{ partial "cv-toc-items.html" . }}</ul>
+  </details>
+
+  {{/* ── Appointments & Education ─────────────────────────── */}}
+  <h2 class="cv-section" id="appointments">Appointments</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.appointments) }}
+
+  <h2 class="cv-section" id="education">Education</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.education) }}
+
+  {{/* ── Roles & Responsibilities ─────────────────────────── */}}
+  <h2 class="cv-section" id="roles">Roles {{ partial "rich.html" "&" }} Responsibilities</h2>
+  {{ range $cv.roles }}
+    <h3 class="role-inst">{{ partial "rich.html" .institution }}</h3>
+    {{ range .positions }}<p class="role-pos">{{ partial "rich.html" . }}</p>{{ end }}
+    <div class="role-body">{{ partial "rich.html" .body }}</div>
+  {{ end }}
+
+  {{/* ── Highlights of Note ───────────────────────────────── */}}
+  <h2 class="cv-section" id="highlights">Highlights of Note</h2>
+  {{ range $cv.highlights }}
+    <p class="hl-title">{{ partial "rich.html" .title }}</p>
+    <p class="hl-body">{{ partial "rich.html" .body }}</p>
+  {{ end }}
+
+  {{/* ── Extended Biography ───────────────────────────────── */}}
+  <h2 class="cv-section" id="biography">Extended Biography</h2>
+  <div class="bio">
+    <img class="headshot" src="/images/scott.png" alt="Scott B. Weingart">
+    {{ partial "rich.html" (os.ReadFile "assets/cv-prose/biography.md") }}
+  </div>
+
+  {{/* ── Publications ─────────────────────────────────────── */}}
+  {{ range $cv.publications.sections }}
+    {{- $anchor := .key -}}
+    {{- if eq .key "academic-books" }}{{ $anchor = "books" }}{{ end -}}
+    {{- if eq .key "articles-chapters" }}{{ $anchor = "articles" }}{{ end -}}
+    <h2 class="cv-section" id="{{ $anchor }}">{{ partial "rich.html" .title }}</h2>
+    {{ with .subtitle }}<p class="section-sub">{{ . }}</p>{{ end }}
+    {{ partial "cv-entries.html" (dict "entries" .entries "citekey" "citation") }}
+  {{ end }}
+
+  {{/* ── Awards ───────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="awards">Selected Awards, Honors, {{ partial "rich.html" "&" }} Funding</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.awards) }}
+
+  {{/* ── Talks ────────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="talks">Keynote Addresses</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.keynotes) }}
+
+  <h2 class="cv-section" id="conference-presentations">Conference Presentations</h2>
+  <p class="section-sub">peer reviewed</p>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "talks-conference")) }}
+
+  <h2 class="cv-section" id="other-presentations">Selected Other Presentations</h2>
+  <p class="section-sub">not peer reviewed</p>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "talks-other")) }}
+
+  <h2 class="cv-section" id="workshops">Selected Workshops {{ partial "rich.html" "&" }} Demos</h2>
+  <p class="section-sub">not peer reviewed unless specified</p>
+  {{ partial "cv-entries.html" (dict "entries" $cv.workshops) }}
+
+  <h2 class="cv-section" id="posters">Posters</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.posters) }}
+
+  {{/* ── Teaching ─────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="teaching">Selected Teaching</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.teaching) }}
+
+  {{/* ── Projects ─────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="projects">Selected Projects, Tools, Websites, {{ partial "rich.html" "&c." }}</h2>
+  {{ range $cv.projects }}{{ if .intro }}<p class="section-sub">{{ partial "rich.html" .text }}</p>{{ end }}{{ end }}
+  {{ partial "cv-entries.html" (dict "entries" $cv.projects) }}
+
+  <h2 class="cv-section" id="consulting">Selected Contract {{ partial "rich.html" "&" }} Consulting Positions</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.consulting) }}
+
+  {{/* ── Reviews ──────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="reviews">Selected Reviews {{ partial "rich.html" "&" }} Related Consequents</h2>
+  {{ range $cv.reviews }}
+    <p class="review-work">{{ partial "rich.html" .work_title }}{{ with .work }}{{ partial "readlink.html" . }}{{ end }}</p>
+    {{ with .intro }}<p class="review-intro">{{ partial "rich.html" . }}</p>{{ end }}
+    <ul class="review-items">
+      {{ range .items }}<li>{{ partial "rich.html" . }}</li>{{ end }}
+    </ul>
+  {{ end }}
+
+  {{/* ── Service ──────────────────────────────────────────── */}}
+  <h2 class="cv-section" id="service">Selected External Service, {{ partial "rich.html" "&c." }}</h2>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "service-external")) }}
+
+  <h2 class="cv-section" id="internal-service">Selected Internal Service, {{ partial "rich.html" "&c." }}</h2>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "service-internal")) }}
+
+  <h2 class="cv-section" id="grant-affiliations">Selected Grant Project Affiliations</h2>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "grant-affiliations")) }}
+
+  {{/* ── Press & Affiliations ─────────────────────────────── */}}
+  <h2 class="cv-section" id="press">Selected Interviews, Press Coverage, {{ partial "rich.html" "&" }} PR</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.press) }}
+
+  <h2 class="cv-section" id="affiliations">Selected Affiliations, Past {{ partial "rich.html" "&" }} Present</h2>
+  {{ partial "cv-entries.html" (dict "entries" $cv.affiliations) }}
+
+  {{/* ── Blog posts ───────────────────────────────────────── */}}
+  <h2 class="cv-section" id="blog-posts">Selected Scholarly Blog Posts</h2>
+  {{ partial "cv-entries.html" (dict "entries" (index $cv "blog-posts")) }}
+
+  {{/* ── By The Numbers ───────────────────────────────────── */}}
+  <h2 class="cv-section" id="by-the-numbers">By The Numbers</h2>
+  <div class="dropcap">{{ partial "rich.html" (os.ReadFile "assets/cv-prose/by-the-numbers.md") }}</div>
+
+  <div class="sassy">This Space<br>Intentionally<br>Left Sassy</div>
+
+  {{ partial "cv-colophon.html" . }}
+</div>
+
+{{/* The still contents menu: floats at the viewport's right on wide
+     screens, holds its place as you scroll, and steps aside whenever a
+     work is opened into the reading pane. */}}
+<nav class="side-rail" aria-label="Contents">
+  <span class="rail-title">Contents</span>
+  <ul>{{ partial "cv-toc-items.html" . }}</ul>
+</nav>
+{{ end }}

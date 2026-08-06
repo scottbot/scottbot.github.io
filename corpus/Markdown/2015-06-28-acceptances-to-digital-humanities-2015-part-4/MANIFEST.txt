@@ -1,0 +1,4 @@
+06b175350cb49d860568a93433677fcb28f3225b0f7d7da4712d7ffad985df8e       23452  2015-06-28-acceptances-to-digital-humanities-2015-part-4.md
+e95812307832c6b48489f691ed911641707b193ca9823fc926d0d201c01ed074        5731  images/img-001.png
+66d9dc4f8d23f70b8de4fda6d0d7c4f3fcaaaac11bc90719d171a350d7aebeb1        7708  images/img-002.png
+2e4ceffb6681f8418b8ad231709ed2ed899bb79b9c489edae5bda0db8d7339de       60617  images/img-003.png

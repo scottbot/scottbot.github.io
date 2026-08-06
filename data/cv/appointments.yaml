@@ -1,0 +1,52 @@
+- year: "2025–ongoing"
+  text: "**Library of Virginia**"
+  sub:
+    - "Inaugural Chief Technology Officer"
+
+- year: "2025–ongoing"
+  text: "**Dartmouth College**"
+  sub:
+    - "Resident Scholar, *Digital Humanities and Social Engagement*"
+
+- year: "2023–ongoing"
+  text: "**University of Edinburgh**"
+  sub:
+    - "Research Affiliate, *Centre for Data, Culture & Society*"
+
+- year: "2022–2025"
+  text: "**National Endowment for the Humanities, United States Government**"
+  sub:
+    - "Inaugural Chief Data Officer"
+    - "Inaugural Director, *Office of Data and Evaluation*"
+  note: "Until DOGE"
+  icon: manicule
+
+- year: "2021–2022"
+  text: "**University of Notre Dame**"
+  sub:
+    - "Inaugural Director, *Navari Family Center for Digital Scholarship*"
+    - "Associate Librarian (Faculty), *Hesburgh Libraries*"
+    - "Affiliated Faculty, *Lucy Family Institute for Data & Society*"
+
+- year: "2015–2021"
+  text: "**Carnegie Mellon University**"
+  sub:
+    - "Inaugural Program Director of Digital Humanities"
+    - "Assistant Librarian (Faculty), *Hunt Library*"
+    - "Core Faculty, *Humanities Analytics*"
+    - "Affiliated Faculty, *The Simon Initiative*"
+
+- year: "2014"
+  text: "**Stanford University**"
+  sub:
+    - "Data Scientist, *Stanford University Libraries*"
+
+- year: "2009–2014"
+  text: "**Indiana University**"
+  sub:
+    - "Research Associate, *Cyberinfrastructure for Network Science Center*"
+
+- year: "2006–2009"
+  text: "**University of Florida**"
+  sub:
+    - "Research Assistant, *History of Science Department & Digital Library Center*"

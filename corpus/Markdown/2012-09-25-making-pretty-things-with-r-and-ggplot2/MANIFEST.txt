@@ -1,0 +1,2 @@
+62bd17be823fed54ef11facfb92ac0b58166d6ba4a292c190a6bf84030b3f2eb        9821  2012-09-25-making-pretty-things-with-r-and-ggplot2.md
+33c2ff664c435e2a1d877ec3f57549abf81881e5c10502a6decb012b27af5caf       32878  images/img-001.png

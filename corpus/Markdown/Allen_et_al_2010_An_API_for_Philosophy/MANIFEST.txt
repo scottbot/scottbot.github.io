@@ -1,0 +1,2 @@
+937fbcf384d904782b1abc76583d11a834dba64b15decc537245653efb8676f2        9259  Allen_et_al_2010_An_API_for_Philosophy.md
+ff93cafa095e07ab076fd417bc3c0bd102e8a73ae6e0f6b760b9cffdc0a86210      501714  images/fig-001.png

@@ -1,0 +1,15 @@
+{{- /* A marginal note. Accepts an entry map; renders .note (string or
+     list) and an optional manicule. */ -}}
+{{- $notes := slice -}}
+{{- with .note -}}
+  {{- if reflect.IsSlice . -}}{{- $notes = . -}}{{- else -}}{{- $notes = slice . -}}{{- end -}}
+{{- end -}}
+{{- if or $notes (eq .icon "manicule") -}}
+<span class="marginal">
+  {{- if eq .icon "manicule" -}}<span class="manicule" aria-hidden="true">☜&#xFE0E;&thinsp;</span>{{- end -}}
+  {{- range $i, $n := $notes -}}
+    {{- $n = replaceRE `^>\s*` "&gt;&thinsp;" $n -}}
+    {{- if $i }}<br>{{ end -}}<i>{{ partial "rich.html" $n }}</i>
+  {{- end -}}
+</span>
+{{- end -}}

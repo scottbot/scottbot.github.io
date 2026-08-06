@@ -1,0 +1,14 @@
+eadfb30965e99075aed292cf09338419233734eb4746fb182e21a4a9947e1640     2684100  images/SBW-026-fig-00-capacitive-touch.webp
+11d5cadca80d2b9c3f2738f85b7ff3c53cf24b793a387d04f0254150a2cdb651       52880  images/SBW-026-fig-01-touch-slop-code.webp
+c378023e00f34472a6c74c27e0d656fb5ee836fe3e052b10a60de378e203da2c       11218  images/SBW-026-fig-02-gsm7-charset.webp
+63ed4d7f2adb90735c4c6c2d6611f1e4df724f9cfb313cdf03429139f45fecd1      903656  images/SBW-026-fig-03-sms-submit-pdu.webp
+f152eb01aed8fbcd974d521110eff9144c329e4a9c6d96c3c59aa54fa4fad4ec      788410  images/SBW-026-fig-04-sms-cellular-network.webp
+1d071df5de7b9956d08d75ed2f6e928213bba2c7281711865ce5ebd2814565fe       15554  images/SBW-026-fig-05-pid-values.webp
+91116cd498360e10c29f18e093c76133a3dc22e6873ca94271b42cc36c0c330d     1082714  images/SBW-026-fig-06-wavelength.webp
+e97ed8d81418b0dc1abf30f4f7cf44496da9ba1a6164c085562e4e31df73186c     2985388  images/SBW-026-fig-07-sms-routed.webp
+9eeaeddeab592c0b5972c41707bc60e9002da39b8e15addd0eb4aa8c3fbb4b38      910266  images/SBW-026-fig-08-sms-deliver-pdu.webp
+cf2fd9306e3b4ab6aab05a18670cb87784e4aaffe3151f38f6c82bfd2db9410b       23638  images/SBW-026-fig-09-oled-subpixels.webp
+b3909ebc8625771df068517bcd8eec4a2392d6bb2dacd9e6c21ae1304daa661f     2568162  images/SBW-026-fig-10-oled-stack.webp
+496f85c631a75eacf82614c121268eeab9a84e039b921577613422c037fd5dcd     4167454  images/SBW-026-fig-11-negative-space.webp
+0249dbfbdffe65a9452142beaf97ebf03496f57228c02a2e0f7c4ca019662b96       31343  the-route-of-a-text-message-a-love-story.md
+20175e011239c61cae52c09f4914db1001e46a115b6839bd1b996a31ec058bb0       31208  the-route-of-a-text-message-a-love-story.md.bak

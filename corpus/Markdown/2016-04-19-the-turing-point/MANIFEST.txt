@@ -1,0 +1,2 @@
+20e227cbdfcc43a0f69d12115056ed9cf8e949d5527bff7072b773ae3c5f3ee4       14722  2016-04-19-the-turing-point.md
+161f57bdd7614749ab9c65eaf81310b1580e97de03a1724d520ff6ff9d2ea8fd        2353  images/img-001.png

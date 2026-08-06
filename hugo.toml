@@ -1,0 +1,79 @@
+# ──────────────────────────────────────────────────────────────
+# scottbot.net — site configuration
+# Edit sparingly; most day-to-day changes happen in content/ and data/
+# ──────────────────────────────────────────────────────────────
+baseURL      = "https://scottbot.net/"
+title        = "Scott B. Weingart"
+
+enableRobotsTXT = true
+disableKinds    = ["taxonomy", "term"]
+timeZone        = "America/New_York"
+
+# Google Drive (and Windows generally) drops junk files like desktop.ini
+# into synced folders; Hugo would otherwise try to parse them as data or
+# publish them. Excluded from every folder Hugo reads.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    files  = ["! **/desktop.ini", "! **/Thumbs.db", "! **/.DS_Store", "**"]
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+    files  = ["! **/desktop.ini", "! **/Thumbs.db", "! **/.DS_Store", "**"]
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+    files  = ["! **/desktop.ini", "! **/Thumbs.db", "! **/.DS_Store", "**"]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+    files  = ["! **/desktop.ini", "! **/Thumbs.db", "! **/.DS_Store", "**"]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+    files  = ["! **/desktop.ini", "! **/Thumbs.db", "! **/.DS_Store", "**"]
+
+# Content in content/blog and content/works becomes /blog/… and /works/…
+# automatically; no permalink config needed.
+
+[params]
+  description = "Historian of knowledge, professional circus performer, amateur father, and hopeless adventurer. Resident scholar at Dartmouth College."
+  author      = "Scott B. Weingart"
+  # Width (px) above which clicking a work on the CV opens the side-by-side
+  # reading pane instead of navigating away. This is a rung of the width
+  # ladder documented atop assets/css/main.css — change them together.
+  readerMinWidth = 1100
+  # The public repository this site is published from (used by the
+  # works-page caveat's "create a pull request" link).
+  repoURL = "https://github.com/scottbot/scottbot.github.io"
+
+[menus]
+  [[menus.main]]
+    name   = "CV"
+    url    = "/cv/"
+    weight = 10
+  [[menus.main]]
+    name   = "Blog"
+    url    = "/blog/"
+    weight = 30
+  [[menus.main]]
+    name   = "Colophon"
+    url    = "/colophon/"
+    weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # The converted corpus contains occasional inline HTML (tables, embeds);
+      # render it rather than escaping it.
+      unsafe = true
+[outputs]
+  home    = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[pagination]
+  pagerSize = 500   # effectively: no pagination; lists are single pages
+
+[minify]
+  disableXML = true

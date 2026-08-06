@@ -1,0 +1,13 @@
+814c78b13bbf5217b0be30bffcea765ef3cccc955d66b8b00d2fb43216458cfc       19824  images/apple-150x150.png
+f810b35074974c79974c03b42c39f8a63d9583c98b5ddb8d26abc0e6321532ff      396387  images/fig-10-topic-composition.png
+6ff60c078a06168c96ed296891e0b7f96a35ccaf278f6fcf749f641ad744dc53       42543  images/fig-4-command-prompt-window.png
+b5ff7572034e5c1cf6e16b31d4fc04642981ea1afb4caba57d24ccc6cca00900       32809  images/fig-5-command-prompt-window-getting-to-c.png
+dec142137b5880d609cd4a98c880255ec1d9f20892bfa53fede6ab3b938ad342       43613  images/fig-6command-prompt-mallet-installed.png
+dd425f9d7c3823fdfc51b51f79d53b1d3fba81935a1dcaab36a8d41ff2bf9dd4       77442  images/fig-7-command-prompt-typing-help.png
+7281030470b7584f18d5965b75f9f92d6cafb0da3d380159b8b79355c293a9c5      106069  images/fig-8-basic-topic-model-output.png
+a9e09caa9b507cb32a792c1705b56757967ceb361ff43d0fd6ddb1424f13a47c      167080  images/fig-9-tutorial-key-words-in-Word.png
+2fa387ee09f39752875e16f1e64c23d27a4a4feb0e85e3ce2c493c1c796f22cb      108832  images/fig1-advanced-system-settings.png
+76ac9066e0a81f60d308473626f208d2b7ced5bdefd4109c79c7c820d2316eee       56702  images/fig2-environment-variables-location.png
+823078250c21ed5e1b0196a759a3f7b687c40e08794fa780a9ffde79bc4d4260       44257  images/fig3-environment-variable.png
+fbe686ab6b814d770669affeb7f618b914ac08678ac81324c2a562f88eb2a2c4       23353  images/windows-150x150.png
+dfba925c6f52b1a5198e96a41dc9d6d30868682ffbcb4fba4d04b6e712d026cd       31115  topic-modeling-and-mallet.md

@@ -1,0 +1,3 @@
+4c605b49feb9c79d9aa22789433a86b31209a0cfc120916850307c45d4092cbe       62770  Ladd_et_al_2017_Exploring_Network_Data_with_Python.md
+47224de7086dfd001d7fca98914521d0c73239615ce153ecba62daedd57741c9       38751  images/fig-001.png
+8945a28185bbdec1ae5f582e7a8987d84c062eda3dfc90ef3eaf6e987d4555fa      138747  images/fig-002.png

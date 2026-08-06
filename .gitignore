@@ -1,0 +1,10 @@
+public/
+.hugo_build.lock
+hugo.exe
+resources/_gen/
+# Windows / Google Drive / macOS junk
+desktop.ini
+Thumbs.db
+.DS_Store
+__pycache__/
+*.pyc

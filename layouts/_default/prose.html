@@ -1,0 +1,7 @@
+{{ define "bodyclass" }}prose-page{{ end }}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<article class="prose {{ with .Params.archaic }}archaic {{ end }}{{ with .Params.dropcap }}colophon-initial{{ end }}" id="reader-source">
+  {{ .Content }}
+</article>
+{{ end }}

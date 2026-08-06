@@ -1,0 +1,3 @@
+30c38f6efe0538f20f413476692c01e0780358b2177dc6674a15f5e3f56cbe92       95255  Graham_Weingart_2014_Equifinality_Archaeological_Networks.md
+289a54c3f596c36eabf1877df8d1737d415b0c5e4f8331ea21f60cd2e9831d57       75098  images/SBW-023-fig-001.png
+fe02dfb83617ada23f3b56899fb6cf6a630b1cc85fe0920d68038c55cd3fe6f8       22224  images/SBW-023-fig-002.png

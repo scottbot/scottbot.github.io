@@ -1,0 +1,6 @@
+7baee3b47e35f8c7058a5dbe17df1056894f79395093caba9f3771999cde5026       12175  2012-11-08-analyzing-submissions-to-dh-2013.md
+b34aa3b935586dc3a7ad8f01a5fdbb4016de3ada54e697d03e64ef86cddf578e       64596  images/SBW-035-img-001.png
+5961bda46bcbb5ad2bb3832a9f8a7be0c55f9e20f74af4e217d193bc0226d70f       16178  images/SBW-035-img-002.png
+b2ab8b95821027dc7c4dc8296d2fd6c2eec1e665197c49c1142a90e0b29c4bb6       19726  images/SBW-035-img-003.png
+e6d6b192b2b6319b8c81557689be738b322d2cc1f4bbf22fd861d629b81eedad      189677  images/SBW-035-img-004.png
+c2dc8f091ca8105fb4eb9436dae152b0ca660ed4581eeee803ffc999d2b650d9      361033  images/SBW-035-img-005.png

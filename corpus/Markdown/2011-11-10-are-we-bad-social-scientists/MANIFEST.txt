@@ -1,0 +1,3 @@
+352000893983c48d6f5d465fb0fb997bdaeaab1fb00ba772fcdd0836d5821474        7623  2011-11-10-are-we-bad-social-scientists.md
+6edffdad2fea157e9b405888fb9a75d6d91ed90fd64f2448d8aff8ccc8e2597f       14492  images/2011-11-10-14.55.19-300x225.jpg
+437b15dfea0e7f945c107b3855281b7a428993ba350ef87dc3c91e783eb41341          68  images/_missing.png

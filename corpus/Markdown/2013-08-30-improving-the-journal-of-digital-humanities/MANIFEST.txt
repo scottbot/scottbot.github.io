@@ -1,0 +1,3 @@
+c96e5b3c7af88972b5cf3c7fa173c1f1cadf4d50a2f24b2353bd63a75097fa27       14517  2013-08-30-improving-the-journal-of-digital-humanities.md
+cc9d1e9217c9d4db354c3a22e7c3926aa9b3768436a80ed0bee7f371a7c37155        2839  images/img-001.png
+3057124f28b5a563056af60d5408caf80e8d35ccacafb8a08038b344a8f6b8ae        7978  images/img-002.png

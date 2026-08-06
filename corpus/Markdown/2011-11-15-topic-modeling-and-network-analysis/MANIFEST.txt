@@ -1,0 +1,5 @@
+ea7bc000c1b2af42e39136ee7c00672aec0a108aff8e5976e4495aabbebfb0c6       37598  2011-11-15-topic-modeling-and-network-analysis.md
+930b5cced0f5e42876ef4bddf90728dfadd55395e4a17be3f8ca918109ec55fc      102023  images/SBW-019-IntroToLDA.png
+e6998b523d80fb85785fa49e8c49b1eacc3d7ed4bbdfa55a9cd356a27964903f       10563  images/SBW-019-blei.png
+f96554ed1f59e8c3224c925ed94eb7774035837db6d68cc89b8e55f712faed93      142609  images/SBW-019-newtonLSA.jpg
+cb29f76c36cc0b62098c400198b1463a2eef5d43f92d41851ef47cd311b5ec78      209443  images/SBW-019-weak_topic_paper.png

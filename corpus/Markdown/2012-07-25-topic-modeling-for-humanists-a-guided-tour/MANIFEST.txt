@@ -1,0 +1,2 @@
+cbc173d51e456bf4c9194e87fe06fc354312a3913f07f05683acbaa5d5e16765       25279  2012-07-25-topic-modeling-for-humanists-a-guided-tour.md
+8cea73e9eecc713a8d31987a996130245ff01197f6828fdb1df88812961a953b      295979  images/img-001.png

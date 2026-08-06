@@ -1,0 +1,3 @@
+cfc4271c32ac33b4ce29e381e48e3be98571c67fba35553a07a0a923d1be6e16       13567  2012-05-06-the-myth-of-text-analytics-and-unobtrusive-measurement.md
+95df9b013155e7353879007f3a0ffddb0cc3e260faba40fc382c73b94a4009bd       84475  images/img-001.png
+127ff178479cf09240d682ebbcbfe3e3ee53a86ca28f0fe48c811e8475e61674      112765  images/img-002.png

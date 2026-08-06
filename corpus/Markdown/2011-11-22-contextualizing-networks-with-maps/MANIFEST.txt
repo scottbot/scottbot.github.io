@@ -1,0 +1,9 @@
+4c2ab92fbb36e0fcb26c3bfc8a1df022d7a631596c713bec476826929c2a77fa       19266  2011-11-22-contextualizing-networks-with-maps.md
+04abf41f19cf13450e164703ad4a6950394839c487daafe306a4c50b03592081       61675  images/Grotius.png
+5c42c23ec1091721967a924253ec96dfe0e3fd1047cb0f31fcaaefd23e26256d       39898  images/NIH.jpg
+563d35fa8022ae1a3ff64582131e3a5a1c7aff38776777ed7ebb9bd1d845c1a6       36126  images/NSF.jpg
+a24ff63bdc4d8e7337658861c124830f0f1f4c15749288350658b931addcf1c5       82416  images/RomanNetworkMeeks.png
+b057982da3327c12794683ca5b4f92b8f198c87bd2a6563eabc98a701b530d25       77979  images/RomanNetworkMeeksExpanded.png
+8eb371d8f37b8ea2f0d48b5e71bec3bdad07dc24ede06c349b52802ac57cbee1      196443  images/RomanNetworkMeeksWater.png
+bfa145e32854727d67dcaea3aa3382be6e132a4e54ec38861845dc841c7d51d8       26796  images/StanfordLetters.png
+3f92054dcaa56d753d7c3a30c465d8f581aba66925d132f20c899044c49530bd       53275  images/basemap.jpg

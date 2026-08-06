@@ -1,0 +1,4 @@
+80f9aa0a0f696c0ab5edfd4e92763f20f83e9ff6af7022a157e54ccbb92aa533       16383  2014-03-09-barriers-to-scholarship-iterative-writing.md
+3b5d2d3059d6887b5835069e42ccea59c04f34984cee4472e8b5f6d63938221f       42326  images/img-001.png
+ccedbb3ad64c40d372d403dede11c55df049f44c33f23319cbd169214f043d5d      118885  images/img-002.png
+7bd4a4ff96c2b6ce7724adc4f07e6e8efda1ccaabf364d8f81f99c0bbd867318       42382  images/img-003.png

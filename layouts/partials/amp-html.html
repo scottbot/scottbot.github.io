@@ -1,0 +1,8 @@
+{{- /* The house ampersand, for content that is ALREADY HTML (rendered
+     .Content). Same two patterns as rich.html, which starts from
+     markdown instead: freestanding "&" (and "&c."), and letter-tight
+     ampersands between capitals (Texas A&M, ASIS&T). */ -}}
+{{- $html := printf "%s" . -}}
+{{- $html = replaceRE `(^|[\s(>])&amp;(\s|c\.|$)` `$1<span class="amp">&amp;</span>$2` $html -}}
+{{- $html = replaceRE `([A-Z])&amp;([A-Z])` `$1<span class="amp">&amp;</span>$2` $html -}}
+{{- $html | safeHTML -}}

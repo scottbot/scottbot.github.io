@@ -1,0 +1,5 @@
+8a39cdbd3f57dbe66ce94972721b6be9044df3e2c93b98f8ed5013fc9e77f574       55233  heberling-et-al-2021-data-integration-enables-global-biodiversity-synthesis.md
+b93b40b7b267df514d0a4359b54104400b7676f4641f6e5cca03a780f4379e55      406233  images/SBW-034-fig01.jpg
+fd1160b8ea9f3d1d637ec25eafe8e1622f690cf51a04f89857220c5ba8cb25db      792628  images/SBW-034-fig02.jpg
+11b606830b7b91d72fdbb43720d11aef6f182ab89a1234ce443c90ec205e797c     1278115  images/SBW-034-fig03.jpg
+43f41a5b66ae936199ac329d56afd3d54de166fb5439d417c700a4099e75304e      660205  images/SBW-034-fig04.jpg

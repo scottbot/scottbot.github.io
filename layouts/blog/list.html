@@ -1,0 +1,32 @@
+{{ define "bodyclass" }}reader-enabled listing{{ end }}
+{{ define "mainclass" }}with-margins{{ end }}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="list-intro prose">{{ partial "amp-html.html" .Content }}</div>
+
+{{ $groups := .RegularPages.ByDate.Reverse.GroupByDate "2006" }}
+
+{{ range $groups }}
+  <h2 class="index-year" id="y{{ .Key }}">{{ .Key }}</h2>
+  {{ range .Pages }}
+  <div class="cv-entry">
+    <span class="year">{{ .Date.Format "Jan 2" }}</span>
+    <div class="body">
+      <a href="{{ .RelPermalink }}">{{ partial "amp-text.html" .Title }}</a>
+      {{- with .Params.venue }}{{ if ne . "the scottbot irregular" }} <span class="index-year">· <i>{{ . }}</i></span>{{ end }}{{ end -}}
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+{{/* The still year menu: floats at the viewport's right on wide screens
+     and steps aside whenever a post is opened into the reading pane. */}}
+<nav class="side-rail" aria-label="Years">
+  <span class="rail-title">Years</span>
+  <ul>
+  {{ range $groups }}
+    <li><a href="#y{{ .Key }}">{{ .Key }}</a></li>
+  {{ end }}
+  </ul>
+</nav>
+{{ end }}
