@@ -299,6 +299,14 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   font-weight: 700;
   margin: 0 0 .1em;
 }
+/* On the home page the name never breaks across lines: drop the 3rem
+   floor so it keeps riding the 9vw slope down on narrow screens (the
+   name at 9vw is ~0.67vw wide — always inside the page padding).
+   Identical to the clamp() above at ≥533px wide. */
+.home .hero h1.bigname {
+  font-size: min(9vw, 4.6rem);
+  white-space: nowrap;
+}
 .hero .tagline { font-size: 1.45rem; margin: 0; }
 .hero .tagline b { font-weight: 700; }
 .hero .tagline .masq { color: var(--grey-marg); }
