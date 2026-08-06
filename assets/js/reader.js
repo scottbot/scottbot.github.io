@@ -27,6 +27,37 @@
            window.innerWidth >= MIN_WIDTH;
   }
 
+  /* ── Reflow-proof scroll memory ──────────────────────────────
+     Opening (or closing) the pane reflows the CV into a narrower
+     (or wider) column, so a pixel offset carried across the change
+     lands somewhere else entirely. Instead, remember which element
+     sat at the top of the viewport and where its top edge was, then
+     scroll the new container until it's back in that spot. */
+  function captureAnchor() {
+    var blocks = document.querySelectorAll(
+      ".page-body main h2, .page-body main h3, .page-body main p, .page-body main li, .page-body main .cv-entry"
+    );
+    var fallback = null;
+    for (var i = 0; i < blocks.length; i++) {
+      var r = blocks[i].getBoundingClientRect();
+      if (r.height === 0 || r.bottom <= 0) continue;
+      if (!fallback) fallback = { el: blocks[i], top: r.top };
+      // Prefer the first block whose top edge is actually on screen;
+      // fall back to the one straddling the viewport's top.
+      if (r.top >= 0) return { el: blocks[i], top: r.top };
+    }
+    return fallback;
+  }
+  function restoreAnchor(anchor, scroller) {
+    if (!anchor || !document.contains(anchor.el)) return;
+    var delta = anchor.el.getBoundingClientRect().top - anchor.top;
+    if (scroller === window) {
+      window.scrollBy({ top: delta, left: 0, behavior: "instant" });
+    } else {
+      scroller.scrollTo({ top: scroller.scrollTop + delta, behavior: "instant" });
+    }
+  }
+
   function absolutize(node, basePath) {
     // Fetched documents live at basePath; their relative srcs/hrefs
     // (images/fig-001.png) must be re-anchored or they'd resolve
@@ -62,12 +93,12 @@
     // works remain true to their published form (see CSS).
     pane.classList.toggle("pane-blog", path.indexOf("/blog/") === 0);
     // Split view: the window stops scrolling and the left column takes
-    // over as its own scroll container — hand it the current position so
-    // the reader doesn't lose their place.
+    // over as its own scroll container — hand it the reader's place by
+    // element, not by pixel (the column narrows, so pixels don't map).
     if (!document.body.classList.contains("reader-open")) {
-      var y = window.scrollY;
+      var anchor = captureAnchor();
       document.body.classList.add("reader-open");
-      pageBody.scrollTo({ top: y, behavior: "instant" });
+      restoreAnchor(anchor, pageBody);
     }
     pane.hidden = false;
     contentEl.scrollTop = 0;
@@ -102,11 +133,12 @@
   }
 
   function closeReader(push) {
-    // Hand the scroll position back from the left column to the window.
+    // Hand the reader's place back from the left column to the window —
+    // again by element, since the column widens back out on close.
     if (document.body.classList.contains("reader-open")) {
-      var y = pageBody.scrollTop;
+      var anchor = captureAnchor();
       document.body.classList.remove("reader-open");
-      window.scrollTo({ top: y, behavior: "instant" });
+      restoreAnchor(anchor, window);
     }
     // If focus was inside the pane, return it to the link that opened it,
     // so keyboard users are not dropped at the top of the document.
