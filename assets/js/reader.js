@@ -18,6 +18,11 @@
   var permalinkEl = pane.querySelector(".reader-permalink");
   var closeBtn = pane.querySelector(".reader-close");
   var pageBody = document.querySelector(".page-body");
+  // In split view the footer joins the scrolling column (so FINIS.
+  // arrives at the end of the text, not pinned to the viewport);
+  // footerHome remembers where to put it back.
+  var siteFooter = document.querySelector(".site-footer");
+  var footerHome = siteFooter ? siteFooter.nextSibling : null;
   var cache = {};
   var currentPath = null;
   var lastTrigger = null; // the link that opened the pane, for focus return
@@ -112,6 +117,7 @@
     if (!document.body.classList.contains("reader-open")) {
       var anchor = captureAnchor();
       document.body.classList.add("reader-open");
+      if (siteFooter) pageBody.appendChild(siteFooter);
       restoreAnchor(anchor, pageBody);
     }
     pane.hidden = false;
@@ -160,6 +166,7 @@
     if (document.body.classList.contains("reader-open")) {
       var anchor = captureAnchor();
       document.body.classList.remove("reader-open");
+      if (siteFooter) document.body.insertBefore(siteFooter, footerHome);
       restoreAnchor(anchor, window);
     }
     // If focus was inside the pane, return it to the link that opened it,
