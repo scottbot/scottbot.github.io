@@ -494,6 +494,13 @@ a.readlink:hover { text-decoration: underline; }
 /* ── Lists (works & blog indexes) ──────────────────────────── */
 .index-year { color: var(--grey-marg); }
 .list-intro { font-style: italic; margin-bottom: 2rem; }
+/* The quiet feed link: present for those who look, invisible to the rest. */
+.rss-note {
+  text-align: right; font-style: italic; font-size: .92rem;
+  margin: -1.6rem 0 1.2rem;
+}
+.rss-note a { color: var(--grey-head); }
+.rss-note a:hover { color: var(--brown); }
 
 /* ── Single pages (works & blog posts) ─────────────────────── */
 .work-head h1 { color: var(--brown-dk); font-size: 2rem; margin-bottom: .2em; }

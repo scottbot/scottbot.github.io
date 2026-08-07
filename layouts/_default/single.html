@@ -41,6 +41,6 @@
 </article>
 
 <nav class="work-meta back-nav" aria-label="More on this site">
-  {{ if eq .Section "blog" }}<a href="/blog/">← the scottbot irregular</a>{{ else }}<a href="/cv/">← curriculum vitae</a>{{ end }}
+  {{ if eq .Section "blog" }}<a href="/blog/">← the scottbot irregular</a>{{ with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }} · <a href="{{ .RelPermalink }}" title="Subscribe via RSS">rss</a>{{ end }}{{ end }}{{ else }}<a href="/cv/">← curriculum vitae</a>{{ end }}
 </nav>
 {{ end }}

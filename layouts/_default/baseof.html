@@ -32,9 +32,14 @@
   <meta property="og:image" content="{{ $ogimg }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="author" content="{{ site.Params.author }}">
-  {{ with .OutputFormats.Get "rss" -}}
-  <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
-  {{ end -}}
+  {{- /* Feed autodiscovery: the blog list carries its own feed; every
+       blog post points at the same one, so a reader pasted any post's
+       URL finds it without visiting the colophon. */ -}}
+  {{- $feedPage := . -}}
+  {{- if and (not (.OutputFormats.Get "rss")) (eq .Section "blog") }}{{ $feedPage = site.GetPage "/blog" }}{{ end -}}
+  {{- with $feedPage }}{{ with .OutputFormats.Get "rss" -}}
+  <link rel="alternate" type="application/rss+xml" title="{{ $feedPage.Title }}" href="{{ .Permalink }}">
+  {{ end }}{{ end -}}
   {{/* Stylesheet and script are served unminified, under their own names.
        A site that brags about its typography should not be ashamed of its
        source. View freely: /css/main.css and /js/reader.js */}}

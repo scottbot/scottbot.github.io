@@ -70,7 +70,9 @@ timeZone        = "America/New_York"
       unsafe = true
 [outputs]
   home    = ["HTML"]
-  section = ["HTML", "RSS"]
+  # Sections render HTML only; the blog opts back into RSS in its
+  # _index.md — the one feed the site publishes (see the colophon).
+  section = ["HTML"]
 
 [minify]
   disableXML = true

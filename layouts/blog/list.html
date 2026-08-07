@@ -3,6 +3,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <div class="list-intro prose">{{ partial "amp-html.html" .Content }}</div>
+{{ with .OutputFormats.Get "rss" }}<p class="rss-note"><a href="{{ .RelPermalink }}" title="Subscribe via RSS">rss</a></p>{{ end }}
 
 {{ $groups := .RegularPages.ByDate.Reverse.GroupByDate "2006" }}
 

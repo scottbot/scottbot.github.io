@@ -18,7 +18,7 @@ The book deserved the caution. Lucretius's ancient poem *De rerum natura* descri
 
 The man who finally did it was just twenty one, a shopkeeper's son from Blandford Forum whose education was paid through charity. Despite Bernard's urgent letter, the translation already wrapped the atheist poison in its own antidote: forty-six pages of notes built to refute, line by line, the verses themselves. "The best method" he wrote "to overthrow the Epicurean Hypothesis... is to expose a full system of it to public view."
 
-He knew the work carried risks.^[In *Reading Lucretius in the Renaissance* (2014), Ada Palmer compellingly argues the risks were not *quite* as great as they might seem. I'll tease the real vs. imagined risks apart another time.] In place of his name, the title page borrowed a line of Latin from the Roman poet Martial: "*I, fuge, sed poteras tutior esse Domi.*" Martial nervously told his own book, as it left for the city: "Go then, flee! But you could have been safer at home." *De rerum natura's* translation left to press with the same warning to itself written on its cover.
+He knew the work carried risks.[^palmer] In place of his name, the title page borrowed a line of Latin from the Roman poet Martial: "*I, fuge, sed poteras tutior esse Domi.*" Martial nervously told his own book, as it left for the city: "Go then, flee! But you could have been safer at home." *De rerum natura's* translation left to press with the same warning to itself written on its cover.
 
 ![De rerum natura, 1682](images/img-001.jpg)
 *image via [WorthPoint](https://www.worthpoint.com/worthopedia/de-natura-rerum-english-verse-titus-1895396467)*
@@ -55,3 +55,5 @@ I don't *think* AI sped up my process. Checking its accuracy probably slowed me 
 Other historians use AI creatively and carefully; I'm not breaking new ground here. But I believe my process to be an example of responsible use of AI for historical research. In a sea of irresponsible uses, it seems worthwhile to share my process alongside my research. Or hey, doing it in public might help me learn it's not so responsible, so careful, or so sound as I believe. Learning that would also be a win.
 
 So in the grand digital humanities spirit of futzing around online and figuring out new things together, as a community, expect more on Creech and my approach to writing his life to show up on *the irregular* in the coming months. Or maybe years. Who knows?
+
+[^palmer]: In *Reading Lucretius in the Renaissance* (2014), Ada Palmer compellingly argues the risks were not *quite* as great as they might seem. I'll tease the real vs. imagined risks apart another time.
