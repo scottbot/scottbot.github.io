@@ -10,11 +10,6 @@
   <div class="hero hero-justified">
     <h1 class="bigname">{{ $p.name }}</h1>
     <p class="tagline">{{ replaceRE `masquerading as a` `<span class="masq">masquerading as a</span>` (partial "rich.html" $p.tagline) | safeHTML }}</p>
-    <div class="contact">
-      {{ with $p.phone }}<span>{{ . }}</span>{{ end }}
-      <a href="mailto:{{ $p.email_mailto | default $p.email }}">{{ $p.email }}</a>
-      <a href="/">{{ $p.web }}</a>
-    </div>
     <p class="mission">{{ partial "rich.html" $p.mission }}</p>
   </div>
 

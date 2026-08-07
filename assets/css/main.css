@@ -270,9 +270,10 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   white-space: nowrap;
   text-align: center;
 }
-.hero.hero-justified .tagline { font-size: 1.5rem; }
-.hero.hero-justified .contact {
-  display: flex; justify-content: space-between; gap: 2rem;
+/* The tagline sits between the dotted rules the printed CV draws
+   under the name (the slot the contact line once held). */
+.hero.hero-justified .tagline {
+  font-size: 1.5rem;
   border-top: 1px dotted var(--grey-head);
   border-bottom: 1px dotted var(--grey-head);
   padding: .3rem .1rem;
@@ -291,13 +292,14 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
     white-space: nowrap; text-align: center;
     font-size: min(1.5rem, calc((100vw - 3rem) / 22.5));
   }
-  /* The name never breaks, and takes the home page's size. */
+  /* The name never breaks, and fills the same measure as the
+     tagline below it (its divisor is the name's width in em, plus
+     a hair of safety), so the two align edge to edge. */
   .hero.hero-justified .bigname {
     white-space: nowrap; text-align: center;
-    font-size: min(10.5vw, 5.5rem);
+    font-size: min(calc((100vw - 3rem) / 7.6), 5.5rem);
   }
   .hero.hero-justified .mission { text-align: center; text-align-last: center; }
-  .hero.hero-justified .contact { flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; }
 }
 .hero h1.bigname {
   font-size: clamp(3rem, 9vw, 4.6rem);
@@ -315,12 +317,6 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
 }
 .hero .tagline { font-size: 1.45rem; margin: 0; }
 .hero .tagline .masq { color: var(--grey-marg); }
-.hero .contact {
-  display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
-  color: var(--grey-head); font-size: 1.02rem; margin: .6rem 0 1rem;
-}
-.hero .contact a { color: var(--grey-head); }
-.hero .contact a:hover { color: var(--brown); }
 .hero .mission {
   font-style: italic; font-size: 1.35rem; line-height: 1.4;
   max-width: 34rem; margin: 0 auto;
