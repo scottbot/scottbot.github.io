@@ -23,8 +23,14 @@
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ site.Title }}">
-  <meta property="og:image" content="{{ "images/scott.png" | absURL }}">
-  <meta name="twitter:card" content="summary">
+  {{- /* Link previews: a page that carries images (a converted work or
+       post bundle) is represented by its first one; everything else —
+       and any page without figures — gets the Yosemite portrait. */ -}}
+  {{- $ogimg := "" -}}
+  {{- if .IsPage }}{{ with .Resources.ByType "image" }}{{ $ogimg = (index . 0).Permalink }}{{ end }}{{ end -}}
+  {{- if not $ogimg }}{{ $ogimg = "images/scott-yosemite.jpg" | absURL }}{{ end -}}
+  <meta property="og:image" content="{{ $ogimg }}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="author" content="{{ site.Params.author }}">
   {{ with .OutputFormats.Get "rss" -}}
   <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
