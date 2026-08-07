@@ -307,11 +307,12 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   }
   /* The mission holds two lines where it can (it is ~50em long; the
      divisor is two full-width lines' worth, minus break slack) — but
-     never below .85rem: on narrow phones readability wins and the
-     text spills to a third line instead. */
+     never below 1rem: on narrow phones readability wins and the
+     text sets in three comfortable lines instead. */
   .hero.hero-justified .mission {
     text-align: center; text-align-last: center;
-    font-size: max(.85rem, calc((100vw - 2.5rem) / 28));
+    text-wrap: balance;   /* even lines, no one-word widows */
+    font-size: max(1rem, calc((100vw - 2.5rem) / 28));
   }
 }
 .hero h1.bigname {
