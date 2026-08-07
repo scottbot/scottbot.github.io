@@ -271,9 +271,11 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   text-align: center;
 }
 /* The tagline sits between the dotted rules the printed CV draws
-   under the name (the slot the contact line once held). */
+   under the name (the slot the contact line once held), sized to
+   fill the name's measure edge to edge (~21.8em of text against
+   the name's ~7.4em, both riding the same slope). */
 .hero.hero-justified .tagline {
-  font-size: 1.5rem;
+  font-size: min(3.54vw, 1.85rem);
   border-top: 1px dotted var(--grey-head);
   border-bottom: 1px dotted var(--grey-head);
   padding: .3rem .1rem;
@@ -285,8 +287,8 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   text-align-last: center;
   /* Sized to set in exactly two lines on the name's measure: the
      mission is ~50em long, the block two name-lengths minus slack.
-     The vw term tracks the name's 9vw slope below its size cap. */
-  font-size: min(2.39vw, 1.22rem);
+     The vw term tracks the name's 10.5vw slope below its size cap. */
+  font-size: min(2.85vw, 1.49rem);
 }
 @media (max-width: 760px) {
   .hero.hero-justified { display: block; width: auto; text-align: center; }
@@ -296,29 +298,32 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
     white-space: nowrap; text-align: center;
     font-size: min(1.5rem, calc((100vw - 3rem) / 22.5));
   }
-  /* The name never breaks, and fills the same measure as the
-     tagline below it (its divisor is the name's width in em, plus
-     a hair of safety), so the two align edge to edge. */
-  .hero.hero-justified .bigname {
+  /* The name never breaks, and fills the page's measure on every
+     page alike (divisor: the name's width in em, plus safety), so
+     home and CV stay identical here too. */
+  .hero h1.bigname {
     white-space: nowrap; text-align: center;
     font-size: min(calc((100vw - 3rem) / 7.6), 5.5rem);
   }
-  .hero.hero-justified .mission { text-align: center; text-align-last: center; font-size: 1.35rem; }
+  /* The mission holds two lines where it can (it is ~50em long; the
+     divisor is two full-width lines' worth, minus break slack) — but
+     never below .85rem: on narrow phones readability wins and the
+     text spills to a third line instead. */
+  .hero.hero-justified .mission {
+    text-align: center; text-align-last: center;
+    font-size: max(.85rem, calc((100vw - 2.5rem) / 28));
+  }
 }
 .hero h1.bigname {
-  font-size: clamp(3rem, 9vw, 4.6rem);
+  /* One formula on every page (home and CV), so the name holds the
+     same size and place when moving between them. */
+  font-size: min(10.5vw, 5.5rem);
   color: var(--brown-dk);
   font-weight: 700;
   margin: 0 0 .1em;
 }
-/* On the home page the name never breaks across lines, and takes the
-   measure more fully: a steeper slope and a higher cap than the CV's
-   (the name at 10.5vw is ~0.78vw wide — still inside the page padding;
-   at the 5.5rem cap it nearly fills the 44rem measure). */
-.home .hero h1.bigname {
-  font-size: min(10.5vw, 5.5rem);
-  white-space: nowrap;
-}
+/* The home page name never breaks (size comes from the shared rule). */
+.home .hero h1.bigname { white-space: nowrap; }
 .hero .tagline { font-size: 1.45rem; margin: 0; }
 .hero .tagline .masq { color: var(--grey-marg); }
 .hero .mission {
@@ -545,12 +550,16 @@ body.reader-open .page-body {
   overflow-y: auto;
   overscroll-behavior: contain;
 }
-body.reader-open .page-body main { max-width: none; margin-right: 0; }
+/* The text keeps its measure inside the split view too: centered in
+   the left column, capped as ever, rather than flooding its width. */
+body.reader-open .page-body main { margin: 0 auto; }
 body.reader-open .site-nav { max-width: none; width: 54%; margin: 0; }
 @media (min-width: 1250px) {
   body.reader-open main.with-margins {
+    /* Marginalia fold inline in the split view, so the right gutter
+       shrinks to breathing room — but the measure holds. */
     padding-right: 2rem;
-    max-width: none;
+    max-width: calc(var(--gutter-l) + var(--measure) + 2rem);
   }
 }
 body.reader-open .site-footer { width: 54%; margin: 0; max-width: none; }
