@@ -81,7 +81,8 @@ Underlined lead-ins in the NEH entry ("Executive Leadership.") → bold markdown
 
 ## profile.yaml (single map, not list)
 name, tagline (markdown, e.g. "**Historian** masquerading as a **Chief Technology Officer**"),
-phone, email, web, mission (the italic two-line statement), updated ("February 2026").
+phone, email (shown on the page), email_mailto (where the link actually sends,
+e.g. a plus-tagged alias), web, mission (the italic two-line statement).
 
 ## reviews.yaml (Selected Reviews & Related Consequents)
 List of works, each with `work_title`, optional `work`/`sbw`, and `items` (list of

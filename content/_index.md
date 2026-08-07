@@ -11,6 +11,8 @@ circus performer, an amateur father, and a hopeless adventurer.
 Read about my work on my [academic cv](/cv/). **To book a speaking engagement
 or my services as a consultant, [email me](mailto:weingart.scott+booking@gmail.com).**
 
+![Scott Weingart in a sun hat and backpack, sitting on a granite outcrop at Glacier Point with Half Dome and Yosemite Valley behind him](/images/scott-yosemite.jpg)
+
 Before my current role, I served the U.S. Government as **Chief Data Officer
 and Director of Data and Evaluation at the National Endowment for the
 Humanities**. I also previously directed tech-inflected scholarly programs at

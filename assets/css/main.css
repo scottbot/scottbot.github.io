@@ -260,6 +260,8 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
    other line to match. */
 .hero-justified {
   display: table;
+  width: min-content;   /* the nowrap name/tagline set the measure;
+                           mission and contact wrap to match */
   margin: 1.5rem auto 2.5rem;
   text-align: left;
 }
@@ -282,20 +284,20 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   text-align-last: center;
 }
 @media (max-width: 760px) {
-  .hero.hero-justified { display: block; text-align: center; }
-  .hero.hero-justified .tagline { white-space: normal; text-align: center; }
-  /* The name itself never breaks: it sheds the 3rem floor and scales
-     down with the viewport instead (as on the home page). */
+  .hero.hero-justified { display: block; width: auto; text-align: center; }
+  /* The tagline holds one line, scaling with the viewport (the divisor
+     is its measured width in em, plus a hair of safety). */
+  .hero.hero-justified .tagline {
+    white-space: nowrap; text-align: center;
+    font-size: min(1.5rem, calc((100vw - 3rem) / 22.5));
+  }
+  /* The name never breaks, and takes the home page's size. */
   .hero.hero-justified .bigname {
     white-space: nowrap; text-align: center;
-    font-size: min(9vw, 4.6rem);
+    font-size: min(10.5vw, 5.5rem);
   }
   .hero.hero-justified .mission { text-align: center; text-align-last: center; }
-  .hero.hero-justified .contact { flex-wrap: wrap; justify-content: center; gap: .4rem 1.5rem; }
-}
-.hero .updated {
-  color: var(--grey-head); font-style: italic; font-size: 1rem;
-  text-align: right; display: block; margin-bottom: 1.5rem;
+  .hero.hero-justified .contact { flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; }
 }
 .hero h1.bigname {
   font-size: clamp(3rem, 9vw, 4.6rem);
