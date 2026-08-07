@@ -165,7 +165,7 @@ main {
 
 /* ── Type ──────────────────────────────────────────────────── */
 h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; margin: 1.6em 0 .4em; }
-h1 { font-size: 2.3rem; margin-top: .4em; }
+h1 { font-size: 2.3rem; margin-top: .4em; color: var(--brown-dk); }
 h2 { font-size: 1.75rem; color: var(--brown); }
 h3 { font-size: 1.35rem; }
 h4 { font-size: 1.2rem; }
