@@ -38,7 +38,7 @@ Science benefited from his decision to leave Blandford. Perhaps he, himself, did
 
 The book flinched and flexed, and lived. The man attempted the same, and did not.
 
-There's a tragedy in the story for those who want to read it—and many do. Rumor-mongers at the time and since blamed heartbreak, debt, and atheism (all untrue). The likelier story was a long battle with what we'd now call depression, combined possibly with the internal theological and philosophical tensions between the sources he loved and the religion he believed with all his heart. Since he ordered his papers to be burned after his death, we'll never know for sure.
+There's a tragedy in the story for those who want to read it—and many do. Rumor-mongers at the time and since blamed heartbreak, debt, and atheism (all untrue). The likelier story was a long battle with what we'd now call depression, combined possibly with internal theological and philosophical tensions between the sources he loved and the religion he believed with all his heart. Since he ordered his papers to be burned after his death, we'll never know for sure.
 
 What we can piece together are the feats of his mind (one credible report has him strolling through the park translating fifty lines at a time before going home to write them all down), some scant aspects of his life, and the impact he had on his contemporaries and those who came after.
 
@@ -48,9 +48,9 @@ And piecing together his life is what I've been doing, on and off, for twenty ye
 
 AI does play into the project. As of 2024 I'd written maybe 20,000 words of the bio, compressed from about 100,000 words of notes. It wasn't a book. At the pace I'd been going, it wouldn't be a book before my death.
 
-Then I started playing with LLMs, and by 2026 "agentic interfaces." Never for writing the book, but for research support. They caught some errors I made, like a miscalculation based on changing calendars. They found connections between people in the sources I hadn't noticed (situations e.g., where there was a bit evidence that two of Creech's contacts were friends, but since that evidence showed up in places beyond the context of Creech, I didn't register it when first reading it). They helped me develop a chronology that I was able to fully audit and then expand upon.
+Then I started playing with LLMs, and by 2026 "agentic interfaces." Never for writing the book, but for research support. They caught some errors I made, like a miscalculation based on changing calendars. They found connections between people in the sources I hadn't noticed (situations e.g., where there was a bit of evidence that two of Creech's contacts were friends, but since that evidence showed up in places beyond the context of Creech, I didn't register it when first reading it). They helped me develop a chronology that I was able to fully audit and then expand upon.
 
-I don't *think* AI sped up my process. Checking its accuracy probably slowed me down tremendously, to be honest. But in a thousand little directions, its given me the pointers and pushes I've needed to kick my writing process into gear.
+I don't *think* AI sped up my process. Checking its accuracy probably slowed me down tremendously, to be honest. But in a thousand little directions, it's given me the pointers and pushes I've needed to kick my writing process into gear.
 
 Other historians use AI creatively and carefully; I'm not breaking new ground here. But I believe my process to be an example of responsible use of AI for historical research. In a sea of irresponsible uses, it seems worthwhile to share my process alongside my research. Or hey, doing it in public might help me learn it's not so responsible, so careful, or so sound as I believe. Learning that would also be a win.
 
