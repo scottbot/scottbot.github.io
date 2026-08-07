@@ -17,7 +17,11 @@
       {{- with .Params.comment_count }} · {{ . }} reader comment{{ if ne . 1 }}s{{ end }} preserved{{ end -}}
     </p>
     {{ with .Params.citation }}<div class="work-citation">{{ partial "rich.html" . }}</div>{{ end }}
-    {{ if in (slice "works" "blog") .Section }}
+    {{- /* The LLM-conversion caveat belongs only to pages generated
+         from the corpus (data/sources.yaml lists exactly those). Posts
+         written by hand — everything new from 2026 on — carry none. */ -}}
+    {{- $src := index (hugo.Data.sources | default dict) .RelPermalink -}}
+    {{ if and $src (in (slice "works" "blog") .Section) }}
     {{- $nouns := dict "book" "book" "article" "article" "chapter" "book chapter" "magazine" "magazine article" "report" "report" "manual" "manual" "issue" "journal issue" "blog" "blog post" -}}
     {{- $noun := index $nouns (.Params.worktype | default "article") | default "work" -}}
     {{- /* Magazine features aren't scholarship and shouldn't claim to be. */ -}}
@@ -26,8 +30,6 @@
          GitHub — the corpus conversion (via data/sources.yaml), or the
          content file for hand-made pages. GitHub's edit flow forks the
          repository and proposes a pull request for the reader. */ -}}
-    {{- $src := index (hugo.Data.sources | default dict) .RelPermalink -}}
-    {{- if not $src }}{{ $src = printf "content%sindex.md" .RelPermalink }}{{ end -}}
     {{- $edit := printf "%s/edit/main/%s" site.Params.repoURL (replace $src " " "%20") -}}
     <p class="work-caveat"><i>Note: The conversion of this {{ if $scholarly }}scholarly {{ end }}{{ $noun }} to a website (via markdown) was assisted with an LLM. Errors likely exist. {{ with .Params.caveat_extra }}{{ . }} {{ end }}To correct errors or to issue a copyright takedown request, please reach out to <a href="mailto:weingart.scott+dossier@gmail.com">weingart.scott+dossier@gmail.com</a> or <a href="{{ $edit }}" title="Edit this page&rsquo;s source on GitHub; saving proposes a pull request">create a pull request</a>.</i></p>
     {{ end }}
