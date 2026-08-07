@@ -1,5 +1,5 @@
 ---
-title: 'CAMPI: Computer-Aided Metadata generation for Photo archives Initiative'
+title: 'CAMPI: Computer-Aided Metadata Generation for Photo archives Initiative'
 subtitle: Whitepaper on successes and failures in computer vision for visual digital collections
 date: 2020-01-01
 yearOnly: true
@@ -15,7 +15,7 @@ publisher: Carnegie Mellon University Libraries
 doi: 10.1184/R1/12791807
 original_url: https://github.com/cmu-lib/campi
 sbw: SBW-131
-citation: 'Corrin, Davis, Lincoln, and Weingart. 2020. CAMPI: Computer-Aided Metadata Generation for Photo Archives Initiative. Carnegie Mellon University Libraries. https://doi.org/10.1184/R1/12791807.'
+citation: 'Corrin, Davis, Lincoln, and Weingart. 2020. CAMPI: Computer-Aided Metadata Generation for Photo archives Initiative. Carnegie Mellon University Libraries. https://doi.org/10.1184/R1/12791807.'
 bibkey: lincolnCAMPIComputerAidedMetadata2020
 ---
 

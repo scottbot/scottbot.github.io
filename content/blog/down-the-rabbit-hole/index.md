@@ -7,10 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=41397
 archive_url: https://web.archive.org/web/20150822130429/http://www.scottbot.net/HIAL/?p=41397
-tags:
-- scholarly communication
-- visualizations
-- miscellanea
 sbw: SBW-099
 comment_count: 2
 bibkey: weingartRabbitHole2015

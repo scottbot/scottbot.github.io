@@ -38,7 +38,7 @@ timeZone        = "America/New_York"
 # automatically; no permalink config needed.
 
 [params]
-  description = "Historian of knowledge, professional circus performer, amateur father, and hopeless adventurer. Resident scholar at Dartmouth College."
+  description = "Historian of knowledge, professional circus performer, amateur father, and hopeless adventurer. Chief Technology Officer at the Library of Virginia and Resident scholar at Dartmouth College."
   author      = "Scott B. Weingart"
   # Width (px) above which clicking a work on the CV opens the side-by-side
   # reading pane instead of navigating away. This is a rung of the width
@@ -71,9 +71,6 @@ timeZone        = "America/New_York"
 [outputs]
   home    = ["HTML"]
   section = ["HTML", "RSS"]
-
-[pagination]
-  pagerSize = 500   # effectively: no pagination; lists are single pages
 
 [minify]
   disableXML = true

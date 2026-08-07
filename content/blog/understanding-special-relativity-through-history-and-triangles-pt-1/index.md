@@ -7,14 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=40456
 archive_url: https://web.archive.org/web/20151024093435/http://www.scottbot.net/HIAL/?p=40456
-tags:
-- history
-- history of science
-- methodologies
-- philosophy of science
-- relativity
-- theory
-- miscellanea
 sbw: SBW-093
 bibkey: weingartUnderstandingSpecialRelativity2014
 ---

@@ -5,11 +5,6 @@ author:
 - Scott B. Weingart
 worktype: blog
 venue: the scottbot irregular
-tags:
-- digital humanities
-- gis
-- review
-- reviews
 sbw: SBW-057
 bibkey: weingartGoogleMapsAncient2012
 ---

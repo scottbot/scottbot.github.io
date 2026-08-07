@@ -7,17 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: https://www.scottbot.net/HIAL/index.html@p=39494.html
 archive_url: https://web.archive.org/web/20251213231406/https://www.scottbot.net/HIAL/index.html@p=39494.html
-tags:
-- complexity
-- diffusion
-- history
-- human-dynamics
-- macroanalysis
-- methodologies
-- network-analysis
-- social-networks
-- social-science
-- reviews
 sbw: SBW-032
 comment_count: 2
 bibkey: weingartHistoriansDoctorsTheir2013

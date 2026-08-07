@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39047
 archive_url: https://web.archive.org/web/20141126054925/http://www.scottbot.net/HIAL/?p=39047
-tags:
-- bias
-- digital humanities
-- open access
-- scholarly communication
-- miscellanea
 sbw: SBW-079
 comment_count: 5
 bibkey: weingartImprovingJournalDigital2013

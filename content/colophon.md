@@ -14,5 +14,5 @@ allowed some of its peculiarities and pathologies to bleed through in the design
 For sustainability purposes, the pages themselves are built with the static-site generator Hugo. 
 I mostly only edit markdown and YAML, and Claude handles the rest. The site's design is inspired
 by my frankly silly [printed cv](/cv.pdf): EB Garamond font, simple colors, 
-and occassional old-fashioned ligatures. No trackers, cookies, or analytics are present. 
+and occasional old-fashioned ligatures. No trackers, cookies, or analytics are present. 
 In the grand tradition, new blog posts may be tracked via [RSS](/blog/index.xml).

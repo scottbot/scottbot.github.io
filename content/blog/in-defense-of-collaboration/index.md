@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=25401
 archive_url: https://web.archive.org/web/20151022195215/http://www.scottbot.net/HIAL/?p=25401
-tags:
-- data analysis
-- digital humanities
-- methodologies
-- text analysis
-- reviews
 sbw: SBW-062
 comment_count: 4
 bibkey: weingartDefenseCollaboration2012

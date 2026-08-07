@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=21129
 archive_url: https://web.archive.org/web/20151003053952/http://www.scottbot.net/HIAL/?p=21129
-tags:
-- complexity
-- data analysis
-- digital humanities
-- methodologies
-- method
 sbw: SBW-060
 comment_count: 2
 bibkey: weingartSimplicity2012

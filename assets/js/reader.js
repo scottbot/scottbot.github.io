@@ -21,6 +21,10 @@
   var cache = {};
   var currentPath = null;
   var lastTrigger = null; // the link that opened the pane, for focus return
+  // The links the pane knows how to open: a work or a blog post.
+  var WORK_RE = /^\/(works|blog)\/[^/]+\/$/;
+  // Respect a reader who has asked the OS for less motion.
+  var MOTION_OK = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
   function readerAllowed() {
     return document.body.classList.contains("reader-enabled") &&
@@ -62,11 +66,21 @@
     // Fetched documents live at basePath; their relative srcs/hrefs
     // (images/fig-001.png) must be re-anchored or they'd resolve
     // against the page we're actually on.
-    node.querySelectorAll("img[src], a[href], source[src]").forEach(function (el) {
-      var attr = el.tagName === "A" ? "href" : "src";
-      var val = el.getAttribute(attr);
-      if (!val || /^([a-z]+:|\/|#)/i.test(val)) return;
-      el.setAttribute(attr, basePath + val);
+    var isRelative = function (val) { return val && !/^([a-z]+:|\/|#)/i.test(val); };
+    node.querySelectorAll("img, a, source, video").forEach(function (el) {
+      ["src", "href", "poster"].forEach(function (attr) {
+        var val = el.getAttribute(attr);
+        if (isRelative(val)) el.setAttribute(attr, basePath + val);
+      });
+      // srcset holds comma-separated "url descriptor" pairs.
+      var srcset = el.getAttribute("srcset");
+      if (srcset) {
+        el.setAttribute("srcset", srcset.split(",").map(function (part) {
+          var bits = part.trim().split(/\s+/);
+          if (isRelative(bits[0])) bits[0] = basePath + bits[0];
+          return bits.join(" ");
+        }).join(", "));
+      }
     });
   }
 
@@ -103,9 +117,17 @@
     pane.hidden = false;
     contentEl.scrollTop = 0;
     currentPath = path;
+    if (paneRise) paneRise.classList.remove("shown");
+    riseCheck();
   }
 
   function openReader(path, push, focusPane) {
+    // Re-opening the piece already in the pane: nothing to render, and
+    // pushing another history entry would make Back appear to do nothing.
+    if (path === currentPath && !pane.hidden) {
+      if (focusPane) contentEl.focus({ preventScroll: true });
+      return;
+    }
     var load = cache[path]
       ? Promise.resolve(cache[path])
       : fetch(path).then(function (r) {
@@ -148,9 +170,14 @@
     }
     pane.hidden = true;
     currentPath = null;
+    if (paneRise) paneRise.classList.remove("shown");
+    riseCheck();
     if (push) {
       var url = new URL(window.location);
       url.searchParams.delete("read");
+      // A footnote jump inside the pane may have left a #fn:… hash
+      // pointing at an element that just went away with the pane.
+      url.hash = "";
       history.pushState({}, "", url);
     }
   }
@@ -167,13 +194,13 @@
       // The "open ↗" permalink is a real navigation — never intercept it.
       if (a.classList.contains("reader-permalink")) return;
       // Other links within the pane: internal works/posts swap the pane content.
-      if (/^\/(works|blog)\/[^/]+\/$/.test(a.pathname)) {
+      if (WORK_RE.test(a.pathname)) {
         e.preventDefault();
         openReader(a.pathname, true, true);
       }
       return;
     }
-    if (!/^\/(works|blog)\/[^/]+\/$/.test(a.pathname)) return;
+    if (!WORK_RE.test(a.pathname)) return;
     e.preventDefault();
     lastTrigger = a;
     openReader(a.pathname, true, true);
@@ -189,14 +216,16 @@
   window.addEventListener("popstate", function () {
     var path = new URL(window.location).searchParams.get("read");
     var paneOpen = document.body.classList.contains("reader-open");
-    if (path && /^\/(works|blog)\/[^/]+\/$/.test(path)) {
+    if (path && WORK_RE.test(path)) {
       // Hash-only traversals (footnote jumps within the pane) re-fire
       // popstate with the same ?read=; re-rendering would throw away the
       // reader's place, so leave the pane alone.
       if (paneOpen && path === currentPath) return;
       // Don't conjure the pane on a window too narrow for it — unless it
-      // is already open (e.g. the user resized after opening).
+      // is already open (e.g. the user resized after opening). On a
+      // too-narrow window, honor the URL by going to the work itself.
       if (readerAllowed() || paneOpen) openReader(path, false, false);
+      else window.location.replace(path);
     } else {
       closeReader(false);
     }
@@ -204,7 +233,7 @@
 
   // Deep link: /cv/?read=/works/network-turn/
   var initial = new URL(window.location).searchParams.get("read");
-  if (initial && /^\/(works|blog)\/[^/]+\/$/.test(initial)) {
+  if (initial && WORK_RE.test(initial)) {
     if (readerAllowed()) {
       openReader(initial, false, false);
     } else {
@@ -266,26 +295,58 @@
   }
   armorTables(document);
 
-  /* ── The rising manicule ─────────────────────────────────────
+  /* ── The rising manicules ────────────────────────────────────
      After about a screen and a half of reading, a hand appears at
-     the bottom corner, pointing the way back to the top. */
-  var rise = document.querySelector(".rise");
+     the bottom corner, pointing the way back to the top. In the
+     split view each half gets its own: the left column's hand sits
+     at that column's edge and scrolls the column; the pane's hand
+     sits at the window's edge and scrolls the pane. */
+  var rise = document.querySelector(".rise:not(.rise-pane)");
+  var paneRise = pane.querySelector(".rise-pane");
+
+  function riseCheck() {
+    if (!rise) return;
+    var open = document.body.classList.contains("reader-open");
+    var y = open ? pageBody.scrollTop : window.scrollY;
+    var h = open ? pageBody.clientHeight : window.innerHeight;
+    rise.classList.toggle("shown", y > h * 1.5);
+  }
+  function paneRiseCheck() {
+    if (!paneRise) return;
+    paneRise.classList.toggle("shown",
+      contentEl.scrollTop > contentEl.clientHeight * 1.5);
+  }
+  function toTop(scroller) {
+    scroller.scrollTo({ top: 0, behavior: MOTION_OK.matches ? "smooth" : "instant" });
+  }
   if (rise) {
-    var riseCheck = function () {
-      rise.classList.toggle("shown", window.scrollY > window.innerHeight * 1.5);
-    };
-    window.addEventListener("scroll", riseCheck, { passive: true });
+    pageBody.addEventListener("scroll", riseCheck, { passive: true });
+    rise.addEventListener("click", function (e) {
+      // In split view the window cannot scroll; send the column up instead.
+      if (document.body.classList.contains("reader-open")) {
+        e.preventDefault();
+        toTop(pageBody);
+      }
+    });
     riseCheck();
+  }
+  if (paneRise) {
+    contentEl.addEventListener("scroll", paneRiseCheck, { passive: true });
+    paneRise.addEventListener("click", function (e) {
+      e.preventDefault();
+      toTop(contentEl);
+    });
   }
 
   /* ── The yielding running head (small screens) ───────────────
      On phones the frozen header would cost a strip of every screen,
      so it slides away while reading downward and returns on the
      first upward scroll (or near the top). Wide screens keep the
-     always-frozen head. */
+     always-frozen head. One listener serves it and the manicule. */
   var smallScreen = window.matchMedia("(max-width: 640px)");
   var lastY = window.scrollY;
   window.addEventListener("scroll", function () {
+    riseCheck();
     if (!smallScreen.matches) {
       document.body.classList.remove("head-away");
       return;

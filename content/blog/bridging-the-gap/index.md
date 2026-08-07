@@ -5,12 +5,6 @@ author:
 - Scott B. Weingart
 worktype: blog
 venue: the scottbot irregular
-tags:
-- alt-ac
-- disciplinarity
-- interdisciplinarity
-- two cultures
-- theory
 sbw: SBW-097
 bibkey: weingartBridgingGap2015
 ---

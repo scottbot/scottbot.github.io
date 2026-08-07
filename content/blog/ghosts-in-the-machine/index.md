@@ -6,12 +6,6 @@ author:
 worktype: blog
 venue: the scottbot irregular
 archive_url: https://web.archive.org/web/20160304020159/http://www.scottbot.net/HIAL/
-tags:
-- archives
-- digital humanities
-- materiality
-- preservation
-- miscellanea
 sbw: SBW-100
 bibkey: weingartGhostsMachine2015
 ---

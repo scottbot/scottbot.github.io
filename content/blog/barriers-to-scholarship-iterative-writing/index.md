@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=40622
 archive_url: https://web.archive.org/web/20150716234337/http://www.scottbot.net/HIAL/?p=40622
-tags:
-- open access
-- scholarly communication
-- scientonomy
-- miscellanea
 sbw: SBW-086
 comment_count: 2
 bibkey: weingartBarriersScholarshipIterative2014

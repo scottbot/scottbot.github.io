@@ -1,5 +1,5 @@
 ---
-title: "A Working Definition of Digital Humanites"
+title: "A Working Definition of Digital Humanities"
 authors:
   - { display: "Scott Weingart" }
 post_date: "2013-12-08"
@@ -52,7 +52,7 @@ extraction_notes: |
 bibkey: "weingartWorkingDefinitionDigital2013"
 ---
 
-# A Working Definition of Digital Humanites
+# A Working Definition of Digital Humanities
 
 Hah! I tricked you. I don’t intend to define digital humanities here—too much blood has already been spilled over that subject. I’m sure we all remember the terrible digital humanities / humanities computing wars of 2004, now commemorated yearly under a Big Tent in the U.S., Europe, or in 2015, Australia. Most of us still suffer from ACH or ~~ALLC~~ (edit: I’ve been reminded the more politically correct acronym these days is EADH).
 

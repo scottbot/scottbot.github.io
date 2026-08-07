@@ -9,7 +9,7 @@ worktype: article
 doi: 10.46430/phen0017
 issue: '1'
 sbw: SBW-021
-citation: Graham, Shawn, Scott B. Weingart, and Ian Milligan. 2012. “Getting Started with Topic Modeling and MALLET.” Programming Historian, no. 1 (September). https://doi.org/10.46430/phen0017.
+citation: Shawn Graham, Scott Weingart, and Ian Milligan, “Getting Started with Topic Modeling and MALLET,” Programming Historian 1 (2012), https://doi.org/10.46430/phen0017.
 abstract: In this lesson you will first learn what topic modeling is and why you might want to employ it in your research. You will then learn how to install and work with the MALLET natural language processing toolkit to do so.
 bibkey: grahamGettingStartedTopic2012
 ---

@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/modeling-space-ships-from-ocean-liners/
 archive_url: https://web.archive.org/web/20191209075208/http://scottbot.net/modeling-space-ships-from-ocean-liners/
-tags:
-- history
-- libraries
-- media
-- scholarly communication
-- miscellanea
 sbw: SBW-128
 bibkey: weingartModelingSpaceShips2019
 ---

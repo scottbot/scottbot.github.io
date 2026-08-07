@@ -14,7 +14,7 @@ volume: '28'
 issue: '3'
 pages: 404-416
 sbw: SBW-038
-citation: Weingart, Scott B., and Jeana Jorgensen. “Computational Analysis of the Body in European Fairy Tales.” Literary and Linguistic Computing 28, no. 3 (2012). https://doi.org/10.1093/llc/fqs015.
+citation: Weingart, Scott B., and Jeana Jorgensen. “Computational Analysis of the Body in European Fairy Tales.” Literary and Linguistic Computing 28, no. 3 (2013). https://doi.org/10.1093/llc/fqs015.
 abstract: 'This article explores how digital humanities research methods can be used to
 
   analyze the representations of gendered bodies in European fairy tales, a flexible

@@ -31,9 +31,12 @@ MODES — the default is safe and additive:
                  directory are reported as orphans, never deleted.
 
 Note for additive runs: cross-links are rewritten only inside the pages
-being written. If a new post is the target of links in OLD posts, those
-old links are not touched (they point at the original URLs, which still
-resolve or are archived).
+being written, and only toward pages that are published (or being written
+this run) — a link to a merely-scanned corpus page would 404. Deferred
+rewrites are counted in the report; a later --force pass picks them up.
+If a new post is the target of links in OLD posts, those old links are
+not touched (they point at the original URLs, which still resolve or
+are archived).
 
 What it does:
   1. Walks every corpus directory (skipping ones starting with "_"), finds the
@@ -48,7 +51,7 @@ What it does:
   3. Replaces the source YAML frontmatter with normalized Hugo frontmatter
      (title, subtitle, date/yearOnly, author, author_note, worktype, venue,
      publisher, doi, original_url, archive_url, volume, issue, pages, isbn,
-     tags, sbw, citation, abstract, comment_count, caveat_extra, bibkey).
+     sbw, citation, abstract, comment_count, caveat_extra, bibkey).
      Provenance/extraction keys are intentionally dropped; the archive corpus
      retains them.
   4. Joins "List of Outputs.csv" on its "Local MD" column to add the sbw ID
@@ -384,7 +387,7 @@ REF_DEF_RE = re.compile(r"^(\s{0,3}\[[^\]]+\]:\s*)(https?://\S+)(.*)$")
 AUTOLINK_RE = re.compile(r"<(https?://[^>\s]+)>")
 
 
-def transform_body(body, title, url_index, self_path, stats):
+def transform_body(body, title, url_index, self_path, stats, eligible=None):
     """Apply the body transformations.
 
     Returns (new_body, caveat_extra) — caveat_extra is the author's extra
@@ -401,6 +404,11 @@ def transform_body(body, title, url_index, self_path, stats):
         key, frag = normalize_url(url)
         if key and not too_generic(key) and key in url_index:
             new = url_index[key]
+            if eligible is not None and new not in eligible:
+                # Target is a scanned-but-unpublished corpus page; leave
+                # the original URL (it still resolves or is archived).
+                stats["links_deferred"] += 1
+                return None
             stats["links_rewritten"] += 1
             if new == self_path:
                 stats["links_self"] += 1
@@ -569,18 +577,9 @@ def build_frontmatter(kind, dirname, fm, csv_row, warnings):
     put("pages")
     put("isbn")
 
-    # ---- tags (tags + categories, deduped, order-preserving) ----
-    tags, seen = [], set()
-    for src in (fm.get("tags"), fm.get("categories")):
-        if isinstance(src, str):
-            src = [src]
-        for t in src or []:
-            t = str(t).strip()
-            if t and t not in seen:
-                seen.add(t)
-                tags.append(t)
-    if tags:
-        out["tags"] = tags
+    # (Corpus tags/categories are deliberately NOT carried over: the site
+    # disables taxonomies and no template reads them. The archive corpus
+    # retains the originals.)
 
     # ---- CSV join ----
     if csv_row:
@@ -641,11 +640,19 @@ def main():
 
     corpus = Path(args.corpus)
     site = Path(args.site)
+    # The corpus's path as written into warnings and sources.yaml. When the
+    # corpus lives inside the site (the normal arrangement) this is the
+    # repo-relative "corpus/Markdown"; a --corpus elsewhere shows as-is.
+    try:
+        corpus_prefix = corpus.resolve().relative_to(site.resolve()).as_posix()
+    except ValueError:
+        corpus_prefix = corpus.as_posix()
     blog_root = site / "content" / "blog"
     works_root = site / "content" / "works"
     warnings, skipped = [], []
-    stats = {"links_rewritten": 0, "links_self": 0, "h1_removed": 0,
-             "h1_demoted": 0, "caveats_stripped": 0, "images_copied": 0}
+    stats = {"links_rewritten": 0, "links_self": 0, "links_deferred": 0,
+             "h1_removed": 0, "h1_demoted": 0, "caveats_stripped": 0,
+             "images_copied": 0}
 
     # ---- mode: additive (default) / --only subset / --force full rebuild ----
     full_rebuild = args.force and not args.only
@@ -673,7 +680,11 @@ def main():
             local_md = (row.get("Local MD") or "").strip()
             if local_md:
                 if local_md in csv_by_localmd:
-                    warnings.append(f"CSV: duplicate Local MD {local_md!r}")
+                    # First row wins, as in the URL index; later duplicates
+                    # are reported and ignored.
+                    warnings.append(f"CSV: duplicate Local MD {local_md!r}; "
+                                    "keeping the first row")
+                    continue
                 csv_by_localmd[local_md] = row
 
     # ---- pass 1: scan corpus, classify, assign slugs ----
@@ -694,11 +705,19 @@ def main():
             skipped.append((d.name, f"unreadable frontmatter: {e}"))
             continue
         m = DATED_DIR_RE.match(d.name)
+        adopted = None
         if d.name in existing_map:
             # Adopt the published slug so cross-links and workmap stay
             # stable regardless of any drift in the slug table above.
             path = existing_map[d.name].strip("/")
-            section, slug = path.split("/", 1)
+            if "/" in path:
+                adopted = path.split("/", 1)
+            else:
+                warnings.append(
+                    f"workmap: malformed path {existing_map[d.name]!r} for "
+                    f"{d.name!r} (expected /section/slug/); ignoring it")
+        if adopted:
+            section, slug = adopted
             kind = "blog" if section == "blog" else "work"
         elif m:
             kind, slug = "blog", m.group(2)
@@ -711,7 +730,7 @@ def main():
                     f"{d.name}: not in WORK_SLUGS; auto-slugged as {slug!r}")
         # Windows caps paths at 260 characters and not every git honors
         # core.longpaths; keep corpus paths comfortably clear of trouble.
-        rel = f"corpus/Markdown/{d.name}/{md.name}"
+        rel = f"{corpus_prefix}/{d.name}/{md.name}"
         if len(rel) > 200:
             warnings.append(
                 f"{d.name}: corpus path is {len(rel)} characters — rename "
@@ -757,6 +776,26 @@ def main():
     for p in pages:
         section = "blog" if p["kind"] == "blog" else "works"
         p["path"] = f"/{section}/{p['slug']}/"
+    # A collision-fallback slug is chosen without looking at the disk, so it
+    # could land on an existing bundle this page does not own (e.g. a
+    # hand-made page) — which the cleanup pass below would then rmtree.
+    # Refuse loudly instead; nothing has been written yet.
+    landgrabs = []
+    for p in pages:
+        section_root = blog_root if p["kind"] == "blog" else works_root
+        if (not p["bundled"]
+                and (section_root / p["slug"] / "index.md").exists()):
+            landgrabs.append(
+                f"{p['kind']}/{p['slug']}: {p['dirname']} would overwrite an "
+                "existing page it did not generate")
+    if landgrabs:
+        print("ERROR: slug resolution landed on existing pages these corpus "
+              "directories do not own:", file=sys.stderr)
+        for lg in landgrabs:
+            print(f"  {lg}", file=sys.stderr)
+        print("Add a WORK_SLUGS entry (or rename the corpus directory), "
+              "then re-run. Nothing was written.", file=sys.stderr)
+        return 2
 
     # ---- build cross-link URL index ----
     url_index, url_owner = {}, {}
@@ -812,6 +851,11 @@ def main():
                   "has a bundle. (Use --only NAME --force to rebuild one, "
                   "or --force alone for a full rebuild.)")
     written_names = {p["dirname"] for p in to_write}
+    # Cross-links may only point at pages that will actually exist when
+    # this run finishes: already published, or being written right now.
+    # (Under --force everything is written, so nothing is excluded.)
+    eligible_paths = {p["path"] for p in pages
+                      if p["bundled"] or p["dirname"] in written_names}
     untouched = sum(1 for p in pages
                     if p["bundled"] and p["dirname"] not in written_names)
 
@@ -848,7 +892,8 @@ def main():
         meta = build_frontmatter(p["kind"], p["dirname"], p["fm"], csv_row,
                                  warnings)
         body, caveat_extra = transform_body(p["body"], meta["title"],
-                                            url_index, p["path"], stats)
+                                            url_index, p["path"], stats,
+                                            eligible_paths)
         if caveat_extra:
             if not meta.get("caveat_extra"):
                 meta["caveat_extra"] = caveat_extra
@@ -925,7 +970,7 @@ def main():
     # source on GitHub (which proposes a pull request), instead of the
     # repository's generic pull-request list.  Hand-made pages aren't
     # listed; the template falls back to their content/ file.
-    sources = {p["path"]: f"corpus/Markdown/{p['dirname']}/{p['srcname']}"
+    sources = {p["path"]: f"{corpus_prefix}/{p['dirname']}/{p['srcname']}"
                for p in pages
                if p["dirname"] in written_names or p["bundled"]}
     with open(data_dir / "sources.yaml", "w", encoding="utf-8",
@@ -958,6 +1003,9 @@ def main():
     print(f"images/assets copied: {stats['images_copied']} files")
     print(f"cross-links rewritten:{stats['links_rewritten']:>5} "
           f"(of which self-links: {stats['links_self']})")
+    if stats["links_deferred"]:
+        print(f"cross-links deferred: {stats['links_deferred']:>5} "
+              "(target pages not published yet; kept original URLs)")
     print(f"redundant H1s removed:{stats['h1_removed']:>5}")
     print(f"H1s demoted to H2:    {stats['h1_demoted']:>5}")
     print(f"caveats -> template:  {stats['caveats_stripped']:>5}")

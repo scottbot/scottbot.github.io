@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=6336
 archive_url: https://web.archive.org/web/20160308074954/http://www.scottbot.net/HIAL/?p=6336
-tags:
-- open access
-- scholarly communication
-- scientonomy
-- personal research
 sbw: SBW-018
 comment_count: 2
 bibkey: weingartPledges2011

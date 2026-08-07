@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39106
 archive_url: https://web.archive.org/web/20140408005832/http://www.scottbot.net:80/HIAL/?p=39106
-tags:
-- academia
-- complexity
-- disciplinarity
-- interdisciplinarity
-- scientonomy
-- miscellanea
 sbw: SBW-081
 comment_count: 7
 bibkey: weingartBreakingPhDModel2013

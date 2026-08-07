@@ -9,17 +9,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/representation-at-digital-humanities-conferences-2000-2015/
 archive_url: https://web.archive.org/web/20160401175433/http://scottbot.net/representation-at-digital-humanities-conferences-2000-2015/
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- disciplinarity
-- diversity
-- gender
-- interdisciplinarity
-- network analysis
-- scholarly communication
-- personal research
 sbw: SBW-111
 bibkey: eichmann-kalwaraRepresentationDigitalHumanities2016
 ---

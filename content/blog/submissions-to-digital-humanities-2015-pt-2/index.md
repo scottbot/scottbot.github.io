@@ -6,15 +6,6 @@ author:
 worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- scholarly communication
-- scientonomy
-- text analysis
-- visualizations
-- personal research
 sbw: SBW-092
 bibkey: weingartSubmissionsDigitalHumanities2014a
 ---

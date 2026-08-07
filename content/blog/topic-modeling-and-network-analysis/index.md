@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=221
 archive_url: https://web.archive.org/web/20140920053451/http://www.scottbot.net/HIAL/?p=221
-tags:
-- data analysis
-- digital humanities
-- methodologies
-- network analysis
-- social networks
-- text analysis
-- topic modeling
-- method
 sbw: SBW-019
 comment_count: 5
 bibkey: weingartTopicModelingNetwork2012

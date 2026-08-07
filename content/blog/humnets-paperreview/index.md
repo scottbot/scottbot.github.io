@@ -7,14 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=80
 archive_url: https://web.archive.org/web/20111103061616/http://www.scottbot.net/HIAL/?p=80
-tags:
-- bias
-- big data
-- data analysis
-- history
-- humnets
-- network analysis
-- Uncategorized
 sbw: SBW-011
 bibkey: weingartHumnetsPaperReview2011
 ---

@@ -7,9 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=20132
 archive_url: https://web.archive.org/web/20150311130724/http://www.scottbot.net/HIAL/?p=20132
-tags:
-- open access
-- personal research
 sbw: SBW-036
 comment_count: 2
 bibkey: weingartAnotherStepKeeping2012

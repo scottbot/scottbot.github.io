@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=8237
 archive_url: https://web.archive.org/web/20121202161527/http://www.scottbot.net/HIAL/?p=8237
-tags:
-- bayesian
-- big data
-- digital humanities
-- methodologies
-- statistics
-- method
 sbw: SBW-037
 comment_count: 6
 bibkey: weingartDoingBayesianData2012

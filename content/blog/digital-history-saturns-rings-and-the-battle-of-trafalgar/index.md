@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=41109
 archive_url: https://web.archive.org/web/20150425231850/http://www.scottbot.net/HIAL/?p=41109
-tags:
-- abms
-- complexity
-- history of science
-- methodologies
-- scientonomy
-- method
 sbw: SBW-088
 comment_count: 1
 bibkey: weingartDigitalHistorySaturns2014

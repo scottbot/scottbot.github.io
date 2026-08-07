@@ -5,16 +5,6 @@ author:
 - Scott B. Weingart
 worktype: blog
 venue: the scottbot irregular
-tags:
-- complexity
-- data analysis
-- digital humanities
-- gephi
-- methodologies
-- network analysis
-- networks demystified
-- social networks
-- method
 sbw: SBW-101
 bibkey: weingartNetworksDemystified92015
 ---

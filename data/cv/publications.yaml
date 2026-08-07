@@ -38,10 +38,10 @@ sections:
     subtitle: "peer reviewed"
     entries:
       - year: "unpublished"
-        citation: "Weingart, S.B. (unpublished). The Networked Structure of Early Modern Science. *Journal for the Association of Information Science & Technology*."
+        citation: "Weingart, S.B. (unpublished). The Networked Structure of Early Modern Science. *Journal of the Association for Information Science and Technology*."
         sbw: SBW-135
       - year: ""
-        citation: "Sack, G. & Weingart, S.B. (unpublished). Literary Network Analysis. In J. O’Sullivan (Ed.) *Digital Humanities for Literary Studies: Theories, Methods, and Practices*. College Station: Texas A&M University Press."
+        citation: "Sack, G. & Weingart, S.B. (2018). Literary Network Analysis. In J. O’Sullivan (Ed.) *Digital Humanities for Literary Studies: Theories, Methods, and Practices*. University Park: Pennsylvania State University Press. [Book never published]"
         work: "Sack_and_Weingart_Literary_Network_Analysis"
         sbw: SBW-124
       - year: "2024"
@@ -59,16 +59,16 @@ sections:
         work: "heberling-et-al-2021-data-integration-enables-global-biodiversity-synthesis"
         sbw: SBW-034
       - year: "2020"
-        citation: "Burton, M., Lavin, M., Otis, J., & Weingart, S.B. (2020). Digits: Two Reports on New Units of Scholarly Publication. *Journal of Electronic Publishing*, 23(1). [10.3998/3336451.0022.105](https://doi.org/10.3998/3336451.0022.105)"
-        work: "Burton_et_al_2019_Digits"
-        sbw: SBW-126
-      - year: ""
-        citation: "Gomez, F., Weingart, S.B., Mulligan, R., & Evans, D. (2019/2020). The Latin American Comics Archive (LACA): an online platform housing digitized Spanish-language comics as a tool to enhance literacy, research, and teaching through scholar / student collaboration. *Cuadernos del Centro de Estudios en Diseño y Comunicación*, 89. [10.18682/cdc.vi89.3789](https://doi.org/10.18682/cdc.vi89.3789)"
+        citation: "Gómez, F., Weingart, S.B., Mulligan, R., & Evans, D. (2019/2020). The Latin American Comics Archive (LACA): an online platform housing digitized Spanish-language comics as a tool to enhance literacy, research, and teaching through scholar / student collaboration. *Cuadernos del Centro de Estudios en Diseño y Comunicación*, 89. [10.18682/cdc.vi89.3789](https://doi.org/10.18682/cdc.vi89.3789)"
         note: "award-winning"
         work: "Gomez_et_al_2020_Latin_American_Comics_Archive"
         sbw: SBW-130
       - year: "2019"
-        citation: "Eichmann, N., Jorgensen, J., & Weingart, S.B. (2019). Representation at Digital Humanities Conferences (2000-2015). In J. Wernimont & E. Losh (Eds.) *Bodies of Information: Intersectional Feminism and Digital Humanities*. Minneapolis: University of Minnesota Press. [10.5749/j.ctv9hj9r9.9](https://doi.org/10.5749/j.ctv9hj9r9.9)"
+        citation: "Burton, M., Lavin, M., Otis, J., & Weingart, S.B. (2019). Digits: Two Reports on New Units of Scholarly Publication. *Journal of Electronic Publishing*, 22(1). [10.3998/3336451.0022.105](https://doi.org/10.3998/3336451.0022.105)"
+        work: "Burton_et_al_2019_Digits"
+        sbw: SBW-126
+      - year: ""
+        citation: "Eichmann, N., Jorgensen, J., & Weingart, S.B. (2019). Representation at Digital Humanities Conferences (2000–2015). In J. Wernimont & E. Losh (Eds.) *Bodies of Information: Intersectional Feminism and Digital Humanities*. Minneapolis: University of Minnesota Press. [10.5749/j.ctv9hj9r9.9](https://doi.org/10.5749/j.ctv9hj9r9.9)"
         note: "30+ citations"
         work: "Eichmann-Kalwara_et_al_2018_Representation_at_DH_Conferences"
         sbw: SBW-123
@@ -78,7 +78,7 @@ sections:
         work: "Weingart_and_Eichmann_2017_Whats_Under_the_Big_Tent"
         sbw: SBW-119
       - year: ""
-        citation: "Ladd, J., Otis, J., Warren, C., & Weingart, S.B. (2017). Exploring and Analyzing Network Data with Python. *The Programming Historian*, 2. [Translated into and published in Ukrainian, Portuguese, and French.] [10.46430/phen0064](https://doi.org/10.46430/phen0064)"
+        citation: "Ladd, J., Otis, J., Warren, C., & Weingart, S.B. (2017). Exploring and Analyzing Network Data with Python. *The Programming Historian*, 6. [Translated into and published in Ukrainian, Portuguese, and French.] [10.46430/phen0064](https://doi.org/10.46430/phen0064)"
         note: "20+ citations"
         work: "Ladd_et_al_2017_Exploring_Network_Data_with_Python"
         sbw: SBW-118
@@ -113,7 +113,7 @@ sections:
         work: "Graham_Weingart_2014_Equifinality_Archaeological_Networks"
         sbw: SBW-023
       - year: "2014"
-        citation: "Graham, S., Milligan, I., & Weingart, S.B. (2014). Writing *The Historian’s Macroscope* in Public. *Perspectives in History*, 52(7)."
+        citation: "Graham, S., Milligan, I., & Weingart, S.B. (2014). Writing *The Historian’s Macroscope* in Public. *Perspectives on History*, 52(7)."
         work: "Graham_et_al_2014_Writing_Macroscope_in_Public"
         sbw: SBW-094
       - year: ""
@@ -145,7 +145,7 @@ sections:
         work: "Milojevic_et_al_2012_Information_visualization"
         sbw: SBW-022
       - year: "2012"
-        citation: "Graham, S., Weingart, S.B., & Milligan, I. (2012). Getting Started with Topic Modeling and MALLET. *The Programming Historian*, 2. [Translated into and published in Spanish.] [10.46430/phen0017](https://doi.org/10.46430/phen0017)"
+        citation: "Graham, S., Weingart, S.B., & Milligan, I. (2012). Getting Started with Topic Modeling and MALLET. *The Programming Historian*, 1. [Translated into and published in Spanish.] [10.46430/phen0017](https://doi.org/10.46430/phen0017)"
         note: "190+ citations"
         work: "Graham_et_al_2012_topic_modeling"
         sbw: SBW-021
@@ -155,7 +155,7 @@ sections:
         work: "Weingart_2011_Demystifying_Networks"
         sbw: SBW-016
       - year: ""
-        citation: "Guo, H., Weingart, S.B., & Börner, K. (2011). Mixed-Indicators Model for Identifying Emerging Research Fields. *Scientometrics*, 89(1). [10.1007/s11192-011-0433-7](https://doi.org/10.1007/s11192-011-0433-7)"
+        citation: "Guo, H., Weingart, S.B., & Börner, K. (2011). Mixed-Indicators Model for Identifying Emerging Research Areas. *Scientometrics*, 89(1). [10.1007/s11192-011-0433-7](https://doi.org/10.1007/s11192-011-0433-7)"
         note: "150+ citations"
         work: "Guo_et_al_2011_Mixed_indicators_model"
         sbw: SBW-010
@@ -179,12 +179,12 @@ sections:
         work: "NEH_2024_Assessing_the_State_of_the_Humanities_Preliminary"
         sbw: SBW-133
       - year: "2021"
-        citation: "Weingart, S.B. & Lincoln, M. (2021). CMU Library Labs (2020-2024). *CMU Library Lab White Paper*. [10.1184/R1/13522718](https://doi.org/10.1184/R1/13522718)"
+        citation: "Weingart, S.B. & Lincoln, M. (2021). CMU Library Labs (2020–2024). *CMU Library Lab White Paper*. [10.1184/R1/13522718](https://doi.org/10.1184/R1/13522718)"
         note: "white paper"
         work: "CMU_Library_Labs_2020-2024"
         sbw: SBW-033
       - year: "2020"
-        citation: "Lincoln, M, & Weingart, S.B. (2020). CMU Libraries Tech Report, Fall 2020. *CMU Library Lab White Paper*."
+        citation: "Lincoln, M., & Weingart, S.B. (2020). CMU Libraries Tech Report, Fall 2020. *CMU Library Lab White Paper*."
         note: "white paper"
         sbw: SBW-137
       - year: ""

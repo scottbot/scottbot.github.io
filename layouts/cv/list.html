@@ -24,7 +24,7 @@
        narrower screens the same list folds into a compact disclosure. */}}
   <details class="toc-details">
     <summary>Contents</summary>
-    <ul class="toc-list">{{ partial "cv-toc-items.html" . }}</ul>
+    <ul class="toc-list">{{ partial "cv-toc-items.html" "" }}</ul>
   </details>
 
   {{/* ── Appointments & Education ─────────────────────────── */}}
@@ -138,7 +138,7 @@
 
   <div class="sassy">This Space<br>Intentionally<br>Left Sassy</div>
 
-  {{ partial "cv-colophon.html" . }}
+  {{ partial "cv-colophon.html" "" }}
 </div>
 
 {{/* The still contents menu: floats at the viewport's right on wide
@@ -146,6 +146,6 @@
      work is opened into the reading pane. */}}
 <nav class="side-rail" aria-label="Contents">
   <span class="rail-title">Contents</span>
-  <ul>{{ partial "cv-toc-items.html" . }}</ul>
+  <ul>{{ partial "cv-toc-items.html" "" }}</ul>
 </nav>
 {{ end }}

@@ -6,23 +6,6 @@ author:
 worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/
-tags:
-- big data
-- complexity
-- data analysis
-- diffusion
-- digital humanities
-- disciplinarity
-- history
-- history of science
-- interdisciplinarity
-- literary history
-- macroanalysis
-- methodologies
-- scientonomy
-- social science
-- theory
-- two cultures
 sbw: SBW-087
 bibkey: weingartBridgingTokenType2014
 ---

@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/index.html@p=22471.html
 archive_url: https://web.archive.org/web/20160907091926/http://www.scottbot.net/HIAL/index.html@p=22471.html
-tags:
-- data analysis
-- methodologies
-- statistics
-- visualizations
-- method
 sbw: SBW-059
 comment_count: 3
 bibkey: weingartMakingPrettyThings2012

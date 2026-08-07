@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=6526
 archive_url: https://web.archive.org/web/20151006115258/http://www.scottbot.net/HIAL/?p=6526
-tags:
-- centrality
-- methodologies
-- network analysis
-- networks demystified
-- method
 sbw: SBW-017
 comment_count: 3
 bibkey: weingartNetworksDemystified22012

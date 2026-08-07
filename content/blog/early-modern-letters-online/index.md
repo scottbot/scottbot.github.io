@@ -6,22 +6,6 @@ author:
 worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/
-tags:
-- big data
-- data analysis
-- digital humanities
-- gephi
-- history
-- history of science
-- network analysis
-- open access
-- republic of letters
-- review
-- scholarly communication
-- sci2
-- social networks
-- visualizations
-- reviews
 sbw: SBW-040
 bibkey: weingartEarlyModernLetters2012
 ---

@@ -7,10 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/dh-conf-index/
 archive_url: https://web.archive.org/web/20201126155503/http://scottbot.net/dh-conf-index/
-tags:
-- dhconf
-- digital humanities
-- miscellanea
 sbw: SBW-149
 bibkey: weingartIndexDigitalHumanities2020a
 ---

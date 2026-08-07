@@ -11,4 +11,3 @@ cf2fd9306e3b4ab6aab05a18670cb87784e4aaffe3151f38f6c82bfd2db9410b       23638  im
 b3909ebc8625771df068517bcd8eec4a2392d6bb2dacd9e6c21ae1304daa661f     2568162  images/SBW-026-fig-10-oled-stack.webp
 496f85c631a75eacf82614c121268eeab9a84e039b921577613422c037fd5dcd     4167454  images/SBW-026-fig-11-negative-space.webp
 0249dbfbdffe65a9452142beaf97ebf03496f57228c02a2e0f7c4ca019662b96       31343  the-route-of-a-text-message-a-love-story.md
-20175e011239c61cae52c09f4914db1001e46a115b6839bd1b996a31ec058bb0       31208  the-route-of-a-text-message-a-love-story.md.bak

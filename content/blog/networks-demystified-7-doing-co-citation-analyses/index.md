@@ -7,18 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39432
 archive_url: https://web.archive.org/web/20130926154747/http://www.scottbot.net/HIAL/?p=39432
-tags:
-- data analysis
-- gephi
-- methodologies
-- network analysis
-- networks demystified
-- scholarly communication
-- sci2
-- scientonomy
-- social networks
-- visualizations
-- method
 sbw: SBW-082
 bibkey: weingartNetworksDemystified72013
 ---

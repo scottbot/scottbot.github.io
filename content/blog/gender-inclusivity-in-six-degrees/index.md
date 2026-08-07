@@ -7,9 +7,6 @@ author:
 worktype: blog
 venue: Six Degrees of Francis Bacon
 original_url: https://6dfb.tumblr.com/post/136678327006/gender-inclusivity-in-six-degrees
-tags:
-- networkingwomen
-- gender
 sbw: SBW-109
 bibkey: weingartGenderInclusivitySix2016
 ---

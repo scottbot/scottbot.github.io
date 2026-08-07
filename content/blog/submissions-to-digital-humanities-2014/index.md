@@ -7,19 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39588
 archive_url: https://web.archive.org/web/20150721003451/http://www.scottbot.net/HIAL/?p=39588
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- disciplinarity
-- interdisciplinarity
-- network analysis
-- scholarly communication
-- scientonomy
-- statistics
-- text analysis
-- visualizations
-- personal research
 sbw: SBW-069
 comment_count: 6
 bibkey: weingartSubmissionsDigitalHumanities2013

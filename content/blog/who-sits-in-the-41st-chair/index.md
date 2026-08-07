@@ -7,20 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net:80/who-sits-in-the-41st-chair/
 archive_url: https://web.archive.org/web/20160610214035/http://scottbot.net:80/who-sits-in-the-41st-chair/
-tags:
-- ABMs
-- academia
-- bias
-- complexity
-- diffusion
-- history of science
-- human dynamics
-- macroanalysis
-- network analysis
-- scholarly communication
-- scientonomy
-- social networks
-- personal research
 sbw: SBW-031
 comment_count: 5
 bibkey: weingartWhoSits41st2016

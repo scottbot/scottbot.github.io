@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=40711
 archive_url: https://web.archive.org/web/20150116073151/http://www.scottbot.net/HIAL/?p=40711
-tags:
-- history
-- review
-- visualizations
-- reviews
 sbw: SBW-090
 comment_count: 2
 bibkey: weingartReviewBookTrees2014

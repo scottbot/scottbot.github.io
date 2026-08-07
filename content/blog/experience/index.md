@@ -7,8 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/experience/
 archive_url: https://web.archive.org/web/20160810022434/http://scottbot.net/experience/
-tags:
-- miscellanea
 sbw: SBW-116
 bibkey: weingartExperience2016
 ---

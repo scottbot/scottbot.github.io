@@ -1,2 +1,2 @@
-7bba4b6ec64175bf08c50a1624018ebdeeed960b1acc94b7ca97539192576d03       19386  2013-12-08-a-working-definition-of-digital-humanites.md
+24a89451f84860f367c21bdbf88c38be1eb4fd850773651948e5723db8f8e686       19388  2013-12-08-a-working-definition-of-digital-humanites.md
 3e2b9621e8d2907787400554247862671b8f9975a863ddf5561ea27ab1ec3dd4      671438  images/img-001.png

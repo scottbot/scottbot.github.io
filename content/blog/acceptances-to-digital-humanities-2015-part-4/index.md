@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=41375
 archive_url: https://web.archive.org/web/20150719233052/http://www.scottbot.net/HIAL/?p=41375
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- disciplinarity
-- diversity
-- gender
-- scholarly communication
-- personal research
 sbw: SBW-145
 comment_count: 8
 bibkey: weingartAcceptancesDigitalHumanities2015

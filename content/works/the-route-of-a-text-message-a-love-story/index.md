@@ -7,12 +7,6 @@ worktype: magazine
 venue: VICE
 publisher: VICE
 original_url: https://www.vice.com/en/article/the-route-of-a-text-message-a-love-story/
-tags:
-- Motherboard
-- sms
-- SMS ILU
-- Tech
-- texting
 sbw: SBW-026
 citation: 'Weingart, Scott B. 2019. “The Route of a Text Message, a Love Story.” VICE: Motherboard, February 22. https://www.vice.com/en/article/the-route-of-a-text-message-a-love-story/.'
 bibkey: weingartRouteTextMessage2019

@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/acceptances-to-dh2016-pt-1/
 archive_url: https://web.archive.org/web/20161230100021/http://scottbot.net/acceptances-to-dh2016-pt-1/
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- scholarly communication
-- personal research
 sbw: SBW-110
 comment_count: 2
 bibkey: weingartAcceptancesDH2016Pt2016

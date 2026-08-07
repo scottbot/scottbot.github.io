@@ -38,7 +38,7 @@ My academic work wanders between categories, but here are some highlights:
   [archaeology](/works/equifinality-of-archaeological-networks/), and
   [web archiving](/works/digits/), among other disciplines.
 
-- Popular press pieces, including *Vice's*
+- Popular press pieces, including *VICE's*
   [The Route of a Text Message](/works/the-route-of-a-text-message-a-love-story/).
 
 - Research software and platform development, including the

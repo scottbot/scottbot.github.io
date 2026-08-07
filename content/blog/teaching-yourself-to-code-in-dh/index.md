@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/teaching-yourself-to-code-in-dh/
 archive_url: https://web.archive.org/web/20180211174245/http://scottbot.net/teaching-yourself-to-code-in-dh/
-tags:
-- digital humanities
-- methodologies
-- pedagogy
-- method
 sbw: SBW-120
 comment_count: 5
 bibkey: weingartTeachingYourselfCode2017

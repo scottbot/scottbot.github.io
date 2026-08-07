@@ -7,19 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=38272
 archive_url: https://web.archive.org/web/20150413205748/http://www.scottbot.net/HIAL/?p=38272
-tags:
-- data analysis
-- history
-- history of science
-- methodologies
-- network analysis
-- networks demystified
-- scholarly communication
-- sci2
-- scientonomy
-- social networks
-- visualizations
-- method
 sbw: SBW-078
 comment_count: 5
 bibkey: weingartNetworksDemystified42013

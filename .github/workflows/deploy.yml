@@ -1,6 +1,8 @@
 # Builds the site with Hugo and publishes it to GitHub Pages.
 # Runs whenever you push to the main branch. Nothing to maintain:
-# Hugo is pinned to one exact version, downloaded as a single binary.
+# Hugo is pinned to one exact version, downloaded as a single binary
+# and verified against its published checksum, and every action is
+# pinned to a full commit SHA (the tag comment says which version).
 name: Deploy to GitHub Pages
 
 on:
@@ -8,10 +10,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# Each job asks only for what it needs; the build never writes anything.
+permissions: {}
 
 # One deployment at a time, and never cancel one mid-flight: a killed
 # deployment lingers "in progress" on GitHub's side and blocks every
@@ -23,15 +23,22 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       HUGO_VERSION: "0.164.0"   # pinned on purpose; update only deliberately
+      # sha256 of hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz, from the
+      # release's hugo_${HUGO_VERSION}_checksums.txt. Update both together.
+      HUGO_SHA256: "fea17b8c076f950bb2e9f9486667bdaa29422883888d509d63931c73e8a9b3a4"
     steps:
-      - uses: actions/checkout@v6
-      - name: Install Hugo (single pinned binary)
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Install Hugo (single pinned binary, checksum verified)
         run: |
-          curl -sL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
-            | tar -xz -C /usr/local/bin hugo
-      - uses: actions/configure-pages@v6
+          curl -sL -o /tmp/hugo.tar.gz \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum --check --strict
+          tar -xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
         id: pages
       - name: Build
         # Use the URL GitHub Pages says the site is served from, so links,
@@ -39,15 +46,18 @@ jobs:
         # the custom domain is set up. No minification: the served HTML,
         # CSS, and JS stay human-readable, as a courteous press should.
         run: hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: public
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5

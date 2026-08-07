@@ -7,16 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=38550
 archive_url: https://web.archive.org/web/20141126054707/http://www.scottbot.net/HIAL/?p=38550
-tags:
-- blogging
-- data analysis
-- digital humanities
-- history
-- macroanalysis
-- methodologies
-- open access
-- scholarly communication
-- method
 sbw: SBW-070
 comment_count: 5
 bibkey: weingartHistoriansMacroscope2013

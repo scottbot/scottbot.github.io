@@ -7,18 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=34775
 archive_url: https://web.archive.org/web/20150606143428/http://www.scottbot.net/HIAL/?p=34775
-tags:
-- data analysis
-- digital humanities
-- history
-- literary history
-- macroanalysis
-- methodologies
-- review
-- statistics
-- text analysis
-- visualizations
-- reviews
 sbw: SBW-077
 comment_count: 2
 bibkey: weingartLivebloggedReviewMacroanalysis2013

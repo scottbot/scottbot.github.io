@@ -13,7 +13,7 @@
     <span class="year">{{ .Date.Format "Jan 2" }}</span>
     <div class="body">
       <a href="{{ .RelPermalink }}">{{ partial "amp-text.html" .Title }}</a>
-      {{- with .Params.venue }}{{ if ne . "the scottbot irregular" }} <span class="index-year">· <i>{{ . }}</i></span>{{ end }}{{ end -}}
+      {{- with .Params.venue }}{{ if ne . $.Title }} <span class="index-year">· <i>{{ . }}</i></span>{{ end }}{{ end -}}
     </div>
   </div>
   {{ end }}

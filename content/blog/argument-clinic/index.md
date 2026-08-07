@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/argument-clinic/
 archive_url: https://web.archive.org/web/20180307024219/http://scottbot.net/argument-clinic/
-tags:
-- data analysis
-- digital humanities
-- history
-- macroanalysis
-- methodologies
-- method
 sbw: SBW-121
 comment_count: 2
 bibkey: weingartArgumentClinic2017

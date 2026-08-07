@@ -7,20 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=1942
 archive_url: https://web.archive.org/web/20150926101719/http://www.scottbot.net/HIAL/?p=1942
-tags:
-- bias
-- big data
-- data analysis
-- digital humanities
-- gephi
-- gis
-- methodologies
-- network analysis
-- republic of letters
-- sci2
-- social networks
-- visualizations
-- method
 sbw: SBW-014
 comment_count: 2
 bibkey: weingartContextualizingNetworksMaps2011

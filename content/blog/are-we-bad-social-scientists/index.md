@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=106
 archive_url: https://web.archive.org/web/20120309062953/http://www.scottbot.net/HIAL/?p=106
-tags:
-- digital humanities
-- disciplinarity
-- discourse
-- humnets
-- social science
-- theory
 sbw: SBW-013
 comment_count: 2
 bibkey: weingartAreWeBad2012

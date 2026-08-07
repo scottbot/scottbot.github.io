@@ -1,5 +1,5 @@
 ---
-title: A Working Definition of Digital Humanites
+title: A Working Definition of Digital Humanities
 date: 2013-12-08
 author:
 - Scott B. Weingart
@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39749
 archive_url: https://web.archive.org/web/20131209014123/http://www.scottbot.net/HIAL/?p=39749
-tags:
-- digital humanities
-- methodologies
-- pedagogy
-- miscellanea
 sbw: SBW-084
 bibkey: weingartWorkingDefinitionDigital2013
 ---

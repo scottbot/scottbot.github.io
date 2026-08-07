@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=41064
 archive_url: https://web.archive.org/web/20150211082012/http://www.scottbot.net/HIAL/?p=41064
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- geography
-- scientonomy
-- personal research
 sbw: SBW-140
 bibkey: weingartSubmissionsDigitalHumanities2014
 ---

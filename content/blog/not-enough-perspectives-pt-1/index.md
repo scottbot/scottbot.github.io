@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=41271
 archive_url: https://web.archive.org/web/20150404211724/http://www.scottbot.net/HIAL/?p=41271
-tags:
-- big data
-- data analysis
-- digital humanities
-- literary history
-- macroanalysis
-- theory
 sbw: SBW-102
 comment_count: 3
 bibkey: weingartNotEnoughPerspectives2015

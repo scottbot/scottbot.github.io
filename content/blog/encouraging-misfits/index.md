@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/encouraging-misfits/
 archive_url: https://web.archive.org/web/20190916154321/http://scottbot.net/encouraging-misfits/
-tags:
-- academia
-- disciplinarity
-- interdisciplinarity
-- miscellanea
 sbw: SBW-122
 bibkey: weingartEncouragingMisfits2017
 ---

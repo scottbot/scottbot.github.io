@@ -7,19 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/index.html@p=38424.html
 archive_url: https://web.archive.org/web/20160424012247/http://www.scottbot.net/HIAL/index.html@p=38424.html
-tags:
-- citation analysis
-- data analysis
-- disciplinarity
-- history
-- history of science
-- interdisciplinarity
-- network analysis
-- philosophy of science
-- scholarly communication
-- scientonomy
-- social networks
-- personal research
 sbw: SBW-065
 bibkey: weingartExperimentCommunalEditing2013
 ---

@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/submissions-to-dh2017-pt-1/
 archive_url: https://web.archive.org/web/20170423012016/http://scottbot.net/submissions-to-dh2017-pt-1/
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- scholarly communication
-- personal research
-- Uncategorized
 sbw: SBW-117
 comment_count: 11
 bibkey: weingartSubmissionsDH2017Pt2016

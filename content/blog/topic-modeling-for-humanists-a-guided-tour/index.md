@@ -7,8 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=19113
 archive_url: https://web.archive.org/web/20120823001001/http://www.scottbot.net/HIAL/?p=19113
-tags:
-- method
 sbw: SBW-056
 bibkey: weingartTopicModelingHumanists2012
 ---

@@ -6,12 +6,6 @@ author:
 worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/
-tags:
-- data analysis
-- digital humanities
-- diversity
-- gender
-- miscellanea
 sbw: SBW-105
 bibkey: weingartWhatsCountedCounts2015
 ---

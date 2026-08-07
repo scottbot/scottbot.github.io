@@ -12,6 +12,9 @@
   {{- if not $desc }}{{ with .Params.abstract }}{{ $desc = . | plainify | htmlUnescape | truncate 155 }}{{ end }}{{ end -}}
   {{- if not $desc }}{{ if .IsPage }}{{ $desc = .Summary | plainify | htmlUnescape | truncate 155 }}{{ end }}{{ end -}}
   {{- if not $desc }}{{ $desc = site.Params.description }}{{ end -}}
+  {{- /* Abstracts arrive with their sources' line breaks; scrapers can
+       mangle multi-line content attributes, so flatten to one line. */ -}}
+  {{- $desc = trim (replaceRE `\s+` " " (printf "%s" $desc)) " " -}}
   <meta name="description" content="{{ $desc }}">
   {{- /* Open Graph & Twitter cards: what Slack, iMessage, and social
        platforms use to draw a preview when a link is shared. */}}
@@ -20,7 +23,7 @@
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ site.Title }}">
-  <meta property="og:image" content="{{ "images/ornamental-s.png" | absURL }}">
+  <meta property="og:image" content="{{ "images/scott.png" | absURL }}">
   <meta name="twitter:card" content="summary">
   <meta name="author" content="{{ site.Params.author }}">
   {{ with .OutputFormats.Get "rss" -}}
@@ -30,7 +33,8 @@
        A site that brags about its typography should not be ashamed of its
        source. View freely: /css/main.css and /js/reader.js */}}
   <link rel="stylesheet" href="{{ (resources.Get "css/main.css").RelPermalink }}">
-  <link rel="icon" href="/images/ornamental-s.png" type="image/png">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="preload" href="/fonts/EBGaramond-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/EBGaramond-Italic-var.woff2" as="font" type="font/woff2" crossorigin>
 </head>
@@ -63,6 +67,9 @@
       </span>
     </div>
     <div class="reader-content prose" tabindex="0" role="region" aria-label="Opened work"></div>
+    {{- /* The pane's own rising manicule; reader.js reveals it after a
+         screen and a half of scrolling within the pane. */ -}}
+    <a class="rise rise-pane" href="#" aria-label="Back to top of reading pane">&#9757;&#xFE0E;</a>
   </aside>
 </div>
 

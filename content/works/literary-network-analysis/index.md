@@ -6,8 +6,10 @@ author:
 - Graham Alexander Sack
 - Scott B. Weingart
 worktype: chapter
+venue: 'Digital Humanities for Literary Studies: Theories, Methods, and Practices'
+publisher: Pennsylvania State University Press
 sbw: SBW-124
-citation: Sack, and Weingart. 2018. “Literary Network Analysis.”.
+citation: 'Sack, Graham, and Scott B. Weingart. “Literary Network Analysis.” In Digital Humanities for Literary Studies: Theories, Methods, and Practices, edited by James O’Sullivan. Pennsylvania State University Press, 2018. [Book never published]'
 ---
 
 <!-- page 1 -->

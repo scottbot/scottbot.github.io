@@ -1,5 +1,4 @@
 5b3d1d9d15da08517472141e39a7a7f6adeb50f75165c533d184cb437021cbde       17264  2016-06-16-fsd-cetus.md
-53ace59f2db54a3f8815533d93e7c5d70c6d67a5cce04a485b640cf3b3547324       17162  2016-06-16-fsd-cetus.md.bak
 552f925fc47790e5d705ab090d6c4d5b2f56c469b368f03e7e761c2cc2bbc101       70666  images/SBW-030-cetus-mira-jupiter.webp
 660a7b9069c64e77e7413a466238d0bbe5bf5595bb20cd0203f4821ef1c7ad6a       64952  images/SBW-030-corinthian-vase.webp
 40b372f44cd26d9bafc9be1736ef3f780f6a600692bda15a37147551e9bdf0b3      114920  images/SBW-030-hevelius-firmamentum.webp

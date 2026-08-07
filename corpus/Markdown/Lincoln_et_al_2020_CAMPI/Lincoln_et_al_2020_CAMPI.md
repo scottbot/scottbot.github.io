@@ -1,5 +1,5 @@
 ---
-title: "CAMPI: Computer-Aided Metadata generation for Photo archives Initiative"
+title: "CAMPI: Computer-Aided Metadata Generation for Photo archives Initiative"
 subtitle: "Whitepaper on successes and failures in computer vision for visual digital collections"
 authors:
   - family: "Corrin"
@@ -52,7 +52,7 @@ bibkey: "lincolnCAMPIComputerAidedMetadata2020"
 
 CARNEGIE MELLON UNIVERSITY LIBRARIES
 
-# CAMPI: Computer-Aided Metadata generation for Photo archives Initiative
+# CAMPI: Computer-Aided Metadata Generation for Photo archives Initiative
 
 *Whitepaper on successes and failures in computer vision for visual digital collections*
 

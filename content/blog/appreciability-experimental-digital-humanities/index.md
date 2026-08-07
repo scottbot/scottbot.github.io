@@ -7,16 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=40224
 archive_url: https://web.archive.org/web/20151018015018/http://www.scottbot.net/HIAL/?p=40224
-tags:
-- appreciability
-- data analysis
-- digital humanities
-- experiment
-- methodologies
-- statistics
-- text analysis
-- visualizations
-- theory
 sbw: SBW-085
 comment_count: 6
 bibkey: weingartAppreciabilityExperimentalDigital2014

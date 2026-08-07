@@ -14,7 +14,7 @@ publisher: Cambridge University Press
 doi: 10.1017/9781108866804
 isbn: 978-1-108-86680-4 978-1-108-79190-8
 sbw: SBW-002
-citation: 'Ahnert, Ruth, Sebastian E. Ahnert, Catherine Nicole Coleman, and Scott B. Weingart. 2021. The Network Turn: Changing Perspectives in the Humanities. 1st ed. Cambridge University Press. https://doi.org/10.1017/9781108866804.'
+citation: 'Ahnert, Ruth, Sebastian E. Ahnert, Catherine Nicole Coleman, and Scott B. Weingart. 2020. The Network Turn: Changing Perspectives in the Humanities. 1st ed. Cambridge University Press. https://doi.org/10.1017/9781108866804.'
 abstract: 'We live in a networked world. Online social networking platforms and the World
 
   Wide Web have changed how society thinks about connectivity. Because of the

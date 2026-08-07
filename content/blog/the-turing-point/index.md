@@ -7,14 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/the-turing-point/
 archive_url: https://web.archive.org/web/20160701114921/http://scottbot.net/the-turing-point/
-tags:
-- ABMs
-- appreciability
-- bots
-- complexity
-- human dynamics
-- social networks
-- miscellanea
 sbw: SBW-113
 bibkey: weingartTuringPoint2016
 ---

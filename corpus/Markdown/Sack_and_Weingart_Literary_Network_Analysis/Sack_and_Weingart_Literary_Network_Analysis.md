@@ -10,8 +10,8 @@ authors:
 
 publication_type: "book_chapter"
 manuscript_status: "unpublished manuscript / accepted chapter typescript"
-container_title: ""
-publisher: ""
+container_title: "Digital Humanities for Literary Studies: Theories, Methods, and Practices"
+publisher: "Pennsylvania State University Press"
 publisher_place: ""
 
 year: 2018

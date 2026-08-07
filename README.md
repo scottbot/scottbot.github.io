@@ -18,7 +18,9 @@ ampersands, marginalia, manicules, and one colophon.
 | `data/workmap.yaml` | connects CV entries to their full-text pages |
 | `layouts/`, `assets/css/`, `assets/js/` | the theme; you rarely need to touch it |
 | `static/fonts/`, `static/images/` | EB Garamond and the site art |
-| `static/cv.pdf` | the printed CV (August 2026 edition), served at `/cv.pdf` so the address that links in the wild already point at keeps working after migration |
+| `static/cv.pdf` | the printed CV (August 2026 edition), served at `/cv.pdf` so addresses already linked in the wild keep working after migration |
+| `making-scottbot/` | the making-of: the commissioning prompt and the two conversion skills (blog→markdown, article/book→markdown) that built the corpus |
+| `.github/workflows/` | the deploy recipe (see "Publishing" below) |
 | `corpus/` | **the source of truth**: the faithful markdown conversions (`corpus/Markdown/`, one folder per work), plus `List of Outputs.csv` and `weingartpubs.bib`. Lives inside the site so the whole apparatus migrates as one folder. The copy in `PhD\Outputs\Markdown` is now a frozen archive; edit this one. |
 | `scripts/ingest.py` | the converter between `corpus/Markdown/` and `content/`. Its default mode is **additive and safe**: it converts only corpus folders that don't yet have a page, and never touches existing ones. See "add a new publication" below. Every correction ever made to the generated pages has been carried back into the corpus, so a full rebuild (`--force`) reproduces today's pages exactly. That guarantee only holds if future fixes go into the corpus too — edit the corpus copy (and its MANIFEST hash), not just `content/`, or your fix will vanish on the next rebuild of that page. |
 
@@ -150,5 +152,5 @@ outside the colophon). Every works page carries the LLM-conversion caveat
 automatically via the template; add `caveat_extra: "…"` to a work's
 frontmatter to insert an extra sentence into it. All the site's JavaScript —
 the reading pane, the contents rail, the back-to-top manicule, the yielding
-mobile header, and the table-overflow guard — is ~270 dependency-free lines
+mobile header, and the table-overflow guard — is ~360 dependency-free lines
 in `assets/js/reader.js`; everything degrades to ordinary links without it.

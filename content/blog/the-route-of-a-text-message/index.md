@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: https://scottbot.net/the-route-of-a-text-message/
 archive_url: https://web.archive.org/web/20190524225906/https://scottbot.net/the-route-of-a-text-message/
-tags:
-- full-stack dev
-- hardware
-- infrastructure
-- miscellanea
 sbw: SBW-148
 comment_count: 40
 bibkey: weingartRouteTextMessage2019a

@@ -7,14 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=8832
 archive_url: https://web.archive.org/web/20120721201516/http://www.scottbot.net/HIAL/?p=8832
-tags:
-- bias
-- big data
-- data analysis
-- digital humanities
-- methodologies
-- significance
-- statistics
 sbw: SBW-043
 comment_count: 3
 bibkey: weingartAvoidingTraps2012

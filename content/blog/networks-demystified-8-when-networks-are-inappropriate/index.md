@@ -7,18 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39600
 archive_url: https://web.archive.org/web/20131130120853/http://www.scottbot.net/HIAL/?p=39600
-tags:
-- complexity
-- data analysis
-- diffusion
-- digital humanities
-- methodological critique
-- methodologies
-- network analysis
-- networks demystified
-- social networks
-- visualizations
-- method
 sbw: SBW-083
 comment_count: 2
 bibkey: weingartNetworksDemystified82013

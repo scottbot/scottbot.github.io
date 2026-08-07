@@ -14,7 +14,7 @@ original_url: https://programminghistorian.org/en/lessons/exploring-and-analyzin
 volume: '6'
 issue: '6'
 sbw: SBW-118
-citation: Ladd, Otis, Warren, and Weingart. 2017. “Exploring and Analyzing Network Data with Python.” The Programming Historian 6. https://doi.org/10.46430/phen0064.
+citation: John R. Ladd, Jessica Otis, Christopher N. Warren, and Scott Weingart, “Exploring and Analyzing Network Data with Python,” Programming Historian 6 (2017), https://doi.org/10.46430/phen0064.
 abstract: 'This lesson introduces network metrics and how to draw conclusions from them
 
   when working with humanities data. You will learn how to use the NetworkX Python

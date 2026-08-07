@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=38807
 archive_url: https://web.archive.org/web/20130825165034/http://www.scottbot.net/HIAL/?p=38807
-tags:
-- epistemology
-- history
-- history of science
-- interdisciplinarity
-- network analysis
-- scientonomy
-- visualizations
-- personal research
 sbw: SBW-080
 comment_count: 1
 bibkey: weingartTreesWebsUprooting2013a

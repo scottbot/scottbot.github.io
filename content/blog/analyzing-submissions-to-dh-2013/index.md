@@ -7,16 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=24437
 archive_url: https://web.archive.org/web/20150922065706/http://www.scottbot.net/HIAL/?p=24437
-tags:
-- data analysis
-- dhconf
-- digital humanities
-- methodologies
-- network analysis
-- scholarly communication
-- visualizations
-- method
-- personal research
 sbw: SBW-035
 bibkey: weingartAnalyzingSubmissionsDigital2012
 ---

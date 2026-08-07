@@ -7,12 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/summary-martin-runyons-digital-humanities-digital-hegemony/
 archive_url: https://web.archive.org/web/20160405221331/http://scottbot.net/summary-martin-runyons-digital-humanities-digital-hegemony/
-tags:
-- data analysis
-- digital humanities
-- gender
-- scientonomy
-- reviews
 sbw: SBW-112
 bibkey: weingartSummaryMartinRunyons2016
 ---

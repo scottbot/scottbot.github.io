@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=40944
 archive_url: https://web.archive.org/web/20141021005507/http://www.scottbot.net/HIAL/?p=40944
-tags:
-- big data
-- complexity
-- data analysis
-- network analysis
-- privacy
-- social networks
-- society
-- miscellanea
 sbw: SBW-141
 comment_count: 3
 bibkey: weingartMoralRoleDH2014

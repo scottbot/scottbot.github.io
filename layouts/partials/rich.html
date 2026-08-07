@@ -1,11 +1,2 @@
-{{- /* Inline markdown → HTML, with the house ampersand.
-     Every ampersand is set in italic, per the colophon: they look
-     swooshy and neat. Three shapes are caught: freestanding "&" (and
-     "&c."), a lone "&" that is the whole string (section headings),
-     and letter-tight ampersands between capitals (Texas A&M, ASIS&T).
-     Ampersands inside URLs and attributes are left alone — no CV data
-     contains a URL with "&", and the guards would skip most anyway. */ -}}
-{{- $html := markdownify . -}}
-{{- $html = replaceRE `(^|[\s(>])&amp;(\s|c\.|$)` `$1<span class="amp">&amp;</span>$2` $html -}}
-{{- $html = replaceRE `([A-Z])&amp;([A-Z])` `$1<span class="amp">&amp;</span>$2` $html -}}
-{{- $html | safeHTML -}}
+{{- /* Inline markdown → HTML with the house ampersand (see amp.html). */ -}}
+{{- partial "amp.html" (markdownify .) -}}

@@ -1,14 +1,11 @@
 ---
-title: Currated syllabi
+title: Curated syllabi
 date: 2012-09-21
 author:
 - Scott B. Weingart
 worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/
-tags:
-- digital humanities
-- site-related
 sbw: SBW-039
 bibkey: weingartCuratedSyllabi2012
 ---

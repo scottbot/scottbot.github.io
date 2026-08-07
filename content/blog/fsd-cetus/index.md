@@ -7,13 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: https://scottbot.net/cetus/
 archive_url: https://web.archive.org/web/20190126100333/https://scottbot.net/cetus/
-tags:
-- archives
-- full-stack dev
-- history of science
-- republic of letters
-- scholarly communication
-- personal research
 sbw: SBW-030
 bibkey: weingartFsCetus2016
 ---

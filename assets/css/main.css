@@ -30,6 +30,7 @@
   --brown-dk:  #724109;   /* the name accent                     */
   --paper:     #fffdf9;   /* a faintly warm sheet                */
   --rule:      #e4ddd0;
+  --codesheet: #f7f3ea;   /* code-block ground: the sheet, shaded  */
   --measure:   44rem;
   --gutter-l:  6.5rem;    /* year column                         */
   --gutter-r:  11rem;     /* marginal-note column                */
@@ -43,6 +44,8 @@
    (6.5 + 44 + 11 = 61.5rem = 984px).
 
      ≤  640px  entries fold to a single column (mobile; unpolished)
+     ≤  760px  the CV head folds: the justified block centers and
+               the name scales with the viewport to hold one line
      ≥ 1100px  the reading pane may open (mirrors readerMinWidth
                in hugo.toml — change them together)
      ≥ 1250px  true margins appear: the year column and marginalia
@@ -154,8 +157,6 @@ main {
   margin: 0 auto; width: 100%;
   padding: .6rem 1.25rem 1.1rem;
 }
-.site-footer a { color: inherit; text-decoration: none; }
-.site-footer a:hover { color: var(--brown); }
 /* The closing word: roman small caps, letterspaced, centered. */
 .site-footer .finis {
   display: block; width: 100%; text-align: center;
@@ -195,7 +196,7 @@ code, pre {
   font-size: .78em;
 }
 pre {
-  background: #f7f3ea;
+  background: var(--codesheet);
   border: 1px solid var(--rule);
   padding: .8em 1em;
   overflow-x: auto;
@@ -209,7 +210,6 @@ th { color: var(--brown-dk); }
 
 sup { font-feature-settings: "sups" 1; }
 .footnotes { font-size: 1.05rem; color: var(--grey-marg); }
-.footnotes hr::after { content: ""; }
 .footnotes hr { border-top: 1px solid var(--rule); width: 12rem; margin: 2.5rem 0 1rem; }
 
 ::selection { background: color-mix(in srgb, var(--brown) 22%, transparent); }
@@ -283,8 +283,12 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
 }
 @media (max-width: 760px) {
   .hero.hero-justified { display: block; text-align: center; }
-  .hero.hero-justified .bigname, .hero.hero-justified .tagline {
-    white-space: normal; text-align: center;
+  .hero.hero-justified .tagline { white-space: normal; text-align: center; }
+  /* The name itself never breaks: it sheds the 3rem floor and scales
+     down with the viewport instead (as on the home page). */
+  .hero.hero-justified .bigname {
+    white-space: nowrap; text-align: center;
+    font-size: min(9vw, 4.6rem);
   }
   .hero.hero-justified .mission { text-align: center; text-align-last: center; }
   .hero.hero-justified .contact { flex-wrap: wrap; justify-content: center; gap: .4rem 1.5rem; }
@@ -299,16 +303,15 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   font-weight: 700;
   margin: 0 0 .1em;
 }
-/* On the home page the name never breaks across lines: drop the 3rem
-   floor so it keeps riding the 9vw slope down on narrow screens (the
-   name at 9vw is ~0.67vw wide — always inside the page padding).
-   Identical to the clamp() above at ≥533px wide. */
+/* On the home page the name never breaks across lines, and takes the
+   measure more fully: a steeper slope and a higher cap than the CV's
+   (the name at 10.5vw is ~0.78vw wide — still inside the page padding;
+   at the 5.5rem cap it nearly fills the 44rem measure). */
 .home .hero h1.bigname {
-  font-size: min(9vw, 4.6rem);
+  font-size: min(10.5vw, 5.5rem);
   white-space: nowrap;
 }
 .hero .tagline { font-size: 1.45rem; margin: 0; }
-.hero .tagline b { font-weight: 700; }
 .hero .tagline .masq { color: var(--grey-marg); }
 .hero .contact {
   display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
@@ -325,7 +328,6 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
 .cv h2.cv-section {
   font-size: 1.9rem;
   margin: 2.6rem 0 .6rem;
-  scroll-margin-top: 4rem;   /* clear the frozen header */
 }
 .cv .section-sub {
   color: var(--grey-head); font-style: normal; font-size: 1.05rem;
@@ -429,23 +431,15 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
     width: calc(var(--gutter-r) - 1.6rem);
   }
 }
-@media (max-width: 1249.9px) {
+@media (max-width: 1249.98px) {
   .cv-entry > .marginal { grid-column: 2; margin-top: .05rem; }
   .margin-host > .marginal { display: block; margin: .2rem 0 .6rem; }
 }
 body.reader-open .cv-entry > .marginal { position: static; grid-column: 2; }
 body.reader-open .margin-host > .marginal { position: static; display: block; margin: .2rem 0 .6rem; }
 
-/* The CV's own colophon, as printed on its last page */
-.cv-colophon .colophon-initial::first-letter {
-  float: left;
-  font-size: 3.6em; line-height: .75;
-  color: var(--brown);
-  border: 2px solid var(--brown);
-  margin: .08em .12em 0 0;
-  padding: .1em .15em;
-  font-weight: 500;
-}
+/* The CV's own colophon, as printed on its last page. Its dropcap
+   comes from the generic .colophon-initial rule (see Colophon & 404). */
 .cv-colophon img.ornament { mix-blend-mode: multiply; }
 
 /* Read-in-pane affordance: a hedera (printer's leaf), not a manicule —
@@ -462,7 +456,6 @@ a.readlink:hover { text-decoration: underline; }
 /* Prose subsections of the CV (roles, highlights, biography) */
 .cv .role-inst { color: var(--brown); font-weight: 400; font-size: 1.5rem; margin: 1.5rem 0 .3rem; }
 .cv .role-pos { margin: 0; font-size: 1.28rem; }
-.cv .role-pos .pos-title { font-weight: 600; }
 .cv .role-body { margin-top: .35rem; }
 .cv .role-body ul { margin: .3em 0; padding-left: 1.2em; }
 .cv .role-body li { margin: .15em 0; }
@@ -502,6 +495,7 @@ a.readlink:hover { text-decoration: underline; }
   margin: 0 0 1.6rem;
 }
 .work-meta .venue { font-style: italic; }
+.back-nav { margin-top: 3rem; }
 .work-meta a { color: var(--grey-marg); text-decoration: underline; text-decoration-color: var(--rule); }
 .work-meta a:hover { color: var(--brown); }
 .work-caveat {
@@ -589,6 +583,15 @@ body.reader-open .site-footer { width: 54%; margin: 0; max-width: none; }
 .reader-content h1 { font-size: 1.7rem; color: var(--brown-dk); }
 
 /* ── Colophon & 404 ────────────────────────────────────────── */
+.sassy-404 { margin-top: 18vh; }
+.err-note {
+  text-align: center;
+  color: var(--grey-head);
+  font-style: italic;
+  font-size: 1rem;
+  margin: 1.2rem 0 2rem;
+}
+.back-links { text-align: center; }
 .ornament { display: block; margin: 2.5rem auto 1rem; width: min(20rem, 70%); }
 .colophon-initial::first-letter {
   float: left;
@@ -637,7 +640,12 @@ body.head-away .site-header { transform: translateY(-100%); }
   transition: opacity .25s, visibility .25s;
 }
 .rise.shown { visibility: visible; opacity: 1; }
-body.reader-open .rise { visibility: hidden; opacity: 0; }
+/* Split view: each half gets its own hand (reader.js wires them).
+   The left column's sits at that column's right edge; the pane's
+   keeps the default corner and only exists while the pane is open. */
+body.reader-open .rise:not(.rise-pane) { right: calc(46% + .9rem); }
+.rise-pane { display: none; }
+body.reader-open .rise-pane { display: block; }
 
 /* Overflow armor: wide tables scroll within themselves, so the page
    never breaks its measure (code blocks already do — see pre above).
@@ -702,6 +710,10 @@ img.ornament {
   .site-header, .site-footer, #reader, a.readlink, .skip-link,
   .toc-details, .side-rail, .rise { display: none !important; }
   .sassy { color: #444; }
+  pre { background: #fff; }
+  /* Wide tables must not clip on paper; let them run and be cropped
+     by the sheet rather than hidden by a scrollbar that cannot exist. */
+  .scrolls { overflow-x: visible; }
   /* Never print the split view, whatever state the pane was in. */
   body.reader-open { overflow: visible; height: auto; }
   body.reader-open .page-body { width: 100%; overflow: visible; }

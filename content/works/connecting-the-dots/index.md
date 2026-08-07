@@ -6,8 +6,6 @@ author:
 - Scott B. Weingart
 worktype: blog
 venue: the scottbot irregular
-tags:
-- personal research
 sbw: SBW-104
 citation: Weingart, Scott B. 2015. “Connecting the Dots.” Blog. The Scottbot Irregular.
 bibkey: weingartConnectingDots2015

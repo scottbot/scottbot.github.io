@@ -7,17 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=129
 archive_url: https://web.archive.org/web/20120309044743/http://www.scottbot.net/HIAL/?p=129
-tags:
-- alchemy
-- history
-- history of science
-- network analysis
-- newton
-- sci2
-- text analysis
-- topic modeling
-- unicode
-- uncategorized
 sbw: SBW-012
 bibkey: weingartAlchemyTextAnalysis2012
 ---

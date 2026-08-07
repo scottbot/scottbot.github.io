@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/index.html@p=40349.html
 archive_url: http://web.archive.org/web/20180307083743/http://www.scottbot.net/HIAL/index.html@p=40349.html
-tags:
-- disciplinarity
-- history
-- history of science
-- interdisciplinarity
-- methodologies
-- scientonomy
-- two cultures
-- method
 sbw: SBW-089
 comment_count: 3
 bibkey: weingartHistoriansNeedScientists2014

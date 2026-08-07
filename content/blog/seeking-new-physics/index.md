@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/seeking-new-physics/
 archive_url: https://web.archive.org/web/20191209075807/http://scottbot.net/seeking-new-physics/
-tags:
-- genetic algorithms
-- machine learning
-- theory
-- miscellanea
 sbw: SBW-129
 bibkey: weingartSeekingNewPhysics2019
 ---

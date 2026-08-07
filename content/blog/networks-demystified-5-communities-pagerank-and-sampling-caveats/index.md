@@ -7,15 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://www.scottbot.net/HIAL/?p=39344
 archive_url: https://web.archive.org/web/20150425171026/http://www.scottbot.net/HIAL/?p=39344
-tags:
-- data analysis
-- digital humanities
-- methodologies
-- network analysis
-- networks demystified
-- scholarly communication
-- social networks
-- method
 sbw: SBW-067
 comment_count: 3
 bibkey: weingartNetworksDemystified52013

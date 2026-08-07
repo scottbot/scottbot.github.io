@@ -7,11 +7,6 @@ worktype: blog
 venue: the scottbot irregular
 original_url: http://scottbot.net/center-for-midnight/
 archive_url: https://web.archive.org/web/20201117172616/http://scottbot.net/center-for-midnight/
-tags:
-- fiction
-- generative art
-- review
-- reviews
 sbw: SBW-125
 bibkey: weingartCenterMidnight2018
 ---

@@ -1,0 +1,5 @@
+{{- /* Markdown images load lazily: several works and posts carry very
+     large figures (a book's worth, on the longest pages), and eager
+     loading would fetch them all before the reader arrives. Alt text
+     is rendered then flattened, so markdown escapes resolve. */ -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text | plainify }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
