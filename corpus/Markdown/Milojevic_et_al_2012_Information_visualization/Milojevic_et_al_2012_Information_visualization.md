@@ -26,7 +26,7 @@ authors:
   - family: "Weingart"
     given: "Scott B."
     affiliation: "School of Library and Information Science, Indiana University Bloomington"
-    email: "weingart.scott@gmail.com"
+    email: "scbweing@indiana.edu"
 
 # --- publication ---
 publication_type: "conference_paper"

@@ -283,6 +283,10 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
   max-width: none; margin: 0;
   text-align: justify;
   text-align-last: center;
+  /* Sized to set in exactly two lines on the name's measure: the
+     mission is ~50em long, the block two name-lengths minus slack.
+     The vw term tracks the name's 9vw slope below its size cap. */
+  font-size: min(2.39vw, 1.22rem);
 }
 @media (max-width: 760px) {
   .hero.hero-justified { display: block; width: auto; text-align: center; }
@@ -299,7 +303,7 @@ i .tex-logo .tex-e, em .tex-logo .tex-e, .marginal .tex-logo .tex-e {
     white-space: nowrap; text-align: center;
     font-size: min(calc((100vw - 3rem) / 7.6), 5.5rem);
   }
-  .hero.hero-justified .mission { text-align: center; text-align-last: center; }
+  .hero.hero-justified .mission { text-align: center; text-align-last: center; font-size: 1.35rem; }
 }
 .hero h1.bigname {
   font-size: clamp(3rem, 9vw, 4.6rem);
