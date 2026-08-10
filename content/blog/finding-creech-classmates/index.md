@@ -113,3 +113,9 @@ The sources were parsed on my desktop, and anyway these materials are well out o
 *What about water usage?*
 
 Okay okay these questions from fictional you, dear reader, are getting much bigger than this little post demands. I promise I'll address my ethical stance on AI, but not here on my post about making a spreadsheet.
+
+## Postscript
+
+The next step of this work, actually researching a few dozen or more Wadhamites with no documented connection to Creech, may take me 20ish hours. I'll stop myself if it goes much more than that.
+
+I don't know if I'd have bothered with this whole part of the project were it not for AI making this part faster. Essentially, it compressed a 40-hour project into a 20-hour one. With my time at a premium, this allowed me the space to actually pursue a diversion that may contribute meaningfully to the final book.
