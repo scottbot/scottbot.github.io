@@ -90,7 +90,7 @@ All told it takes under an hour of back-and-forth, and results in a great place 
 
 If I were doing this myself a year ago, combining regular expressions, academic database searches, hand-entry, etc., this could easily have taken me twenty hours (about five minutes per person).
 
-Now I get to focus my time on the fun part: look through people for whom there are actual historical traces easily found, to get a sense of who they were and the problems that mattered to them.
+Now I get to focus my time on the fun part: researching relevant people for whom there are actual historical traces easily found, to get a sense of who they were and the problems that mattered to them.
 
 For the purposes of ordering my research activities, I'll rank the names by some combination of both importance scores and duration overlap with Creech (even though the accuracy on that is low). Then I'll start my searches at the top of the list and work my way down. Once I feel like I've read the same thing over and over and I have a general sense of the social millieu of Wadham, I'll stop.
 
