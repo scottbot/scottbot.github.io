@@ -5,7 +5,7 @@ author: ["Scott B. Weingart"]
 worktype: blog
 venue: "the scottbot irregular"
 ---
-One thesis of the most entertaining popularizations of moral philosophy of the 21st century, [*The Good Place*](https://en.wikipedia.org/wiki/The_Good_Place), is that the complexity of modern life essentially renders good choices impossible. You can't avoid accidentally (or with awareness but no real choice) buying products made by slave labor, eating homophobic chicken, etc. With such intertangled and long global systems, the odds of evil creeping in at any point in (say) a supply chain before it reaches you are remarkably high.
+One thesis of the most entertaining popularization of moral philosophy of the 21st century, [*The Good Place*](https://en.wikipedia.org/wiki/The_Good_Place), is that the complexity of modern life essentially renders good choices impossible. You can't avoid accidentally (or with awareness but no real choice) buying products made by slave labor, eating homophobic chicken, etc. With such intertwingled and long global systems, the odds of evil creeping in at any point in (say) a supply chain before it reaches you are remarkably high.
 
 It's easy to forget such global entanglements stretch back through history, alongside their associated moral perils. Historians try to tread carefully around yesterday's ethical quagmires, understanding a moment on its own terms without necessarily *forgiving* any associated cruelties. It can be a tightrope walk sometimes. 
 
