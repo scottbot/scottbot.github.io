@@ -33,4 +33,4 @@ Lots of theories explain the Little Ice Age, though one is particularly troublin
 
 So in a way, if Koch et al. are correct, indigenous genocide led directly to one of the most widely known episodes in Thomas Creech's life. It might also have [led to the remarkable quality of Stadivarius violins](https://www.sciencedirect.com/science/article/pii/S1125786504700314), incidentally. I'm not sure what to do with that knowledge.
 
-I suppose nothing. It doesn't belong in his biography. He wouldn't have known anything about it. He didn't benefit from it in anyway. It's just a tragic entanglement, one illustration of the many cruelties that connect and have always connected us.
+I suppose nothing. It doesn't belong in his biography. He wouldn't have known anything about it. He didn't benefit from it in any way. It's just a tragic entanglement, one illustration of the many cruelties that connect and have always connected us.
