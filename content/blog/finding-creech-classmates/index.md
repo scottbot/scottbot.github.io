@@ -39,7 +39,6 @@ So, here and there, I turn to my remarkably stupid and often useful research ass
 There are two sources to find all of Creech's contemporaries at Wadham College: the [Registers of Wadham College from 1613 to 1719](https://archive.org/details/registersofwadha00wadhuoft), and [Alumnni Oxonienses from 1500 to 1714](https://www.british-history.ac.uk/alumni-oxon/1500-1714). The *Registers* is helpfully arranged in chronological order; *Alumni Oxonienses* is annoyingly alphabetical. 
 
 ![Alumni Oxonienses](images/img-002.png)
-
 *The Alumni Oxonienses, photo from booksbythefoot.com*
 
 They contain slightly different information, and I want a spreadsheet that:
