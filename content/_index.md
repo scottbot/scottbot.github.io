@@ -4,8 +4,7 @@ title: "Home"
 Hi! I'm Scott B. Weingart, a historian of knowledge who wears many hats. By day,
 I am the **Chief Technology Officer at the Library of Virginia**, where I help
 make its rich collections and services digitally accessible to all.[^lva]
-Concurrently, I serve as a resident scholar at Dartmouth and a research
-affiliate at the University of Edinburgh. In my off time, I'm a professional
+Concurrently, I serve as a resident scholar at Dartmouth. In my off time, I'm a professional
 circus performer, an amateur father, and a hopeless adventurer.
 
 Read about my work on my [academic cv](/cv/). **To book a speaking engagement
